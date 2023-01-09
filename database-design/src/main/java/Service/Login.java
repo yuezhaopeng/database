@@ -32,6 +32,7 @@ public class Login {
                     break;
                 case 2:
                     //学术交流子系统入口，传参userid,roleNum
+                    ActivityService.acticityMenu(userid,roleNum);
                     break;
                 case 3:
                     //参与项目子系统入口，传参userid,roleNum
@@ -91,7 +92,7 @@ public class Login {
         String realPassword = DAOFactory.getInstance().getLoginCheckDAO().getLoginCheckByUsername(username).getPassword();
         String realRole = DAOFactory.getInstance().getLoginDetailDAO().getLoginDetailByUsername(username).getRole();
 
-        if (realPassword.trim().equals(password.trim()) && realRole.trim().equals(role)) {
+        if (realPassword!=null && realRole!=null && realPassword.trim().equals(password.trim()) && realRole.trim().equals(role)) {
             System.out.println("登录成功");
             mainMenu(DAOFactory.getInstance().getLoginDetailDAO().getLoginDetailByUsername(username).getNo(),roleNum);
         } else {
