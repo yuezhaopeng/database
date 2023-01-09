@@ -1,22 +1,18 @@
 package Utils;
 
-import Dao.ActivityAttendDao;
-import Dao.ActivityDetailDao;
-import Dao.ActivityTableDao;
-import Dao.Impl.ActivityAttendDaoImpl;
-import Dao.Impl.ActivityDetailDaoImpl;
-import Dao.Impl.ActivityTableDaoImpl;
+import Dao.*;
+import Dao.Impl.*;
 
-public class DaoFactory {                       //接口工厂
-    private static DaoFactory daoFactory;
+public class DAOFactory {                       //接口工厂
+    private static DAOFactory daoFactory;
     static {
-        daoFactory = new DaoFactory();
+        daoFactory = new DAOFactory();
     }
-    private DaoFactory(){
+    private DAOFactory(){
 
     }
 
-    public static DaoFactory getInstance(){
+    public static DAOFactory getInstance(){
         return daoFactory;
     }
     public ActivityAttendDao getActivityAttendDao(){
@@ -29,4 +25,27 @@ public class DaoFactory {                       //接口工厂
         return new ActivityTableDaoImpl();
     }
 
+    public LoginCheckDAO getLoginCheckDAO() {
+        return new LoginCheckDAOImpl();
+    }
+
+    public LoginDetailDAO getLoginDetailDAO() {
+        return new LoginDetailDAOImpl();
+    }
+
+    public LeaderDAO getLeaderDAO() {
+        return new LeaderDAOImpl();
+    }
+
+    public TeacherDao getTeacherDao() {
+        return new TeacherDaoImpl();
+    }
+
+    public MentorDao getMentorDao() {
+        return new MentorDaoImpl();
+    }
+
+    public StudentDao getStudentDao() {
+        return new StudentDaoImpl();
+    }
 }

@@ -1,7 +1,7 @@
-import static Service.ActivityService.acticityMenu;
+import Service.Login;
 
 public class main {
     public static void main(String[] args) {
-        //test
+        Login.login();
     }
 }

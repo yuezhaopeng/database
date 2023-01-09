@@ -3,7 +3,7 @@ package Service;
 import Entity.ActivityAttend;
 import Entity.ActivityDetail;
 import Entity.ActivityTable;
-import Utils.DaoFactory;
+import Utils.DAOFactory;
 
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
@@ -219,7 +219,7 @@ public class ActivityService {
         }
     }
     public static void attendDetailShowForStu(String Sno) {
-        List<ActivityDetail> ActivityDetails = DaoFactory.getInstance().getActivityDetailDao().showForStu(Sno);
+        List<ActivityDetail> ActivityDetails = DAOFactory.getInstance().getActivityDetailDao().showForStu(Sno);
         System.out.println("共 " + ActivityDetails.size() + " 条记录");
         for (ActivityDetail activityDetail : ActivityDetails) {
             System.out.print("活动序号：" + activityDetail.getActNo() + "\t");
@@ -251,7 +251,7 @@ public class ActivityService {
         activityAttend.setMaudit("0");
         activityAttend.setSps(sps);
         activityAttend.setMps("无");
-        boolean check = DaoFactory.getInstance().getActivityAttendDao().insert(activityAttend);
+        boolean check = DAOFactory.getInstance().getActivityAttendDao().insert(activityAttend);
         if (check) {
             System.out.println("申请成功");
         } else {
@@ -266,7 +266,7 @@ public class ActivityService {
         System.out.println("请输入参与活动序号");
         String actNo = sc.nextLine();
 
-        boolean check = DaoFactory.getInstance().getActivityAttendDao().delete(Sno, actNo);
+        boolean check = DAOFactory.getInstance().getActivityAttendDao().delete(Sno, actNo);
         if (check) {
             System.out.println("删除成功");
         } else {
@@ -279,7 +279,7 @@ public class ActivityService {
         System.out.println("撤回对应的申请学术交流参与信息");
         System.out.println("请输入参与活动序号");
         String actNo = sc.nextLine();
-        boolean check = DaoFactory.getInstance().getActivityAttendDao().withdraw(Sno, actNo);
+        boolean check = DAOFactory.getInstance().getActivityAttendDao().withdraw(Sno, actNo);
         if (check) {
             System.out.println("撤销成功");
         } else {
@@ -307,7 +307,7 @@ public class ActivityService {
         activityAttend.setSps(sps);
         activityAttend.setMps("无");
 
-        boolean check = DaoFactory.getInstance().getActivityAttendDao().reSubmit(activityAttend);
+        boolean check = DAOFactory.getInstance().getActivityAttendDao().reSubmit(activityAttend);
         if (check) {
             System.out.println("更新成功");
         } else {
@@ -327,9 +327,9 @@ public class ActivityService {
         String res = sc.nextLine().trim();
         boolean check;
         if (res.equals("1")) {
-            check = DaoFactory.getInstance().getActivityAttendDao().audit(Sno, actNo, 1);
+            check = DAOFactory.getInstance().getActivityAttendDao().audit(Sno, actNo, 1);
         } else {
-            check = DaoFactory.getInstance().getActivityAttendDao().audit(Sno, actNo, -1);
+            check = DAOFactory.getInstance().getActivityAttendDao().audit(Sno, actNo, -1);
         }
         if (check) {
             System.out.println("审核成功");
@@ -340,7 +340,7 @@ public class ActivityService {
 
     public static void activityAttendShowForStuYes(String Sno) {
         System.out.println("学生查看申请成功记录");
-        List<ActivityAttend> activityAttends = DaoFactory.getInstance().getActivityAttendDao().showForStuYes(Sno);
+        List<ActivityAttend> activityAttends = DAOFactory.getInstance().getActivityAttendDao().showForStuYes(Sno);
         for (ActivityAttend activityAttend : activityAttends) {
             System.out.println("共 " + activityAttends.size() + " 条记录");
             System.out.print("学生学号：" + activityAttend.getSno() + "\t");
@@ -356,7 +356,7 @@ public class ActivityService {
 
     public static void activityAttendShowForStuNo(String Sno) {
         System.out.println("学生查看申请失败记录");
-        List<ActivityAttend> activityAttends = DaoFactory.getInstance().getActivityAttendDao().showForStuNo(Sno);
+        List<ActivityAttend> activityAttends = DAOFactory.getInstance().getActivityAttendDao().showForStuNo(Sno);
         System.out.println("共 " + activityAttends.size() + " 条记录");
         for (ActivityAttend activityAttend : activityAttends) {
             System.out.print("学生学号：" + activityAttend.getSno() + "\t");
@@ -373,7 +373,7 @@ public class ActivityService {
 
     public static void activityAttendShowForMenAudit(String Mno) {
         System.out.println("导师查看需要审批的记录");
-        List<ActivityAttend> activityAttends = DaoFactory.getInstance().getActivityAttendDao().showForMenAudit(Mno);
+        List<ActivityAttend> activityAttends = DAOFactory.getInstance().getActivityAttendDao().showForMenAudit(Mno);
         System.out.println("共 " + activityAttends.size() + " 条记录");
         for (ActivityAttend activityAttend : activityAttends) {
             System.out.print("学生学号：" + activityAttend.getSno() + "\t");
@@ -390,7 +390,7 @@ public class ActivityService {
 
     public static void activityAttendShowForMenYes(String Mno) {
         System.out.println("导师查看通过记录表");
-        List<ActivityAttend> activityAttends = DaoFactory.getInstance().getActivityAttendDao().showForMenYes(Mno);
+        List<ActivityAttend> activityAttends = DAOFactory.getInstance().getActivityAttendDao().showForMenYes(Mno);
         System.out.println("共 " + activityAttends.size() + " 条记录");
         for (ActivityAttend activityAttend : activityAttends) {
             System.out.print("学生学号：" + activityAttend.getSno() + "\t");
@@ -424,7 +424,7 @@ public class ActivityService {
         activityDetail.setActAdd(actAdd);
         activityDetail.setActDate(actDate);
 
-        boolean check = DaoFactory.getInstance().getActivityDetailDao().insert(activityDetail);
+        boolean check = DAOFactory.getInstance().getActivityDetailDao().insert(activityDetail);
         if (check) {
             System.out.println("增加成功");
         } else {
@@ -433,7 +433,7 @@ public class ActivityService {
     }
 
     public static void attendDetailShowForMen(String Mno) {
-        List<ActivityDetail> activityDetails = DaoFactory.getInstance().getActivityDetailDao().showForMen(Mno);
+        List<ActivityDetail> activityDetails = DAOFactory.getInstance().getActivityDetailDao().showForMen(Mno);
         System.out.println("共 " + activityDetails.size() + " 条记录");
         for (ActivityDetail activityDetail : activityDetails) {
             System.out.print("活动序号：" + activityDetail.getActNo() + "\t");
@@ -447,7 +447,7 @@ public class ActivityService {
     }
 
     public static void attendDetailShowForAdmin() {
-        List<ActivityDetail> activityDetails = DaoFactory.getInstance().getActivityDetailDao().showForAdmin();
+        List<ActivityDetail> activityDetails = DAOFactory.getInstance().getActivityDetailDao().showForAdmin();
         System.out.println("共 " + activityDetails.size() + " 条记录");
         for (ActivityDetail activityDetail : activityDetails) {
             System.out.print("活动序号：" + activityDetail.getActNo() + "\t");
@@ -481,7 +481,7 @@ public class ActivityService {
         activityTable.setMaudit("0");
         activityTable.setLaudit("0");
 
-        boolean check = DaoFactory.getInstance().getActivityTableDao().insert(activityTable);
+        boolean check = DAOFactory.getInstance().getActivityTableDao().insert(activityTable);
         if (check) {
             System.out.println("增加成功");
         } else {
@@ -491,7 +491,7 @@ public class ActivityService {
 
     public static void activityTableDelete(String Sno) {
         System.out.println("删除本人申请表");
-        boolean check = DaoFactory.getInstance().getActivityTableDao().delete(Sno);
+        boolean check = DAOFactory.getInstance().getActivityTableDao().delete(Sno);
         if (check) {
             System.out.println("删除成功");
         } else {
@@ -509,9 +509,9 @@ public class ActivityService {
         String res = sc.nextLine();
         boolean check;
         if (Objects.equals(res, "1")) {
-            check = DaoFactory.getInstance().getActivityTableDao().Maudit(Sno, 1);
+            check = DAOFactory.getInstance().getActivityTableDao().Maudit(Sno, 1);
         } else {
-            check = DaoFactory.getInstance().getActivityTableDao().Maudit(Sno, -1);
+            check = DAOFactory.getInstance().getActivityTableDao().Maudit(Sno, -1);
         }
         if (check) {
             System.out.println("审核成功");
@@ -530,9 +530,9 @@ public class ActivityService {
         String res = sc.nextLine();
         boolean check;
         if (Objects.equals(res, "1")) {
-            check = DaoFactory.getInstance().getActivityTableDao().Laudit(Sno, 1);
+            check = DAOFactory.getInstance().getActivityTableDao().Laudit(Sno, 1);
         } else {
-            check = DaoFactory.getInstance().getActivityTableDao().Laudit(Sno, -1);
+            check = DAOFactory.getInstance().getActivityTableDao().Laudit(Sno, -1);
         }
         if (check) {
             System.out.println("审核成功");
@@ -542,7 +542,7 @@ public class ActivityService {
     }
 
     public static void activityTableShowForM(String Mno) {
-        List<HashMap<String, Object>> activityTables = DaoFactory.getInstance().getActivityTableDao().showForM(Mno);
+        List<HashMap<String, Object>> activityTables = DAOFactory.getInstance().getActivityTableDao().showForM(Mno);
         for (HashMap<String, Object> activityTable : activityTables) {
             ActivityTable a = (ActivityTable) activityTable.get("a");
             String name = (String) activityTable.get("name");
@@ -580,7 +580,7 @@ public class ActivityService {
     }
 
     public static void activityTableShowForL(String Lno) {
-        List<HashMap<String, Object>> activityTables = DaoFactory.getInstance().getActivityTableDao().showForL(Lno);
+        List<HashMap<String, Object>> activityTables = DAOFactory.getInstance().getActivityTableDao().showForL(Lno);
         for (HashMap<String, Object> activityTable : activityTables) {
             ActivityTable a = (ActivityTable) activityTable.get("a");
             String name = (String) activityTable.get("name");
@@ -618,7 +618,7 @@ public class ActivityService {
     }
 
     public static void activityTableShowForAdmin() {
-        List<HashMap<String, Object>> activityTables = DaoFactory.getInstance().getActivityTableDao().showForAdmin();
+        List<HashMap<String, Object>> activityTables = DAOFactory.getInstance().getActivityTableDao().showForAdmin();
         for (HashMap<String, Object> activityTable : activityTables) {
             ActivityTable a = (ActivityTable) activityTable.get("a");
             String name = (String) activityTable.get("name");
@@ -655,28 +655,28 @@ public class ActivityService {
     }
 
     public static void activityAttendShowOne(String Sno, String actNo) {
-        ActivityAttend a = DaoFactory.getInstance().getActivityAttendDao().showOne(Sno, actNo);
+        ActivityAttend a = DAOFactory.getInstance().getActivityAttendDao().showOne(Sno, actNo);
         System.out.print("报告名称:" + a.getActReportName() + "\t");
         System.out.print("参会图片:" + a.getActPic() + "\t");
         System.out.print("学生备注:" + a.getSps() + "\t");
     }
 
     public static void activityDetailShowOne(String actNo) {
-        ActivityDetail a = DaoFactory.getInstance().getActivityDetailDao().showOne(actNo);
+        ActivityDetail a = DAOFactory.getInstance().getActivityDetailDao().showOne(actNo);
         System.out.print("名称:" + a.getActName() + "\t");
         System.out.print("名称:" + a.getActAdd() + "\t");
         System.out.print("名称:" + a.getActDate() + "\t");
     }
 
     public static boolean activityAttendCheck(String Sno, String a1, String a2) {
-        return DaoFactory.getInstance().getActivityAttendDao().exist(Sno, a1, a2);
+        return DAOFactory.getInstance().getActivityAttendDao().exist(Sno, a1, a2);
     }
 
     public static void out() {
         String path = "D:\\test.txt";
         try {
             BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path, false)));
-            List<HashMap<String, Object>> activityTables = DaoFactory.getInstance().getActivityTableDao().showForAdmin();
+            List<HashMap<String, Object>> activityTables = DAOFactory.getInstance().getActivityTableDao().showForAdmin();
             for (HashMap<String, Object> activityTable : activityTables) {
                 ActivityTable a = (ActivityTable) activityTable.get("a");
                 String name = (String) activityTable.get("name");
@@ -718,14 +718,14 @@ public class ActivityService {
     }
 
     public static void activityAttendShowOne(BufferedWriter out, String Sno, String actNo) throws IOException {
-        ActivityAttend a = DaoFactory.getInstance().getActivityAttendDao().showOne(Sno, actNo);
+        ActivityAttend a = DAOFactory.getInstance().getActivityAttendDao().showOne(Sno, actNo);
         out.write("报告名称:" + a.getActReportName() + "\t");
         out.write("参会图片:" + a.getActPic() + "\t");
         out.write("学生备注:" + a.getSps() + "\t");
     }
 
     public static void activityDetailShowOne(BufferedWriter out, String actNo) throws IOException {
-        ActivityDetail a = DaoFactory.getInstance().getActivityDetailDao().showOne(actNo);
+        ActivityDetail a = DAOFactory.getInstance().getActivityDetailDao().showOne(actNo);
         out.write("名称:" + a.getActName() + "\t");
         out.write("名称:" + a.getActAdd() + "\t");
         out.write("名称:" + a.getActDate() + "\t");
