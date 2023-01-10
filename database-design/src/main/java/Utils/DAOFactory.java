@@ -48,4 +48,30 @@ public class DAOFactory {                       //接口工厂
     public StudentDao getStudentDao() {
         return new StudentDaoImpl();
     }
+
+    public PatentDAO getPatentBase(){
+        return new PatentDAOBase();
+    }
+
+    public ProveDAO getProveBase(){
+        return new ProveDAOBase();
+    }
+
+    public ReportDAO getReportBase(){ return new ReportDAOBase(); }
+
+    public TextbookDAO getTextbookBase(){
+        return new TextbookDAOBase();
+    }
+
+    public ThesisDao getThesisDAO(){
+        return new ThesisDaoImpl();
+    }
+
+    public RewardDao getRewardDAO(){
+        return new RewardDaoImpl();
+    }
+
+    public StandardDao getStandardDAO(){
+        return new StandardDaoImpl();
+    }
 }
