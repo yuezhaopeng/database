@@ -1,7 +1,6 @@
 package Service;
 
 
-
 import Utils.DAOFactory;
 
 import java.util.Scanner;
@@ -38,7 +37,7 @@ public class Login {
                     break;
                 case 4:
                     //成果认定子系统入口，传参userid,roleNum
-                    //AchieveService.achieveMenu(loginDetailDAOImpl.getLoginDetailByUsername(username).getNo(),roleNum);
+                    AchieveService.achieveMenu(userid,roleNum);
                     break;
                 case 5:
                     //用户管理，传参userid,roleNum
