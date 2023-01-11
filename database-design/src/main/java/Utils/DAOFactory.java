@@ -83,4 +83,27 @@ public class DAOFactory {                       //接口工厂
         return new ProjectDistributeDAOImpl();
     }
 
+    public CourseDao getCourseDAO() {
+        return new CourseDaoImpl();
+    }
+
+    public AvailableAssistantDao getAvailableAssistantDAO() {
+        return new AvailableAssistantDaoImpl();
+    }
+
+    public StudentDao getStudentDAO() {
+        return new StudentDaoImpl();
+    }
+
+    public TeacherCourseDao getTeacherCourseDAO() {
+        return new TeacherCourseDaoImpl();
+    }
+
+    public TeacherDao getTeacherDAO() {
+        return new TeacherDaoImpl();
+    }
+
+    public ManagerDao getManagerDAO() {
+        return new ManagerDaoImpl();
+    }
 }

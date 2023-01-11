@@ -2,6 +2,7 @@ package Dao;
 
 import Entity.Student;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface StudentDao {
@@ -14,4 +15,8 @@ public interface StudentDao {
     boolean addStudent(String Sno, String Sname, String Smajor, String Mno,String Stype);
 
     List<Student> listStudent();
+
+    Student getBySno(String sno);
+
+    ArrayList<Student> getAll();
 }

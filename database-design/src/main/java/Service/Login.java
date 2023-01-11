@@ -30,6 +30,7 @@ public class Login {
             switch(c) {
                 case 1:
                     //助教工作子系统入口，传参userid,roleNum
+                    AssistantService.service(userid,roleNum);
                     break;
                 case 2:
                     //学术交流子系统入口，传参userid,roleNum

@@ -4,7 +4,7 @@ import Entity.Mentor;
 
 import java.util.List;
 
-public interface MentorDao {
+public interface MentorDAO {
 
     boolean addMentor(String Mno, String Mname,String Lno);
 
