@@ -1,6 +1,5 @@
 package Dao.Impl;
 
-
 import Dao.ProjectDistributeDAO;
 import Entity.ProjectDistribute;
 
@@ -34,7 +33,7 @@ public class ProjectDistributeDAOImpl extends DaoBase implements ProjectDistribu
             while (rs.next()){
                 ProjectDistribute projectDistribute = new ProjectDistribute();
                 projectDistribute.setSno(rs.getString("Sno"));
-                projectDistribute.setPno(rs.getString("Pno"));
+                projectDistribute.setPno(rs.getString("Pno").trim());
                 projectDistribute.setStartTime(rs.getDate("start_time"));
                 projectDistribute.setEndTime(rs.getDate("end_time"));
                 projectDistribute.setResponsibility(rs.getString("responsibility"));
@@ -46,6 +45,76 @@ public class ProjectDistributeDAOImpl extends DaoBase implements ProjectDistribu
             }
 //            psmt.close();
             statement.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally {
+            try{
+                con.close();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return list;
+    }
+
+    private static final String SQL_SELECT_PROJECT_DISTRIBUTE_BY_SNO = "SELECT Sno, Pno, convert(varchar(20), start_time, 23) start_time, convert(varchar(20), end_time, 23) end_time, responsibility, personal_money, mentor_agree, chief_agree FROM project_distribute where Sno=?;";
+    @Override
+    public List<ProjectDistribute> getProjectDistributeBySno(String Sno) {
+        Connection con = null;
+        List<ProjectDistribute> list = new ArrayList<>();
+        try{
+            con = getConnection();
+            PreparedStatement psmt = con.prepareStatement(SQL_SELECT_PROJECT_DISTRIBUTE_BY_SNO);
+            psmt.setString(1, Sno);
+            ResultSet rs = psmt.executeQuery();
+            while (rs.next()){
+                ProjectDistribute projectDistribute = new ProjectDistribute();
+                projectDistribute.setSno(rs.getString("Sno"));
+                projectDistribute.setPno(rs.getString("Pno").trim());
+                projectDistribute.setStartTime(rs.getDate("start_time"));
+                projectDistribute.setEndTime(rs.getDate("end_time"));
+                projectDistribute.setResponsibility(rs.getString("responsibility"));
+                projectDistribute.setPersonalMoney(rs.getBigDecimal("personal_money"));
+                projectDistribute.setMentorAgree(rs.getString("mentor_agree"));
+                projectDistribute.setChiefAgree(rs.getString("chief_agree"));
+                list.add(projectDistribute);
+            }
+            psmt.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally {
+            try{
+                con.close();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return list;
+    }
+
+    private static final String SQL_SELECT_PROJECT_DISTRIBUTE_BY_PNO = "SELECT Sno, Pno, convert(varchar(20), start_time, 23) start_time, convert(varchar(20), end_time, 23) end_time, responsibility, personal_money, mentor_agree, chief_agree FROM project_distribute where Pno=?;";
+    @Override
+    public List<ProjectDistribute> getProjectDistributeByPno(String Pno) {
+        Connection con = null;
+        List<ProjectDistribute> list = new ArrayList<>();
+        try{
+            con = getConnection();
+            PreparedStatement psmt = con.prepareStatement(SQL_SELECT_PROJECT_DISTRIBUTE_BY_PNO);
+            psmt.setString(1, Pno);
+            ResultSet rs = psmt.executeQuery();
+            while (rs.next()){
+                ProjectDistribute projectDistribute = new ProjectDistribute();
+                projectDistribute.setSno(rs.getString("Sno"));
+                projectDistribute.setPno(rs.getString("Pno").trim());
+                projectDistribute.setStartTime(rs.getDate("start_time"));
+                projectDistribute.setEndTime(rs.getDate("end_time"));
+                projectDistribute.setResponsibility(rs.getString("responsibility"));
+                projectDistribute.setPersonalMoney(rs.getBigDecimal("personal_money"));
+                projectDistribute.setMentorAgree(rs.getString("mentor_agree"));
+                projectDistribute.setChiefAgree(rs.getString("chief_agree"));
+                list.add(projectDistribute);
+            }
+            psmt.close();
         }catch(Exception e){
             e.printStackTrace();
         }finally {

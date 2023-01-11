@@ -2,7 +2,6 @@ package Dao;
 
 
 
-
 import Entity.ProjectDistribute;
 
 import java.math.BigDecimal;
@@ -10,6 +9,8 @@ import java.util.List;
 
 public interface ProjectDistributeDAO {
     List<ProjectDistribute> getAllProjectDistribute();
+    List<ProjectDistribute> getProjectDistributeBySno(String Sno);
+    List<ProjectDistribute> getProjectDistributeByPno(String Pno);
     void addProjectDistribute(ProjectDistribute projectDistribute);
     void mentorDistribute(ProjectDistribute projectDistribute); // 环节一、导师指定科研项目
     void studentComplete(String Sno, String Pno, String startTime, String endTime, String responsibility); // 环节二、学生完善认定表

@@ -1,6 +1,7 @@
 package Entity;
 
 import java.math.BigDecimal;
+import java.sql.Date;
 
 public class ProjectMentor {
     // project_mentor（Pno, Pname, Ptype, total_money, Mno） Mno是外键
@@ -9,6 +10,9 @@ public class ProjectMentor {
     private String Ptype;
     private BigDecimal totalMoney;
     private String Mno;
+    private Date startTime;
+    private Date endTime;
+    private String Lno;
 
     public String getPno() {
         return Pno;
@@ -50,6 +54,30 @@ public class ProjectMentor {
         Mno = mno;
     }
 
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public String getLno() {
+        return Lno;
+    }
+
+    public void setLno(String lno) {
+        Lno = lno;
+    }
+
     @Override
     public String toString() {
         return "ProjectMentor{" +
@@ -58,6 +86,10 @@ public class ProjectMentor {
                 ", Ptype='" + Ptype + '\'' +
                 ", totalMoney=" + totalMoney +
                 ", Mno='" + Mno + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", Lno='" + Lno + '\'' +
                 '}';
     }
+
 }
