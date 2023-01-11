@@ -3,12 +3,14 @@ package Service;
 
 import Utils.DAOFactory;
 
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class Login {
 
     //主菜单
-    public static void mainMenu(String userid, int roleNum) {
+    public static void mainMenu(String userid, int roleNum) throws ParseException, IOException {
         Scanner sc = new Scanner(System.in);
         boolean flag = true;
         while (flag){
@@ -35,7 +37,7 @@ public class Login {
                     break;
                 case 3:
                     //参与项目子系统入口，传参userid,roleNum
-                    ProjectService.showMenu();
+                    ProjectService.showMenu(userid, roleNum);
                     break;
                 case 4:
                     //成果认定子系统入口，传参userid,roleNum
@@ -57,7 +59,7 @@ public class Login {
      * @return 登陆成功返回true，失败返回false
      *
      */
-    public static void login() {
+    public static void login() throws ParseException, IOException {
         Scanner sc = new Scanner(System.in);
         System.out.println("*******研究生毕业管理系统*******");
         System.out.println("请输入您的用户名：");

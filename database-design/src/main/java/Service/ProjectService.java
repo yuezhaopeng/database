@@ -508,7 +508,7 @@ public class ProjectService {
     }
 
 
-//    public static void main(String[] args) throws ParseException, IOException {
-//        leaderMenu("0000");
-//    }
+    public static void main(String[] args) throws ParseException, IOException {
+        showMenu("0000",1);
+    }
 }
