@@ -1,13 +1,13 @@
 package Dao.Impl;
 
-import Dao.MentorDao;
+import Dao.MentorDAO;
 import Entity.Mentor;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MentorDaoImpl extends DaoBase implements MentorDao {
+public class MentorDAOImpl extends DaoBase implements MentorDAO {
     private static final String SQL_INSERT_MENTOR = "INSERT INTO mentor (Mno,Mname,Lno) values(?,?,?)";
     private static final String SQL_SELECT_MENTOR = "SELECT * FROM mentor";
     @Override
@@ -67,4 +67,43 @@ public class MentorDaoImpl extends DaoBase implements MentorDao {
         }
         return list;
     }
+
+
+    // 以下是第3个子系统用到的方法
+    private static final String SQL_SELECT_MENTOR_ALL = "SELECT * FROM mentor;";
+    @Override
+    public List<Mentor> getAllMentors() {
+        Connection con = null;
+        List<Mentor> list = new ArrayList<>();
+        try{
+            // 法一、使用prepareStatement
+//            con = getConnection();
+//            PreparedStatement psmt = con.prepareStatement(SQL_SELECT_STUDENT_ALL);
+//            ResultSet rs = psmt.executeQuery();
+            // 法二、使用Statement
+            con = getConnection();
+            Statement statement = con.createStatement();
+            ResultSet rs = statement.executeQuery(SQL_SELECT_MENTOR_ALL);
+            while (rs.next()){
+                Mentor mentor = new Mentor();
+                mentor.setMno(rs.getString("Mno"));
+                mentor.setMname(rs.getString("Mname"));
+                mentor.setLno(rs.getString("Lno"));
+                list.add(mentor);
+            }
+//            psmt.close();
+            statement.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally {
+            try{
+                con.close();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return list;
+    }
+
+
 }

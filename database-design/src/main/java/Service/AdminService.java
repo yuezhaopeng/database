@@ -131,7 +131,7 @@ public class AdminService {
     /**
      * 自动生成学生账号,可以直接把参数Mno放入函数参数，不用输入
      */
-    public static void aotuGenerateStudentLoginAccountByMno() {
+    public static void autoGenerateStudentLoginAccountByMno() {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入要为某导师所有学生生成登陆账号的导师号");
         String Mno = sc.nextLine();

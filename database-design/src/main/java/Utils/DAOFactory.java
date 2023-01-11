@@ -41,8 +41,8 @@ public class DAOFactory {                       //接口工厂
         return new TeacherDaoImpl();
     }
 
-    public MentorDao getMentorDao() {
-        return new MentorDaoImpl();
+    public MentorDAO getMentorDao() {
+        return new MentorDAOImpl();
     }
 
     public StudentDao getStudentDao() {
@@ -74,4 +74,13 @@ public class DAOFactory {                       //接口工厂
     public StandardDao getStandardDAO(){
         return new StandardDaoImpl();
     }
+
+    public ProjectMentorDAO getProjectMentorDAO() {
+        return new ProjectMentorDAOImpl();
+    }
+
+    public ProjectDistributeDAO getProjectDistributeDAO() {
+        return new ProjectDistributeDAOImpl();
+    }
+
 }

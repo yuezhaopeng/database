@@ -35,6 +35,7 @@ public class Login {
                     break;
                 case 3:
                     //参与项目子系统入口，传参userid,roleNum
+                    ProjectService.showMenu();
                     break;
                 case 4:
                     //成果认定子系统入口，传参userid,roleNum
