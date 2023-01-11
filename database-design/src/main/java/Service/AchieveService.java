@@ -630,7 +630,7 @@ public class AchieveService {
 						List<Patent> lt=DAOFactory .getInstance().getPatentBase().findPatent(userid, 3);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("未审核")) {
+							if(lt.get(k).getTstatus().contentEquals("未审核")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
 								System.out.println("请输入：同意-1，拒绝-0");
@@ -1143,48 +1143,40 @@ public class AchieveService {
 					}
 					if(choice.contentEquals("5")) {
 						System.out.printf("请输入您想申请的专利认证个数：");
-						while (!scanner.hasNextInt()){
+						while (!scanner.hasNextInt()){			//输入鲁棒性
 							System.out.println("请输入整数！");
 						}
 						int count=scanner.nextInt();
 						int j=0;
 						for(j=0;j<count;j++) {
 							Patent t=new Patent();
-							System.out.printf("专利名称：");
+							System.out.printf("专利名称：");			//输入专利名称
 							t.setName(scanner.nextLine());
-							System.out.printf("专利号：");
+							System.out.printf("专利号：");			//输入专利号
 							t.setId(scanner.nextLine());
-							System.out.printf("专利发布时间：yyyy-MM-dd");
+							System.out.printf("专利发布时间：yyyy-MM-dd");		//输入专利发布时间
 							String tmp=scanner.nextLine();
 							while(!isValidDate(tmp)) {
 								System.out.println("请以yyyy-MM-dd格式输入时间！");
 								tmp=scanner.nextLine();
 							}
 							t.setTime(tmp);
-							System.out.printf("专利类型(发明专利/实用新型专利)：");
+							System.out.printf("专利类型(发明专利/实用新型专利)：");		//限制专利类型
 							tmp=scanner.nextLine();
 							while(!tmp.contentEquals("发明专利")&&!tmp.contentEquals("实用新型专利")) {
 								System.out.println("请输入 发明专利/实用新型专利");
 								tmp=scanner.nextLine();
 							}
 							t.setType(tmp);
-							System.out.printf("贡献度排名（整数）：");
+							System.out.printf("贡献度排名（整数）：");		//输入贡献度排名
 							t.setContribution(Integer.parseInt(scanner.nextLine()));
-							System.out.printf("专利状态：");
+							System.out.printf("专利状态：");		//输入专利状态
 							t.setStatus(scanner.nextLine());
-							System.out.printf("佐证材料：");
+							System.out.printf("佐证材料：");		//输入佐证材料
 							t.setMaterial(scanner.nextLine());
 							t.setSid(userid);
-							t.setTstatus("未审核");
-							List<Patent> ltl=DAOFactory.getInstance().getPatentBase().findPatent(userid, 4);
-							String id="";
-							if(ltl==null||ltl.size()==0) {
-								id="1";
-							}else {
-								id=String.valueOf(Integer.valueOf(ltl.get(ltl.size()-1).getId())+1);
-							}
-							t.setId(id);
-							DAOFactory.getInstance().getPatentBase().addPatent(t);
+							t.setTstatus("未审核");				//设置审核状态为未提交
+							DAOFactory.getInstance().getPatentBase().addPatent(t);		//将其添加到表中
 							System.out.println("已提交申请！");
 						}
 					}
@@ -1642,26 +1634,26 @@ public class AchieveService {
 						}
 					}
 					if(choice.contentEquals("5")) {
-						List<Patent> lt=DAOFactory.getInstance().getPatentBase().findPatent(userid, 1);
+						List<Patent> lt=DAOFactory.getInstance().getPatentBase().findPatent(userid, 1);	//获取到学生名下的所有专利
 						int k=0;
-						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("初审结果：拒绝")||lt.get(k).getStatus().contentEquals("终审结果：拒绝")) {
+						while(k<lt.size()) {			//遍历列表，
+							if(lt.get(k).getTstatus().contentEquals("初审结果：拒绝")||lt.get(k).getTstatus().contentEquals("终审结果：拒绝")) {			//状态位为被打回
 								Patent t=lt.get(k);
 								System.out.println(lt.get(k));
 								String inchoice="";
 								System.out.println("请输入：修改-1，跳过-0");
 								inchoice = scanner.next();
-								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
+								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){		//输入鲁棒性
 									System.out.println("您的输入错误，请输入1或0：");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
 									int count=0;
-									System.out.println("请输入修改项序号（1-专利名称 2-专利类型 3-专利发布时间 4-专利状态 5-贡献度排名 6-佐证材料 0-退出对当前项的修改）");
+									System.out.println("请输入修改项序号（1-专利名称 2-专利类型 3-专利发布时间 4-专利状态 5-贡献度排名 6-佐证材料 0-退出对当前项的修改）");  //选择修改的字段
 									while(true) {
 										String inc="";
 										if(scanner.hasNext()){
-											inc = scanner.next();//程序会等待用户输入完毕
+											inc = scanner.next();				//程序会等待用户输入完毕
 										}
 										while(!inc.contentEquals("1")&&!inc.contentEquals("2")&&!inc.contentEquals("3")&&!inc.contentEquals("4")&&!inc.contentEquals("5")&&!inc.contentEquals("6")&&!inc.contentEquals("0")) {
 											System.out.println("您的输入不正确，请重新输入：");
@@ -1670,43 +1662,43 @@ public class AchieveService {
 										if(choice.contentEquals("0")) {
 											break;
 										}
-										if(choice.contentEquals("1")) {
+										if(choice.contentEquals("1")) {				//对专利名称进行修改
 											System.out.printf("专利名称：");
 											t.setName(scanner.nextLine());
 										}
 										if(choice.contentEquals("2")) {
-											System.out.printf("专利类型：(发明专利/实用新型专利)");
+											System.out.printf("专利类型：(发明专利/实用新型专利)");		//对专利类型进行修改
 											String tmp=scanner.nextLine();
-											while(!tmp.contentEquals("发明专利")&&!tmp.contentEquals("实用新型专利")) {
+											while(!tmp.contentEquals("发明专利")&&!tmp.contentEquals("实用新型专利")) {	//对专利类型进行控制
 												System.out.println("请输入 发明专利/实用新型专利");
 												tmp=scanner.nextLine();
 											}
 											t.setType(tmp);
 										}
-										if(choice.contentEquals("3")) {
+										if(choice.contentEquals("3")) {				//对专利时间进行修改
 											System.out.printf("专利发布时间：yyyy-MM-dd");
 											String tmp=scanner.nextLine();
-											while(!isValidDate(tmp)) {
+											while(!isValidDate(tmp)) {				//对输入格式进行判断
 												System.out.println("请以yyyy-MM-dd格式输入时间！");
 												tmp=scanner.nextLine();
 											}
 											t.setTime(tmp);
 										}
-										if(choice.contentEquals("4")) {
+										if(choice.contentEquals("4")) {				//对专利状态进行修改
 											System.out.printf("专利状态：");
 											t.setStatus(scanner.nextLine());
 										}
-										if(choice.contentEquals("5")) {
+										if(choice.contentEquals("5")) {				//对贡献度排名进行修改
 											System.out.printf("贡献度排名（整数）：");
 											t.setContribution(Integer.parseInt(scanner.nextLine()));
 										}
-										if(choice.contentEquals("6")) {
+										if(choice.contentEquals("6")) {				//对佐证材料进行修改
 											System.out.printf("佐证材料：");
 											t.setMaterial(scanner.nextLine());
 										}
 									}
-									t.setStatus("未审核");
-									DAOFactory.getInstance().getPatentBase().updatePatent(t);
+									t.setStatus("未审核");									//将审核状态改为未审核，从初审开始
+									DAOFactory.getInstance().getPatentBase().updatePatent(t);	//调用DAO层更新状态
 									System.out.println("修改成功！");
 								}
 								k++;
@@ -1977,7 +1969,7 @@ public class AchieveService {
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("请输入您想撤回的标准序号：");
+					System.out.printf("请输入您想撤回的报告序号：");
 					while (!scanner.hasNextInt()){
 						System.out.println("请输入整数！");
 					}
@@ -1993,19 +1985,19 @@ public class AchieveService {
 					System.out.println("撤回成功！");
 				}
 				System.out.println("已提交申请的专利认证列表");
-				List<Patent> lt5=DAOFactory.getInstance().getPatentBase().findPatent(userid, 1);
+				List<Patent> lt5=DAOFactory.getInstance().getPatentBase().findPatent(userid, 1);	//获取该研究生名下的专利列表
 				int k5=0;
 				while(k5<lt5.size()) {
-					System.out.println(k5+1+"\t"+lt5.get(k5));
+					System.out.println(k5+1+"\t"+lt5.get(k5));		//输出专利列表
 					k5++;
 				}
-				System.out.printf("请输入您想撤回的报告认证个数：");
-				while (!scanner.hasNextInt()){
+				System.out.printf("请输入您想撤回的专利认证个数：");
+				while (!scanner.hasNextInt()){					//对输入进行控制
 					System.out.println("请输入整数！");
 				}
 				count=scanner.nextInt();
 				while(count>lt5.size()||count<0) {
-					System.out.printf("请输入0-"+lt5.size()+"的数字！");
+					System.out.printf("请输入0-"+lt5.size()+"的数字！");	 //对输入进行控制
 					while (!scanner.hasNextInt()){
 						System.out.println("请输入整数！");
 					}
@@ -2013,19 +2005,19 @@ public class AchieveService {
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("请输入您想撤回的标准序号：");
+					System.out.printf("请输入您想撤回的专利序号：");			//对输入进行控制
 					while (!scanner.hasNextInt()){
 						System.out.println("请输入整数！");
 					}
 					int index=scanner.nextInt();
 					while(index>lt5.size()||index<1) {
-						System.out.printf("请输入1-"+lt5.size()+"的数字！");
+						System.out.printf("请输入1-"+lt5.size()+"的数字！");	//对输入进行控制
 						while (!scanner.hasNextInt()){
 							System.out.println("请输入整数！");
 						}
 						index=scanner.nextInt();
 					}
-					DAOFactory.getInstance().getPatentBase().deletePatent(lt5.get(index-1));
+					DAOFactory.getInstance().getPatentBase().deletePatent(lt5.get(index-1));	//调用DAO层撤回申请
 					System.out.println("撤回成功！");
 				}
 
@@ -2036,7 +2028,7 @@ public class AchieveService {
 					System.out.println(k6+1+"\t"+lt6.get(k6));
 					k6++;
 				}
-				System.out.printf("请输入您想撤回的报告认证个数：");
+				System.out.printf("请输入您想撤回的软硬件平台认证个数：");
 				while (!scanner.hasNextInt()){
 					System.out.println("请输入整数！");
 				}
@@ -2050,7 +2042,7 @@ public class AchieveService {
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("请输入您想撤回的标准序号：");
+					System.out.printf("请输入您想撤回的软硬件平台认证序号：");
 					while (!scanner.hasNextInt()){
 						System.out.println("请输入整数！");
 					}
@@ -2074,7 +2066,7 @@ public class AchieveService {
 					System.out.println(k7+1+"\t"+lt7.get(k7));
 					k7++;
 				}
-				System.out.printf("请输入您想撤回的报告认证个数：");
+				System.out.printf("请输入您想撤回的教材认证个数：");
 				while (!scanner.hasNextInt()){
 					System.out.println("请输入整数！");
 				}
@@ -2088,7 +2080,7 @@ public class AchieveService {
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("请输入您想撤回的标准序号：");
+					System.out.printf("请输入您想撤回的教材序号：");
 					while (!scanner.hasNextInt()){
 						System.out.println("请输入整数！");
 					}
