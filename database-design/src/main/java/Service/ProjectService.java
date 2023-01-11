@@ -143,7 +143,7 @@ public class ProjectService {
             System.out.println("这里是负责人对项目的管理模块");
             System.out.println("1. 查看我负责的所有项目");
             System.out.println("2. 查看我负责项目的分配指派情况");
-            System.out.println("3. 填报学生参与我的项目折合经费并且签字");
+            System.out.println("3. 审核学生参与我的项目折合经费并且签字");
             System.out.println("0. 退出");
             System.out.println("请输入要进行操作的序号：");
             int option = sc.nextInt();
@@ -332,7 +332,7 @@ public class ProjectService {
 
         // 然后根据Pno再进行查询分配指派情况
         for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i).getPno());
+            System.out.println("您负责了项目 " + list.get(i).getPno());
             List<ProjectDistribute> list2 = projectDistributeDAOImpl.getProjectDistributeByPno(list.get(i).getPno().trim());
             for (int j = 0; j < list2.size(); j++) {
                 System.out.println(list2.get(j).toString());
@@ -477,7 +477,7 @@ public class ProjectService {
             dos1.write(projectMentorList.get(i).toString());
             dos1.write("\n");
         }
-        System.out.println("导出成功，在当前目录下的txt文件");
+        System.out.println("导出成功，在当前目录下的txt文件，即"+f.getAbsolutePath());
         dos1.close();
     }
 
@@ -509,6 +509,9 @@ public class ProjectService {
 
 
     public static void main(String[] args) throws ParseException, IOException {
-        showMenu("0000",1);
+//        showMenu("0000",1);
+        showMenu("0000",2);
+//        showMenu("2001",4);
+//        showMenu("testt",5);
     }
 }

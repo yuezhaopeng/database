@@ -143,7 +143,7 @@ public class ProjectMentorDAOImpl extends DaoBase implements ProjectMentorDAO {
             psmt.setDate(6, projectMentor.getStartTime());
             psmt.setDate(7, projectMentor.getEndTime());
 
-            psmt.setString(7, projectMentor.getLno());
+            psmt.setString(8, projectMentor.getLno());
 
             int result = psmt.executeUpdate();
             if (result > 0) {
