@@ -2,13 +2,13 @@ package Entity;
 
 public class Textbook {
     public String id;
-    public String name;
-    public String press;
-    public String time;
-    public String material;
-    public int contribution;
-    public String status;
-    public String sid;
+    public String name;     //教材名称
+    public String press;    //教材出版社
+    public String time;     //教材出版时间
+    public String material; //佐证材料
+    public int contribution;    //贡献度
+    public String status;       //审核状态
+    public String sid;      //学号
 
     public String getId() {
         return id;

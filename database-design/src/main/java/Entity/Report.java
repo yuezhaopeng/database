@@ -2,14 +2,14 @@ package Entity;
 
 public class Report {
     public String id;
-    public String name;
-    public String type;
-    public String time;
-    public String address;
-    public String material;
-    public int contribution;
-    public String status;
-    public String sid;
+    public String name;     //报告名称
+    public String type;     //报告类型
+    public String time;     //报告时间
+    public String address;      //报告服务单位
+    public String material;     //佐证材料
+    public int contribution;    //贡献度排名
+    public String status;       //审核状态
+    public String sid;          //学号
 
     public String getId() {
         return id;

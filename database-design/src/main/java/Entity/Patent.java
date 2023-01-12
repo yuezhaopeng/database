@@ -1,15 +1,15 @@
 package Entity;
 
 public class Patent {
-    public String id;
-    public String name;
-    public String type;
-    public String time;
-    public String status;
-    public String material;
-    public int contribution;
-    public String tstatus;
-    public String sid;
+    public String id;   //专利号
+    public String name; //专利名称
+    public String type; //专利类型
+    public String time; //专利发布时间
+    public String status;   //专利状态
+    public String material; //佐证材料
+    public int contribution;    //贡献度排名
+    public String tstatus;  //审核状态
+    public String sid;      //学号
 
     public String getId() {
         return id;

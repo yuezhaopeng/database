@@ -2,13 +2,13 @@ package Entity;
 
 public class Prove {
     public String id;
-    public String name;
-    public String time;
-    public String material;
-    public int contribution;
-    public String status;
-    public String sid;
-    public String address;
+    public String name;     //名称
+    public String time;     //平台上线时间
+    public String material; //佐证材料
+    public int contribution;    //贡献度
+    public String status;       //审核状态
+    public String sid;          //学号
+    public String address;      //平台服务单位
 
     public String getId() {
         return id;
