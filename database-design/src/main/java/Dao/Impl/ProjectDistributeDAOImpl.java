@@ -292,4 +292,27 @@ public class ProjectDistributeDAOImpl extends DaoBase implements ProjectDistribu
     }
 
 
+    private static final String SQL_DELETE_PROJECT_DISTRIBUTE = "DELETE from project_distribute where Pno=? and Sno=?";
+    @Override
+    public void deleteProjectDistributeByPnoAndSno(String Pno, String Sno) {
+        Connection con = null;
+        con = getConnection();
+        PreparedStatement psmt;
+        try {
+            psmt = con.prepareStatement(SQL_DELETE_PROJECT_DISTRIBUTE);
+            psmt.setString(1, Pno);
+            psmt.setString(2, Sno);
+            psmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try{
+                con.close();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+
 }

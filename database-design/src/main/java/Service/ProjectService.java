@@ -91,6 +91,7 @@ public class ProjectService {
             System.out.println("2. 查看所有项目分配指派情况");
             System.out.println("3. 将我的项目指派分配给学生");
             System.out.println("4. 填报学生参与我的项目折合经费并且签字");
+            System.out.println("5. 删除项目分配指派关系");
             System.out.println("0. 退出");
             System.out.println("请输入要进行操作的序号：");
             int option = sc.nextInt();
@@ -104,6 +105,8 @@ public class ProjectService {
                 mentorDistribute(userId);
             } else if (option == 4) {
                 mentorGiveMoneyAndSign(userId);
+            } else if (option == 5) {
+                deleteProjectDistributeByPnoAndSno(userId);
             }
         }
     }
@@ -225,6 +228,8 @@ public class ProjectService {
     }
 
 
+
+
     /**
      * 学生填写认定表
      * 填写start_time, end_time, responsibility这几个字段
@@ -304,6 +309,37 @@ public class ProjectService {
         projectDistributeDAOImpl.mentorGiveMoneyAndSign(Sno, Pno, personalMoney);
         System.out.println("操作成功");
 //        sc.close();
+    }
+
+    /**
+     * 根据Pno和Sno删除项目分配情况记录
+     * 但是要先判断这个项目是否是这个导师的项目
+     * @param Mno
+     */
+    public static void deleteProjectDistributeByPnoAndSno(String Mno) {
+        Scanner sc = new Scanner(System.in);
+        ProjectMentorDAOImpl projectMentorDAOImpl = (ProjectMentorDAOImpl) DAOFactory.getInstance().getProjectMentorDAO();
+        ProjectDistributeDAOImpl projectDistributeDAOImpl = (ProjectDistributeDAOImpl) DAOFactory.getInstance().getProjectDistributeDAO();
+        List<ProjectMentor> list = projectMentorDAOImpl.getProjectMentorsByMno(Mno);
+
+        System.out.println("请输入要删除分配情况的项目编号Pno：");
+        String Pno = sc.nextLine();
+        System.out.println("请输入要删除分配情况的学生编号Sno：");
+        String Sno = sc.nextLine();
+        // 判断这是否是我的项目
+        boolean flag = false;
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i).getPno().trim().equals(Pno.trim())) {
+                flag = true;
+                break;
+            }
+        }
+        if (flag == false) {
+            System.out.println("这不是您的项目，请确定后重新操作");
+            return;
+        }
+        projectDistributeDAOImpl.deleteProjectDistributeByPnoAndSno(Pno.trim(), Sno.trim());
+        System.out.println("删除成功");
     }
 
 

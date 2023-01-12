@@ -5,40 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c9f1936-df80-4c99-b2a5-0f19ef9b198d" name="变更" comment="变更">
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/AvailableAssistantDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/CourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/AvailableAssistantDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/CourseDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/ManagerDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/MentorDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/TeacherCourseDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/ManagerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/MentorDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/TeacherCourseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Entity/AvailableAssistant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Entity/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Entity/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Entity/vo/AssistantRemark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Entity/vo/TeacherCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Service/AssistantService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Service/AssistantServiceHelp/ManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Service/AssistantServiceHelp/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database-design/src/main/java/Service/AssistantServiceHelp/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/database.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/database.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/StudentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/TeacherDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/TeacherDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/src/main/java/Dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/src/main/java/Dao/TeacherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/TeacherDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/src/main/java/Service/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/src/main/java/Service/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/src/main/java/Utils/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/src/main/java/Utils/DAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/target/classes/Dao/Impl/StudentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/target/classes/Dao/Impl/StudentDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/target/classes/Dao/Impl/TeacherDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/target/classes/Dao/Impl/TeacherDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/target/classes/Dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/target/classes/Dao/StudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/target/classes/Dao/TeacherDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/target/classes/Dao/TeacherDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/target/classes/Service/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/target/classes/Service/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database-design/target/classes/Utils/DAOFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/target/classes/Utils/DAOFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/ProjectDistributeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/Impl/ProjectDistributeDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database-design/src/main/java/Dao/ProjectDistributeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/src/main/java/Dao/ProjectDistributeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database-design/src/main/java/Service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/database-design/src/main/java/Service/ProjectService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +68,7 @@
       <recent name="Service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="应用程序.main">
     <configuration name="ManagerService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Service.AssistantServiceHelp.ManagerService" />
       <module name="database-design" />
@@ -145,14 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.main" />
-        <item itemvalue="Application.ManagerService" />
-        <item itemvalue="Application.StudentService" />
-        <item itemvalue="Application.TeacherService" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -168,6 +130,7 @@
       <workItem from="1673413257068" duration="5631000" />
       <workItem from="1673434497659" duration="3516000" />
       <workItem from="1673444748501" duration="3206000" />
+      <workItem from="1673550835383" duration="714000" />
     </task>
     <servers />
   </component>
