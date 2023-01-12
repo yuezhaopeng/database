@@ -1,13 +1,13 @@
 package Dao.Impl;
 
-import Dao.MentorDAO;
+import Dao.MentorDao;
 import Entity.Mentor;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MentorDAOImpl extends DaoBase implements MentorDAO {
+public class MentorDaoImpl extends DaoBase implements MentorDao {
     private static final String SQL_INSERT_MENTOR = "INSERT INTO mentor (Mno,Mname,Lno) values(?,?,?)";
     private static final String SQL_SELECT_MENTOR = "SELECT * FROM mentor";
     @Override
