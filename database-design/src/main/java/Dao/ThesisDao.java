@@ -5,8 +5,8 @@ import Entity.Thesis;
 import java.util.List;
 
 public interface ThesisDao {
-	void addThesis(Thesis thesis);//Ìí¼ÓÂÛÎÄ
-    void updateThesis(Thesis thesis);//¸üĞÂÂÛÎÄĞÅÏ¢
-    void deleteThesis(Thesis thesis);//É¾³ıÂÛÎÄĞÅÏ¢
-    List<Thesis> findThesis(String userid,int i);//°´Ñ§Éú²éÕÒÂÛÎÄ,1ÊÇÑ§Éú£¬2ÊÇÑ§¿Æ¸ºÔğÈË²é±¾Ñ§¿ÆÏÂµÄ£¬3ÊÇµ¼Ê¦²éÑĞ¾¿Éú
+	void addThesis(Thesis thesis);//æ·»åŠ è®ºæ–‡
+    void updateThesis(Thesis thesis);//æ›´æ–°è®ºæ–‡ä¿¡æ¯
+    void deleteThesis(Thesis thesis);//åˆ é™¤è®ºæ–‡ä¿¡æ¯
+    List<Thesis> findThesis(String userid,int i);//æŒ‰å­¦ç”ŸæŸ¥æ‰¾è®ºæ–‡,1æ˜¯å­¦ç”Ÿï¼Œ2æ˜¯å­¦ç§‘è´Ÿè´£äººæŸ¥æœ¬å­¦ç§‘ä¸‹çš„ï¼Œ3æ˜¯å¯¼å¸ˆæŸ¥ç ”ç©¶ç”Ÿ
 }

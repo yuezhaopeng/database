@@ -82,15 +82,15 @@ public class Reward {
 	public String toString() {
 		String status="";
 		if(state.contentEquals("0")) {
-			status="Î´ÉóºË";
+			status="æœªå®¡æ ¸";
 		}else if(state.contentEquals("1")) {
-			status="³õÉó½á¹û£ºÍ¬Òâ";
+			status="åˆå®¡ç»“æœï¼šåŒæ„";
 		}else if(state.contentEquals("2")) {
-			status="ÖÕÉó½á¹û£ºÍ¬Òâ";
+			status="ç»ˆå®¡ç»“æœï¼šåŒæ„";
 		}else if(state.contentEquals("3")) {
-			status="³õÉó½á¹û£º¾Ü¾ø";
+			status="åˆå®¡ç»“æœï¼šæ‹’ç»";
 		}else if(state.contentEquals("4")) {
-			status="ÖÕÉó½á¹û£º¾Ü¾ø";
+			status="ç»ˆå®¡ç»“æœï¼šæ‹’ç»";
 		}
 		return name+"\t"+relevel+"\t"+getlevel+"\t"+rank+"\t"+gettime+"\t"+material+"\t"+sid+"\t"+status;
 	}

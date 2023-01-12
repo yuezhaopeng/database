@@ -18,7 +18,7 @@ public class ThesisDaoImpl extends DaoBase implements ThesisDao {
     private static final String QUERY_SQL3="select thesis.* from thesis,student,mentor where student.Mno=mentor.Mno and thesis.sid=student.Sno and mentor.Mno=?";//��ʦ
     private static final String QUERY_SQL4="select * from thesis";
     @Override
-    public void addThesis(Thesis thesis) {//�������
+    public void addThesis(Thesis thesis) {
     	 Connection con = null;
 	        try{
 	            con = getConnection();
@@ -46,7 +46,7 @@ public class ThesisDaoImpl extends DaoBase implements ThesisDao {
 	        }
     }
     @Override
-    public void updateThesis(Thesis thesis) {//����������Ϣ
+    public void updateThesis(Thesis thesis) {
     	Connection con = null;
         try{
             con = getConnection();
@@ -73,7 +73,7 @@ public class ThesisDaoImpl extends DaoBase implements ThesisDao {
         }
     }
     @Override
-    public void deleteThesis(Thesis thesis) {//ɾ��������Ϣ
+    public void deleteThesis(Thesis thesis) {
     	Connection con = null;
         try{
             con = getConnection();
@@ -92,7 +92,7 @@ public class ThesisDaoImpl extends DaoBase implements ThesisDao {
         }
     }
     @Override
-    public List<Thesis> findThesis(String userid,int i){//��ѧ����������
+    public List<Thesis> findThesis(String userid,int i){
     	Connection con = null;
     	List<Thesis> ls=new ArrayList<Thesis>();
         try{

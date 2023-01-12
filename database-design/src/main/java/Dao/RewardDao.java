@@ -5,8 +5,8 @@ import Entity.Reward;
 import java.util.List;
 
 public interface RewardDao {
-	void addReward(Reward reward);//Ìí¼Ó½±Àø
-    void updateReward(Reward reward);//¸üĞÂ½±ÀøĞÅÏ¢
-    void deleteReward(Reward reward);//É¾³ı½±ÀøĞÅÏ¢
-    List<Reward> findReward(String userid,int i);//°´Ñ§Éú²éÕÒ½±Àø
+	void addReward(Reward reward);//æ·»åŠ å¥–åŠ±
+    void updateReward(Reward reward);//æ›´æ–°å¥–åŠ±ä¿¡æ¯
+    void deleteReward(Reward reward);//åˆ é™¤å¥–åŠ±ä¿¡æ¯
+    List<Reward> findReward(String userid,int i);//æŒ‰å­¦ç”ŸæŸ¥æ‰¾å¥–åŠ±
 }

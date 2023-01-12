@@ -18,7 +18,7 @@ public class RewardDaoImpl extends DaoBase implements RewardDao {
     private static final String QUERY_SQL3="select reward.* from reward,student,mentor where student.Mno=mentor.Mno and reward.sid=student.Sno and mentor.Mno=?";//��ʦ
     private static final String QUERY_SQL4="select * from reward";
     @Override
-	public void addReward(Reward reward) {//��ӽ���
+	public void addReward(Reward reward) {
 		Connection con = null;
         try{
             con = getConnection();

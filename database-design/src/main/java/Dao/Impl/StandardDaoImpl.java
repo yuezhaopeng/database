@@ -18,7 +18,7 @@ public class StandardDaoImpl extends DaoBase implements StandardDao {
     private static final String QUERY_SQL3="select standard.* from standard,student,mentor where student.Mno=mentor.Mno and standard.sid=student.Sno and mentor.Mno=?";//��ʦ
     private static final String QUERY_SQL4="select * from standard";
     @Override
-	public void addStandard(Standard standard) {//��ӱ�׼
+	public void addStandard(Standard standard) {
 		Connection con = null;
         try{
             con = getConnection();

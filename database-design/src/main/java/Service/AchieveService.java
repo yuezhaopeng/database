@@ -27,61 +27,61 @@ public class AchieveService {
         return judgeresult;
     }
 	public static void adminMenu(String userid) {
-		//É¸Ñ¡³õÉó½á¹ûÎªÍ¨¹ı£¬×´Ì¬Îª1µÄ¼ÇÂ¼£¬²¢½øĞĞ¸üĞÂÎª2Í¨¹ı»òÕß4¾Ü¾ø
-		//²é¿´ÒÑ±»ÈÏÖ¤µÄ½á¹û£¬×´Ì¬Îª2µÄ¼ÇÂ¼
-		//²é¿´ÒÑ¾Ü¾øÈÏÖ¤µÄ¼ÇÂ¼£¬×´Ì¬Îª4µÄ¼ÇÂ¼
-		System.out.println("A-¶Ô³õÉóÍ¨¹ıµÄ³É¹ûÈÏ¶¨½øĞĞÖÕÉó");
-		System.out.println("B-²é¿´ÖÕÉóÍ¨¹ıµÄ³É¹û¼ÇÂ¼");
-		System.out.println("C-²é¿´Î´Í¨¹ıÖÕÉóµÄ³É¹û¼ÇÂ¼");
-		System.out.println("D-ÍË³ö");
+		//ç­›é€‰åˆå®¡ç»“æœä¸ºé€šè¿‡ï¼ŒçŠ¶æ€ä¸º1çš„è®°å½•ï¼Œå¹¶è¿›è¡Œæ›´æ–°ä¸º2é€šè¿‡æˆ–è€…4æ‹’ç»
+		//æŸ¥çœ‹å·²è¢«è®¤è¯çš„ç»“æœï¼ŒçŠ¶æ€ä¸º2çš„è®°å½•
+		//æŸ¥çœ‹å·²æ‹’ç»è®¤è¯çš„è®°å½•ï¼ŒçŠ¶æ€ä¸º4çš„è®°å½•
+		System.out.println("A-å¯¹åˆå®¡é€šè¿‡çš„æˆæœè®¤å®šè¿›è¡Œç»ˆå®¡");
+		System.out.println("B-æŸ¥çœ‹ç»ˆå®¡é€šè¿‡çš„æˆæœè®°å½•");
+		System.out.println("C-æŸ¥çœ‹æœªé€šè¿‡ç»ˆå®¡çš„æˆæœè®°å½•");
+		System.out.println("D-é€€å‡º");
 		String c="";
 		Scanner scanner = new Scanner(System.in);
 		while(true) {
-			System.out.println("ÇëÊäÈë²Ëµ¥Ñ¡Ïî£º");
+			System.out.println("è¯·è¾“å…¥èœå•é€‰é¡¹ï¼š");
 			if(scanner.hasNext()){
-			    c = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+			    c = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 			}
 			while(!c.contentEquals("A")&&!c.contentEquals("B")&&!c.contentEquals("C")&&!c.contentEquals("D")) {
-				System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+				System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 				c = scanner.next();
 			}
 			if(c.contentEquals("D")) {
 				break;
 			}
 			if(c.contentEquals("A")) {
-				System.out.println("1-ÉóºËÂÛÎÄÈÏÖ¤");
-				System.out.println("2-ÉóºË½±ÀøÈÏÖ¤");
-				System.out.println("3-ÉóºË±ê×¼ÈÏÖ¤");
-				System.out.println("4-ÉóºË±¨¸æÈÏÖ¤");
-				System.out.println("5-ÉóºË×¨ÀûÈÏÖ¤");
-				System.out.println("6-ÉóºËÈíÓ²¼şÆ½Ì¨ÈÏÖ¤");
-				System.out.println("7-ÉóºË½Ì²ÄÈÏÖ¤");
-				System.out.println("0-ÍË³öÉóºË");
+				System.out.println("1-å®¡æ ¸è®ºæ–‡è®¤è¯");
+				System.out.println("2-å®¡æ ¸å¥–åŠ±è®¤è¯");
+				System.out.println("3-å®¡æ ¸æ ‡å‡†è®¤è¯");
+				System.out.println("4-å®¡æ ¸æŠ¥å‘Šè®¤è¯");
+				System.out.println("5-å®¡æ ¸ä¸“åˆ©è®¤è¯");
+				System.out.println("6-å®¡æ ¸è½¯ç¡¬ä»¶å¹³å°è®¤è¯");
+				System.out.println("7-å®¡æ ¸æ•™æè®¤è¯");
+				System.out.println("0-é€€å‡ºå®¡æ ¸");
 				String choice="";
 				while(true) {
-					System.out.println("ÇëÊäÈëÉóºËÑ¡Ïî£º");
+					System.out.println("è¯·è¾“å…¥å®¡æ ¸é€‰é¡¹ï¼š");
 					if(scanner.hasNext()){
-					    choice = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+					    choice = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 					}
 					while(!choice.contentEquals("1")&&!choice.contentEquals("2")&&!choice.contentEquals("3")&&!choice.contentEquals("4")&&!choice.contentEquals("5")&&!choice.contentEquals("6")&&!choice.contentEquals("7")&&!choice.contentEquals("0")) {
-						System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+						System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 						choice = scanner.next();
 					}
 					if(choice.contentEquals("0")) {
 						break;
 					}
 					if(choice.contentEquals("1")) {
-						System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+						System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 						List<Thesis> lt= DAOFactory.getInstance().getThesisDAO().findThesis(userid, 4);
 						int k=0;
 						while(k<lt.size()) {
 							if(lt.get(k).getState().contentEquals("1")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
@@ -96,17 +96,17 @@ public class AchieveService {
 						}
 					}
 					if(choice.contentEquals("2")) {
-						System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+						System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 						List<Reward> lt=DAOFactory .getInstance().getRewardDAO().findReward(userid, 4);
 						int k=0;
 						while(k<lt.size()) {
 							if(lt.get(k).getState().contentEquals("1")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
@@ -121,17 +121,17 @@ public class AchieveService {
 						}
 					}
 					if(choice.contentEquals("3")) {
-						System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+						System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 						List<Standard> lt=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 4);
 						int k=0;
 						while(k<lt.size()) {
 							if(lt.get(k).getState().contentEquals("1")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
@@ -149,20 +149,20 @@ public class AchieveService {
 						List<Report> lt=DAOFactory .getInstance().getReportBase().findReport(userid, 4);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("³õÉó½á¹û£ºÍ¬Òâ")) {
+							if(lt.get(k).getStatus().contentEquals("åˆå®¡ç»“æœï¼šåŒæ„")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
-									lt.get(k).setStatus("ÖÕÉó½á¹û£ºÍ¬Òâ");
+									lt.get(k).setStatus("ç»ˆå®¡ç»“æœï¼šåŒæ„");
 									DAOFactory .getInstance().getReportBase().updateReport(lt.get(k));
 								}else if(inchoice.contentEquals("0")) {
-									lt.get(k).setStatus("ÖÕÉó½á¹û£º¾Ü¾ø");
+									lt.get(k).setStatus("ç»ˆå®¡ç»“æœï¼šæ‹’ç»");
 									DAOFactory .getInstance().getReportBase().updateReport(lt.get(k));
 								}
 							}
@@ -173,20 +173,20 @@ public class AchieveService {
 						List<Patent> lt=DAOFactory .getInstance().getPatentBase().findPatent(userid, 4);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getTstatus().contentEquals("³õÉó½á¹û£ºÍ¬Òâ")) {
+							if(lt.get(k).getTstatus().contentEquals("åˆå®¡ç»“æœï¼šåŒæ„")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
-									lt.get(k).setTstatus("ÖÕÉó½á¹û£ºÍ¬Òâ");
+									lt.get(k).setTstatus("ç»ˆå®¡ç»“æœï¼šåŒæ„");
 									DAOFactory .getInstance().getPatentBase().updatePatent(lt.get(k));
 								}else if(inchoice.contentEquals("0")) {
-									lt.get(k).setTstatus("ÖÕÉó½á¹û£º¾Ü¾ø");
+									lt.get(k).setTstatus("ç»ˆå®¡ç»“æœï¼šæ‹’ç»");
 									DAOFactory .getInstance().getPatentBase().updatePatent(lt.get(k));
 								}
 							}
@@ -197,20 +197,20 @@ public class AchieveService {
 						List<Prove> lt=DAOFactory .getInstance().getProveBase().findProve(userid, 4);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("³õÉó½á¹û£ºÍ¬Òâ")) {
+							if(lt.get(k).getStatus().contentEquals("åˆå®¡ç»“æœï¼šåŒæ„")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
-									lt.get(k).setStatus("ÖÕÉó½á¹û£ºÍ¬Òâ");
+									lt.get(k).setStatus("ç»ˆå®¡ç»“æœï¼šåŒæ„");
 									DAOFactory .getInstance().getProveBase().updateProve(lt.get(k));
 								}else if(inchoice.contentEquals("0")) {
-									lt.get(k).setStatus("ÖÕÉó½á¹û£º¾Ü¾ø");
+									lt.get(k).setStatus("ç»ˆå®¡ç»“æœï¼šæ‹’ç»");
 									DAOFactory .getInstance().getProveBase().updateProve(lt.get(k));
 								}
 							}
@@ -221,20 +221,20 @@ public class AchieveService {
 						List<Textbook> lt=DAOFactory .getInstance().getTextbookBase().findTextbook(userid, 4);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("³õÉó½á¹û£ºÍ¬Òâ")) {
+							if(lt.get(k).getStatus().contentEquals("åˆå®¡ç»“æœï¼šåŒæ„")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
-									lt.get(k).setStatus("ÖÕÉó½á¹û£ºÍ¬Òâ");
+									lt.get(k).setStatus("ç»ˆå®¡ç»“æœï¼šåŒæ„");
 									DAOFactory .getInstance().getTextbookBase().updateTextbook(lt.get(k));
 								}else if(inchoice.contentEquals("0")) {
-									lt.get(k).setStatus("ÖÕÉó½á¹û£º¾Ü¾ø");
+									lt.get(k).setStatus("ç»ˆå®¡ç»“æœï¼šæ‹’ç»");
 									DAOFactory .getInstance().getTextbookBase().updateTextbook(lt.get(k));
 								}
 							}
@@ -244,8 +244,8 @@ public class AchieveService {
 				}
 			}
 			if(c.contentEquals("B")) {
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄÂÛÎÄÁĞ±í");
-				System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„è®ºæ–‡åˆ—è¡¨");
+				System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 4);
 				int k=0;
 				while(k<lt.size()) {
@@ -254,8 +254,8 @@ public class AchieveService {
 					}
 					k++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ½±ÀøÁĞ±í");
-				System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„å¥–åŠ±åˆ—è¡¨");
+				System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Reward> lt2=DAOFactory .getInstance().getRewardDAO().findReward(userid, 4);
 				int k2=0;
 				while(k2<lt2.size()) {
@@ -264,8 +264,8 @@ public class AchieveService {
 					}
 					k2++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ±ê×¼ÁĞ±í");
-				System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„æ ‡å‡†åˆ—è¡¨");
+				System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Standard> lt3=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 4);
 				int k3=0;
 				while(k3<lt3.size()) {
@@ -274,46 +274,46 @@ public class AchieveService {
 					}
 					k3++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ±¨¸æÁĞ±í");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„æŠ¥å‘Šåˆ—è¡¨");
 				List<Report> lt4=DAOFactory .getInstance().getReportBase().findReport(userid, 4);
 				int k4=0;
 				while(k4<lt4.size()) {
-					if(lt4.get(k4).getStatus().contentEquals("ÖÕÉó½á¹û£ºÍ¨¹ı")) {
+					if(lt4.get(k4).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šé€šè¿‡")) {
 						System.out.println(lt4.get(k4));
 					}
 					k4++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ×¨ÀûÁĞ±í");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„ä¸“åˆ©åˆ—è¡¨");
 				List<Patent> lt5=DAOFactory .getInstance().getPatentBase().findPatent(userid, 4);
 				int k5=0;
 				while(k5<lt5.size()) {
-					if(lt5.get(k5).getTstatus().contentEquals("ÖÕÉó½á¹û£ºÍ¨¹ı")) {
+					if(lt5.get(k5).getTstatus().contentEquals("ç»ˆå®¡ç»“æœï¼šé€šè¿‡")) {
 						System.out.println(lt5.get(k5));
 					}
 					k5++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤ÁĞ±í");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„è½¯ç¡¬ä»¶å¹³å°è®¤è¯åˆ—è¡¨");
 				List<Prove> lt6=DAOFactory .getInstance().getProveBase().findProve(userid, 4);
 				int k6=0;
 				while(k6<lt6.size()) {
-					if(lt6.get(k6).getStatus().contentEquals("ÖÕÉó½á¹û£ºÍ¨¹ı")) {
+					if(lt6.get(k6).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šé€šè¿‡")) {
 						System.out.println(lt6.get(k6));
 					}
 					k6++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ½Ì²ÄÁĞ±í");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„æ•™æåˆ—è¡¨");
 				List<Textbook> lt7=DAOFactory .getInstance().getTextbookBase().findTextbook(userid, 4);
 				int k7=0;
 				while(k7<lt7.size()) {
-					if(lt7.get(k7).getStatus().contentEquals("ÖÕÉó½á¹û£ºÍ¨¹ı")) {
+					if(lt7.get(k7).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šé€šè¿‡")) {
 						System.out.println(lt7.get(k7));
 					}
 					k7++;
 				}
 			}
 			if(c.contentEquals("C")) {
-				System.out.println("Î´Í¨¹ıÖÕÉóµÄÂÛÎÄÁĞ±í");
-				System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("æœªé€šè¿‡ç»ˆå®¡çš„è®ºæ–‡åˆ—è¡¨");
+				System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 4);
 				int k=0;
 				while(k<lt.size()) {
@@ -322,8 +322,8 @@ public class AchieveService {
 					}
 					k++;
 				}
-				System.out.println("Î´Í¨¹ıÖÕÉóµÄ½±ÀøÁĞ±í");
-				System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("æœªé€šè¿‡ç»ˆå®¡çš„å¥–åŠ±åˆ—è¡¨");
+				System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Reward> lt2=DAOFactory .getInstance().getRewardDAO().findReward(userid, 4);
 				int k2=0;
 				while(k2<lt2.size()) {
@@ -332,8 +332,8 @@ public class AchieveService {
 					}
 					k2++;
 				}
-				System.out.println("Î´Í¨¹ıÖÕÉóµÄ±ê×¼ÁĞ±í");
-				System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("æœªé€šè¿‡ç»ˆå®¡çš„æ ‡å‡†åˆ—è¡¨");
+				System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Standard> lt3=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 4);
 				int k3=0;
 				while(k3<lt3.size()) {
@@ -342,38 +342,38 @@ public class AchieveService {
 					}
 					k3++;
 				}
-				System.out.println("Î´Í¨¹ıÖÕÉóµÄ±¨¸æÁĞ±í");
+				System.out.println("æœªé€šè¿‡ç»ˆå®¡çš„æŠ¥å‘Šåˆ—è¡¨");
 				List<Report> lt4=DAOFactory .getInstance().getReportBase().findReport(userid, 4);
 				int k4=0;
 				while(k4<lt4.size()) {
-					if(lt4.get(k4).getStatus().contentEquals("ÖÕÉó½á¹û£º¾Ü¾ø")) {
+					if(lt4.get(k4).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šæ‹’ç»")) {
 						System.out.println(lt4.get(k4));
 					}
 					k4++;
 				}
-				System.out.println("Î´Í¨¹ıÖÕÉóµÄ×¨ÀûÁĞ±í");
+				System.out.println("æœªé€šè¿‡ç»ˆå®¡çš„ä¸“åˆ©åˆ—è¡¨");
 				List<Patent> lt5=DAOFactory .getInstance().getPatentBase().findPatent(userid, 4);
 				int k5=0;
 				while(k5<lt5.size()) {
-					if(lt5.get(k5).getTstatus().contentEquals("ÖÕÉó½á¹û£º¾Ü¾ø")) {
+					if(lt5.get(k5).getTstatus().contentEquals("ç»ˆå®¡ç»“æœï¼šæ‹’ç»")) {
 						System.out.println(lt5.get(k5));
 					}
 					k5++;
 				}
-				System.out.println("Î´Í¨¹ıÖÕÉóµÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤ÁĞ±í");
+				System.out.println("æœªé€šè¿‡ç»ˆå®¡çš„è½¯ç¡¬ä»¶å¹³å°è®¤è¯åˆ—è¡¨");
 				List<Prove> lt6=DAOFactory .getInstance().getProveBase().findProve(userid, 4);
 				int k6=0;
 				while(k6<lt6.size()) {
-					if(lt6.get(k6).getStatus().contentEquals("ÖÕÉó½á¹û£º¾Ü¾ø")) {
+					if(lt6.get(k6).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šæ‹’ç»")) {
 						System.out.println(lt6.get(k6));
 					}
 					k6++;
 				}
-				System.out.println("Î´Í¨¹ıÖÕÉóµÄ½Ì²ÄÁĞ±í");
+				System.out.println("æœªé€šè¿‡ç»ˆå®¡çš„æ•™æåˆ—è¡¨");
 				List<Textbook> lt7=DAOFactory .getInstance().getTextbookBase().findTextbook(userid, 4);
 				int k7=0;
 				while(k7<lt7.size()) {
-					if(lt7.get(k7).getStatus().contentEquals("ÖÕÉó½á¹û£º¾Ü¾ø")) {
+					if(lt7.get(k7).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šæ‹’ç»")) {
 						System.out.println(lt7.get(k7));
 					}
 					k7++;
@@ -382,32 +382,32 @@ public class AchieveService {
 		}
 	}
 	public static void leaderMenu(String userid) {
-		//²é¿´±¾Ñ§¿ÆÏÂÒÑ±»ÈÏ¶¨µÄ³É¹û£¬×´Ì¬Îª2µÄ¼ÇÂ¼
-		System.out.println("²éÑ¯ÑĞ¾¿Éú³É¹ûÈÏ¶¨Çé¿ö");
-		System.out.println("1-²éÑ¯ÂÛÎÄÈÏÖ¤Çé¿ö");
-		System.out.println("2-²éÑ¯½±ÀøÈÏÖ¤Çé¿ö");
-		System.out.println("3-²éÑ¯±ê×¼ÈÏÖ¤Çé¿ö");
-		System.out.println("4-²éÑ¯±¨¸æÈÏÖ¤Çé¿ö");
-		System.out.println("5-²éÑ¯×¨ÀûÈÏÖ¤Çé¿ö");
-		System.out.println("6-²éÑ¯ÈíÓ²¼şÆ½Ì¨ÈÏÖ¤Çé¿ö");
-		System.out.println("7-²éÑ¯½Ì²ÄÈÏÖ¤Çé¿ö");
-		System.out.println("0-ÍË³ö²éÑ¯");
+		//æŸ¥çœ‹æœ¬å­¦ç§‘ä¸‹å·²è¢«è®¤å®šçš„æˆæœï¼ŒçŠ¶æ€ä¸º2çš„è®°å½•
+		System.out.println("æŸ¥è¯¢ç ”ç©¶ç”Ÿæˆæœè®¤å®šæƒ…å†µ");
+		System.out.println("1-æŸ¥è¯¢è®ºæ–‡è®¤è¯æƒ…å†µ");
+		System.out.println("2-æŸ¥è¯¢å¥–åŠ±è®¤è¯æƒ…å†µ");
+		System.out.println("3-æŸ¥è¯¢æ ‡å‡†è®¤è¯æƒ…å†µ");
+		System.out.println("4-æŸ¥è¯¢æŠ¥å‘Šè®¤è¯æƒ…å†µ");
+		System.out.println("5-æŸ¥è¯¢ä¸“åˆ©è®¤è¯æƒ…å†µ");
+		System.out.println("6-æŸ¥è¯¢è½¯ç¡¬ä»¶å¹³å°è®¤è¯æƒ…å†µ");
+		System.out.println("7-æŸ¥è¯¢æ•™æè®¤è¯æƒ…å†µ");
+		System.out.println("0-é€€å‡ºæŸ¥è¯¢");
 		Scanner scanner = new Scanner(System.in);
 		String c="";
 		while(true) {
-			System.out.println("ÇëÊäÈëÑ¡Ïî£º");
+			System.out.println("è¯·è¾“å…¥é€‰é¡¹ï¼š");
 			if(scanner.hasNext()){
-			    c = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+			    c = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 			}
 			while(!c.contentEquals("1")&&!c.contentEquals("2")&&!c.contentEquals("3")&&!c.contentEquals("4")&&!c.contentEquals("5")&&!c.contentEquals("6")&&!c.contentEquals("7")&&!c.contentEquals("0")) {
-				System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+				System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 				c = scanner.next();
 			}
 			if(c.contentEquals("0")) {
 				break;
 			}
 			if(c.contentEquals("1")) {
-				System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 2);
 				int k=0;
 				while(k<lt.size()) {
@@ -418,7 +418,7 @@ public class AchieveService {
 				}
 			}
 			if(c.contentEquals("2")) {
-				System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Reward> lt=DAOFactory .getInstance().getRewardDAO().findReward(userid, 2);
 				int k=0;
 				while(k<lt.size()) {
@@ -429,7 +429,7 @@ public class AchieveService {
 				}
 			}
 			if(c.contentEquals("3")) {
-				System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Standard> lt=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 2);
 				int k=0;
 				while(k<lt.size()) {
@@ -443,7 +443,7 @@ public class AchieveService {
 				List<Report> lt=DAOFactory.getInstance().getReportBase().findReport(userid, 2);
 				int k=0;
 				while(k<lt.size()) {
-					if(lt.get(k).getStatus().contentEquals("ÖÕÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt.get(k).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt.get(k));
 					}
 					k++;
@@ -453,7 +453,7 @@ public class AchieveService {
 				List<Patent> lt=DAOFactory.getInstance().getPatentBase().findPatent(userid, 2);
 				int k=0;
 				while(k<lt.size()) {
-					if(lt.get(k).getTstatus().contentEquals("ÖÕÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt.get(k).getTstatus().contentEquals("ç»ˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt.get(k));
 					}
 					k++;
@@ -463,7 +463,7 @@ public class AchieveService {
 				List<Prove> lt=DAOFactory.getInstance().getProveBase().findProve(userid, 2);
 				int k=0;
 				while(k<lt.size()) {
-					if(lt.get(k).getStatus().contentEquals("ÖÕÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt.get(k).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt.get(k));
 					}
 					k++;
@@ -473,7 +473,7 @@ public class AchieveService {
 				List<Textbook> lt=DAOFactory.getInstance().getTextbookBase().findTextbook(userid, 2);
 				int k=0;
 				while(k<lt.size()) {
-					if(lt.get(k).getStatus().contentEquals("ÖÕÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt.get(k).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt.get(k));
 					}
 					k++;
@@ -482,63 +482,63 @@ public class AchieveService {
 		}
 	}
 	public static void mentorMenu(String userid) {
-		//É¸Ñ¡Î´ÉóºËµÄ¼ÇÂ¼£¬×´Ì¬Îª0µÄ¼ÇÂ¼£¬²¢½øĞĞ¸üĞÂÎª1Í¨¹ı»òÕß3¾Ü¾ø
-		//²é¿´µ¼Ê¦ÉóºË½×¶Î£¬Í¨¹ıµÄ¼ÇÂ¼£¬×´Ì¬Îª1
-		//²é¿´µ¼Ê¦ÉóºË½×¶Î£¬¾Ü¾øµÄ¼ÇÂ¼£¬×´Ì¬Îª3
-		//²é¿´ÒÑ±»ÈÏÖ¤µÄ½á¹û£¬×´Ì¬Îª2µÄ¼ÇÂ¼
-		System.out.println("A-¶Ô±¾×éÑĞ¾¿Éú³É¹ûÈÏ¶¨½øĞĞ³õÉó");
-		System.out.println("B-²é¿´±¾×éÑĞ¾¿Éú³õÉóÍ¨¹ıµÄ³É¹û¼ÇÂ¼");
-		System.out.println("C-²é¿´±¾×éÑĞ¾¿ÉúÎ´Í¨¹ı³õÉóµÄ³É¹û¼ÇÂ¼");
-		System.out.println("D-²é¿´±¾×éÑĞ¾¿ÉúÍ¨¹ıÖÕÉóµÄ³É¹û¼ÇÂ¼");
-		System.out.println("E-ÍË³ö");
+		//ç­›é€‰æœªå®¡æ ¸çš„è®°å½•ï¼ŒçŠ¶æ€ä¸º0çš„è®°å½•ï¼Œå¹¶è¿›è¡Œæ›´æ–°ä¸º1é€šè¿‡æˆ–è€…3æ‹’ç»
+		//æŸ¥çœ‹å¯¼å¸ˆå®¡æ ¸é˜¶æ®µï¼Œé€šè¿‡çš„è®°å½•ï¼ŒçŠ¶æ€ä¸º1
+		//æŸ¥çœ‹å¯¼å¸ˆå®¡æ ¸é˜¶æ®µï¼Œæ‹’ç»çš„è®°å½•ï¼ŒçŠ¶æ€ä¸º3
+		//æŸ¥çœ‹å·²è¢«è®¤è¯çš„ç»“æœï¼ŒçŠ¶æ€ä¸º2çš„è®°å½•
+		System.out.println("A-å¯¹æœ¬ç»„ç ”ç©¶ç”Ÿæˆæœè®¤å®šè¿›è¡Œåˆå®¡");
+		System.out.println("B-æŸ¥çœ‹æœ¬ç»„ç ”ç©¶ç”Ÿåˆå®¡é€šè¿‡çš„æˆæœè®°å½•");
+		System.out.println("C-æŸ¥çœ‹æœ¬ç»„ç ”ç©¶ç”Ÿæœªé€šè¿‡åˆå®¡çš„æˆæœè®°å½•");
+		System.out.println("D-æŸ¥çœ‹æœ¬ç»„ç ”ç©¶ç”Ÿé€šè¿‡ç»ˆå®¡çš„æˆæœè®°å½•");
+		System.out.println("E-é€€å‡º");
 		String c="";
 		Scanner scanner = new Scanner(System.in);
 		while(true) {
-			System.out.println("ÇëÊäÈë²Ëµ¥Ñ¡Ïî£º");
+			System.out.println("è¯·è¾“å…¥èœå•é€‰é¡¹ï¼š");
 			if(scanner.hasNext()){
-			    c = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+			    c = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 			}
 			while(!c.contentEquals("A")&&!c.contentEquals("B")&&!c.contentEquals("C")&&!c.contentEquals("D")&&!c.contentEquals("E")) {
-				System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+				System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 				c = scanner.next();
 			}
 			if(c.contentEquals("E")) {
 				break;
 			}
 			if(c.contentEquals("A")) {
-				System.out.println("1-ÉóºËÂÛÎÄÈÏÖ¤");
-				System.out.println("2-ÉóºË½±ÀøÈÏÖ¤");
-				System.out.println("3-ÉóºË±ê×¼ÈÏÖ¤");
-				System.out.println("4-ÉóºË±¨¸æÈÏÖ¤");
-				System.out.println("5-ÉóºË×¨ÀûÈÏÖ¤");
-				System.out.println("6-ÉóºËÈíÓ²¼şÆ½Ì¨ÈÏÖ¤");
-				System.out.println("7-ÉóºË½Ì²ÄÈÏÖ¤");
-				System.out.println("0-ÍË³öÉóºË");
+				System.out.println("1-å®¡æ ¸è®ºæ–‡è®¤è¯");
+				System.out.println("2-å®¡æ ¸å¥–åŠ±è®¤è¯");
+				System.out.println("3-å®¡æ ¸æ ‡å‡†è®¤è¯");
+				System.out.println("4-å®¡æ ¸æŠ¥å‘Šè®¤è¯");
+				System.out.println("5-å®¡æ ¸ä¸“åˆ©è®¤è¯");
+				System.out.println("6-å®¡æ ¸è½¯ç¡¬ä»¶å¹³å°è®¤è¯");
+				System.out.println("7-å®¡æ ¸æ•™æè®¤è¯");
+				System.out.println("0-é€€å‡ºå®¡æ ¸");
 				String choice="";
 				while(true) {
-					System.out.println("ÇëÊäÈëÉóºËÑ¡Ïî£º");
+					System.out.println("è¯·è¾“å…¥å®¡æ ¸é€‰é¡¹ï¼š");
 					if(scanner.hasNext()){
-					    choice = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+					    choice = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 					}
 					while(!choice.contentEquals("1")&&!choice.contentEquals("2")&&!choice.contentEquals("3")&&!choice.contentEquals("4")&&!choice.contentEquals("5")&&!choice.contentEquals("6")&&!choice.contentEquals("7")&&!choice.contentEquals("0")) {
-						System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+						System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 						choice = scanner.next();
 					}
 					if(choice.contentEquals("0")) {
 						break;
 					}
 					if(choice.contentEquals("1")) {
-						System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+						System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 						List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 3);
 						int k=0;
 						while(k<lt.size()) {
 							if(lt.get(k).getState().contentEquals("0")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
@@ -553,17 +553,17 @@ public class AchieveService {
 						}
 					}
 					if(choice.contentEquals("2")) {
-						System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+						System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 						List<Reward> lt=DAOFactory .getInstance().getRewardDAO().findReward(userid, 3);
 						int k=0;
 						while(k<lt.size()) {
 							if(lt.get(k).getState().contentEquals("0")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
@@ -578,17 +578,17 @@ public class AchieveService {
 						}
 					}
 					if(choice.contentEquals("3")) {
-						System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+						System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 						List<Standard> lt=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 3);
 						int k=0;
 						while(k<lt.size()) {
 							if(lt.get(k).getState().contentEquals("0")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
@@ -606,20 +606,20 @@ public class AchieveService {
 						List<Report> lt=DAOFactory .getInstance().getReportBase().findReport(userid, 3);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("Î´ÉóºË")) {
+							if(lt.get(k).getStatus().contentEquals("æœªå®¡æ ¸")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
-									lt.get(k).setStatus("³õÉó½á¹û£ºÍ¬Òâ");
+									lt.get(k).setStatus("åˆå®¡ç»“æœï¼šåŒæ„");
 									DAOFactory .getInstance().getReportBase().updateReport(lt.get(k));
 								}else if(inchoice.contentEquals("0")) {
-									lt.get(k).setStatus("³õÉó½á¹û£º¾Ü¾ø");
+									lt.get(k).setStatus("åˆå®¡ç»“æœï¼šæ‹’ç»");
 									DAOFactory .getInstance().getReportBase().updateReport(lt.get(k));
 								}
 							}
@@ -630,20 +630,20 @@ public class AchieveService {
 						List<Patent> lt=DAOFactory .getInstance().getPatentBase().findPatent(userid, 3);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getTstatus().contentEquals("Î´ÉóºË")) {
+							if(lt.get(k).getTstatus().contentEquals("æœªå®¡æ ¸")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
-									lt.get(k).setTstatus("³õÉó½á¹û£ºÍ¬Òâ");
+									lt.get(k).setTstatus("åˆå®¡ç»“æœï¼šåŒæ„");
 									DAOFactory .getInstance().getPatentBase().updatePatent(lt.get(k));
 								}else if(inchoice.contentEquals("0")) {
-									lt.get(k).setTstatus("³õÉó½á¹û£º¾Ü¾ø");
+									lt.get(k).setTstatus("åˆå®¡ç»“æœï¼šæ‹’ç»");
 									DAOFactory .getInstance().getPatentBase().updatePatent(lt.get(k));
 								}
 							}
@@ -654,20 +654,20 @@ public class AchieveService {
 						List<Prove> lt=DAOFactory .getInstance().getProveBase().findProve(userid, 3);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("Î´ÉóºË")) {
+							if(lt.get(k).getStatus().contentEquals("æœªå®¡æ ¸")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
-									lt.get(k).setStatus("³õÉó½á¹û£ºÍ¬Òâ");
+									lt.get(k).setStatus("åˆå®¡ç»“æœï¼šåŒæ„");
 									DAOFactory .getInstance().getProveBase().updateProve(lt.get(k));
 								}else if(inchoice.contentEquals("0")) {
-									lt.get(k).setStatus("³õÉó½á¹û£º¾Ü¾ø");
+									lt.get(k).setStatus("åˆå®¡ç»“æœï¼šæ‹’ç»");
 									DAOFactory .getInstance().getProveBase().updateProve(lt.get(k));
 								}
 							}
@@ -678,20 +678,20 @@ public class AchieveService {
 						List<Textbook> lt=DAOFactory.getInstance().getTextbookBase().findTextbook(userid, 3);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("Î´ÉóºË")) {
+							if(lt.get(k).getStatus().contentEquals("æœªå®¡æ ¸")) {
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
-									lt.get(k).setStatus("³õÉó½á¹û£ºÍ¬Òâ");
+									lt.get(k).setStatus("åˆå®¡ç»“æœï¼šåŒæ„");
 									DAOFactory .getInstance().getTextbookBase().updateTextbook(lt.get(k));
 								}else if(inchoice.contentEquals("0")) {
-									lt.get(k).setStatus("³õÉó½á¹û£º¾Ü¾ø");
+									lt.get(k).setStatus("åˆå®¡ç»“æœï¼šæ‹’ç»");
 									DAOFactory .getInstance().getTextbookBase().updateTextbook(lt.get(k));
 								}
 							}
@@ -701,8 +701,8 @@ public class AchieveService {
 				}
 			}
 			if(c.contentEquals("B")) {
-				System.out.println("ÒÑÍ¨¹ı³õÉóµÄÂÛÎÄÁĞ±í");
-				System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²é€šè¿‡åˆå®¡çš„è®ºæ–‡åˆ—è¡¨");
+				System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 3);
 				int k=0;
 				while(k<lt.size()) {
@@ -711,8 +711,8 @@ public class AchieveService {
 					}
 					k++;
 				}
-				System.out.println("ÒÑÍ¨¹ı³õÉóµÄ½±ÀøÁĞ±í");
-				System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²é€šè¿‡åˆå®¡çš„å¥–åŠ±åˆ—è¡¨");
+				System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Reward> lt2=DAOFactory .getInstance().getRewardDAO().findReward(userid, 3);
 				int k2=0;
 				while(k2<lt2.size()) {
@@ -721,8 +721,8 @@ public class AchieveService {
 					}
 					k2++;
 				}
-				System.out.println("ÒÑÍ¨¹ı³õÉóµÄ±ê×¼ÁĞ±í");
-				System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²é€šè¿‡åˆå®¡çš„æ ‡å‡†åˆ—è¡¨");
+				System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Standard> lt3=DAOFactory.getInstance().getStandardDAO().findStandard(userid, 3);
 				int k3=0;
 				while(k3<lt3.size()) {
@@ -731,46 +731,46 @@ public class AchieveService {
 					}
 					k3++;
 				}
-				System.out.println("ÒÑÍ¨¹ı³õÉóµÄ±¨¸æÁĞ±í");
+				System.out.println("å·²é€šè¿‡åˆå®¡çš„æŠ¥å‘Šåˆ—è¡¨");
 				List<Report> lt4=DAOFactory.getInstance().getReportBase().findReport(userid, 3);
 				int k4=0;
 				while(k4<lt.size()) {
-					if(lt4.get(k4).getStatus().contentEquals("³õÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt4.get(k4).getStatus().contentEquals("åˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt4.get(k4));
 					}
 					k4++;
 				}
-				System.out.println("ÒÑÍ¨¹ı³õÉóµÄ×¨ÀûÁĞ±í");
+				System.out.println("å·²é€šè¿‡åˆå®¡çš„ä¸“åˆ©åˆ—è¡¨");
 				List<Patent> lt5=DAOFactory.getInstance().getPatentBase().findPatent(userid, 3);
 				int k5=0;
 				while(k5<lt.size()) {
-					if(lt5.get(k5).getTstatus().contentEquals("³õÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt5.get(k5).getTstatus().contentEquals("åˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt5.get(k5));
 					}
 					k5++;
 				}
-				System.out.println("ÒÑÍ¨¹ı³õÉóµÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤ÁĞ±í");
+				System.out.println("å·²é€šè¿‡åˆå®¡çš„è½¯ç¡¬ä»¶å¹³å°è®¤è¯åˆ—è¡¨");
 				List<Prove> lt6=DAOFactory.getInstance().getProveBase().findProve(userid, 3);
 				int k6=0;
 				while(k6<lt.size()) {
-					if(lt6.get(k6).getStatus().contentEquals("³õÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt6.get(k6).getStatus().contentEquals("åˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt6.get(k6));
 					}
 					k6++;
 				}
-				System.out.println("ÒÑÍ¨¹ı³õÉóµÄ½Ì²ÄÁĞ±í");
+				System.out.println("å·²é€šè¿‡åˆå®¡çš„æ•™æåˆ—è¡¨");
 				List<Textbook> lt7=DAOFactory.getInstance().getTextbookBase().findTextbook(userid, 3);
 				int k7=0;
 				while(k7<lt.size()) {
-					if(lt7.get(k7).getStatus().contentEquals("³õÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt7.get(k7).getStatus().contentEquals("åˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt7.get(k7));
 					}
 					k7++;
 				}
 			}
 			if(c.contentEquals("C")) {
-				System.out.println("Î´Í¨¹ı³õÉóµÄÂÛÎÄÁĞ±í");
-				System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("æœªé€šè¿‡åˆå®¡çš„è®ºæ–‡åˆ—è¡¨");
+				System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 3);
 				int k=0;
 				while(k<lt.size()) {
@@ -779,8 +779,8 @@ public class AchieveService {
 					}
 					k++;
 				}
-				System.out.println("Î´Í¨¹ı³õÉóµÄ½±ÀøÁĞ±í");
-				System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("æœªé€šè¿‡åˆå®¡çš„å¥–åŠ±åˆ—è¡¨");
+				System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Reward> lt2=DAOFactory .getInstance().getRewardDAO().findReward(userid, 3);
 				int k2=0;
 				while(k2<lt2.size()) {
@@ -789,8 +789,8 @@ public class AchieveService {
 					}
 					k2++;
 				}
-				System.out.println("Î´Í¨¹ı³õÉóµÄ±ê×¼ÁĞ±í");
-				System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("æœªé€šè¿‡åˆå®¡çš„æ ‡å‡†åˆ—è¡¨");
+				System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Standard> lt3=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 3);
 				int k3=0;
 				while(k3<lt3.size()) {
@@ -799,46 +799,46 @@ public class AchieveService {
 					}
 					k3++;
 				}
-				System.out.println("Î´Í¨¹ı³õÉóµÄ±¨¸æÁĞ±í");
+				System.out.println("æœªé€šè¿‡åˆå®¡çš„æŠ¥å‘Šåˆ—è¡¨");
 				List<Report> lt4=DAOFactory.getInstance().getReportBase().findReport(userid, 3);
 				int k4=0;
 				while(k4<lt.size()) {
-					if(lt4.get(k4).getStatus().contentEquals("³õÉó½á¹û£º¾Ü¾ø")) {
+					if(lt4.get(k4).getStatus().contentEquals("åˆå®¡ç»“æœï¼šæ‹’ç»")) {
 						System.out.println(lt4.get(k4));
 					}
 					k4++;
 				}
-				System.out.println("Î´Í¨¹ı³õÉóµÄ×¨ÀûÁĞ±í");
+				System.out.println("æœªé€šè¿‡åˆå®¡çš„ä¸“åˆ©åˆ—è¡¨");
 				List<Patent> lt5=DAOFactory.getInstance().getPatentBase().findPatent(userid, 3);
 				int k5=0;
 				while(k5<lt.size()) {
-					if(lt5.get(k5).getTstatus().contentEquals("³õÉó½á¹û£º¾Ü¾ø")) {
+					if(lt5.get(k5).getTstatus().contentEquals("åˆå®¡ç»“æœï¼šæ‹’ç»")) {
 						System.out.println(lt5.get(k5));
 					}
 					k5++;
 				}
-				System.out.println("Î´Í¨¹ı³õÉóµÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤ÁĞ±í");
+				System.out.println("æœªé€šè¿‡åˆå®¡çš„è½¯ç¡¬ä»¶å¹³å°è®¤è¯åˆ—è¡¨");
 				List<Prove> lt6=DAOFactory.getInstance().getProveBase().findProve(userid, 3);
 				int k6=0;
 				while(k6<lt.size()) {
-					if(lt6.get(k6).getStatus().contentEquals("³õÉó½á¹û£º¾Ü¾ø")) {
+					if(lt6.get(k6).getStatus().contentEquals("åˆå®¡ç»“æœï¼šæ‹’ç»")) {
 						System.out.println(lt6.get(k6));
 					}
 					k6++;
 				}
-				System.out.println("Î´Í¨¹ı³õÉóµÄ½Ì²ÄÁĞ±í");
+				System.out.println("æœªé€šè¿‡åˆå®¡çš„æ•™æåˆ—è¡¨");
 				List<Textbook> lt7=DAOFactory.getInstance().getTextbookBase().findTextbook(userid, 3);
 				int k7=0;
 				while(k7<lt.size()) {
-					if(lt7.get(k7).getStatus().contentEquals("³õÉó½á¹û£º¾Ü¾ø")) {
+					if(lt7.get(k7).getStatus().contentEquals("åˆå®¡ç»“æœï¼šæ‹’ç»")) {
 						System.out.println(lt7.get(k7));
 					}
 					k7++;
 				}
 			}
 			if(c.contentEquals("D")) {
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄÂÛÎÄÁĞ±í");
-				System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„è®ºæ–‡åˆ—è¡¨");
+				System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 3);
 				int k=0;
 				while(k<lt.size()) {
@@ -847,8 +847,8 @@ public class AchieveService {
 					}
 					k++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ½±ÀøÁĞ±í");
-				System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„å¥–åŠ±åˆ—è¡¨");
+				System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Reward> lt2=DAOFactory .getInstance().getRewardDAO().findReward(userid, 3);
 				int k2=0;
 				while(k2<lt2.size()) {
@@ -857,8 +857,8 @@ public class AchieveService {
 					}
 					k2++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ±ê×¼ÁĞ±í");
-				System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„æ ‡å‡†åˆ—è¡¨");
+				System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Standard> lt3=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 3);
 				int k3=0;
 				while(k3<lt3.size()) {
@@ -867,38 +867,38 @@ public class AchieveService {
 					}
 					k3++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ±¨¸æÁĞ±í");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„æŠ¥å‘Šåˆ—è¡¨");
 				List<Report> lt4=DAOFactory.getInstance().getReportBase().findReport(userid, 3);
 				int k4=0;
 				while(k4<lt.size()) {
-					if(lt4.get(k4).getStatus().contentEquals("ÖÕÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt4.get(k4).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt4.get(k4));
 					}
 					k4++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ×¨ÀûÁĞ±í");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„ä¸“åˆ©åˆ—è¡¨");
 				List<Patent> lt5=DAOFactory.getInstance().getPatentBase().findPatent(userid, 3);
 				int k5=0;
 				while(k5<lt.size()) {
-					if(lt5.get(k5).getTstatus().contentEquals("ÖÕÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt5.get(k5).getTstatus().contentEquals("ç»ˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt5.get(k5));
 					}
 					k5++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤ÁĞ±í");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„è½¯ç¡¬ä»¶å¹³å°è®¤è¯åˆ—è¡¨");
 				List<Prove> lt6=DAOFactory.getInstance().getProveBase().findProve(userid, 3);
 				int k6=0;
 				while(k6<lt.size()) {
-					if(lt6.get(k6).getStatus().contentEquals("ÖÕÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt6.get(k6).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt6.get(k6));
 					}
 					k6++;
 				}
-				System.out.println("ÒÑÍ¨¹ıÖÕÉóµÄ½Ì²ÄÁĞ±í");
+				System.out.println("å·²é€šè¿‡ç»ˆå®¡çš„æ•™æåˆ—è¡¨");
 				List<Textbook> lt7=DAOFactory.getInstance().getTextbookBase().findTextbook(userid, 3);
 				int k7=0;
 				while(k7<lt.size()) {
-					if(lt7.get(k7).getStatus().contentEquals("ÖÕÉó½á¹û£ºÍ¬Òâ")) {
+					if(lt7.get(k7).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šåŒæ„")) {
 						System.out.println(lt7.get(k7));
 					}
 					k7++;
@@ -907,88 +907,88 @@ public class AchieveService {
 		}
 	}
 	public static void studentMenu(String userid) {
-		//Ìá½»ÈÏÖ¤ÉêÇë£¬´Ë´¦²åÈëÊ±ÉóºË×´Ì¬ÉèÎª0
-		//²é¿´ÒÑÌá½»µÄÉêÇë
-		//ĞŞ¸Ä±»¾Ü¾øµÄÉêÇë£¬É¸Ñ¡×´Ì¬Îª3ºÍ4µÄ¼ÇÂ¼£¬½øĞĞ¸üĞÂ
-		//³·»ØÉêÇë£¬É¾³ı
-		System.out.println("A-Ìá½»³É¹ûÈÏ¶¨ÉêÇë");
-		System.out.println("B-²é¿´ÒÑÌá½»ÉêÇëÉóºË½ø³Ì");
-		System.out.println("C-ĞŞ¸Ä±»ÍË»ØµÄÉêÇë");
-		System.out.println("D-³·»Ø³É¹ûÈÏ¶¨ÉêÇë");
-		System.out.println("E-ÍË³ö");
+		//æäº¤è®¤è¯ç”³è¯·ï¼Œæ­¤å¤„æ’å…¥æ—¶å®¡æ ¸çŠ¶æ€è®¾ä¸º0
+		//æŸ¥çœ‹å·²æäº¤çš„ç”³è¯·
+		//ä¿®æ”¹è¢«æ‹’ç»çš„ç”³è¯·ï¼Œç­›é€‰çŠ¶æ€ä¸º3å’Œ4çš„è®°å½•ï¼Œè¿›è¡Œæ›´æ–°
+		//æ’¤å›ç”³è¯·ï¼Œåˆ é™¤
+		System.out.println("A-æäº¤æˆæœè®¤å®šç”³è¯·");
+		System.out.println("B-æŸ¥çœ‹å·²æäº¤ç”³è¯·å®¡æ ¸è¿›ç¨‹");
+		System.out.println("C-ä¿®æ”¹è¢«é€€å›çš„ç”³è¯·");
+		System.out.println("D-æ’¤å›æˆæœè®¤å®šç”³è¯·");
+		System.out.println("E-é€€å‡º");
 		String c="";
 		Scanner scanner = new Scanner(System.in);
 		while(true) {
-			System.out.println("ÇëÊäÈë²Ëµ¥Ñ¡Ïî£º");
+			System.out.println("è¯·è¾“å…¥èœå•é€‰é¡¹ï¼š");
 			if(scanner.hasNext()){
-			    c = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+			    c = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 			}
 			while(!c.contentEquals("A")&&!c.contentEquals("B")&&!c.contentEquals("C")&&!c.contentEquals("D")&&!c.contentEquals("E")) {
-				System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+				System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 				c = scanner.next();
 			}
 			if(c.contentEquals("E")) {
 				break;
 			}
 			if(c.contentEquals("A")) {
-				System.out.println("1-Ìá½»ÂÛÎÄÈÏÖ¤ÉêÇë");
-				System.out.println("2-Ìá½»½±ÀøÈÏÖ¤ÉêÇë");
-				System.out.println("3-Ìá½»±ê×¼ÈÏÖ¤ÉêÇë");
-				System.out.println("4-Ìá½»±¨¸æÈÏÖ¤ÉêÇë");
-				System.out.println("5-Ìá½»×¨ÀûÈÏÖ¤ÉêÇë");
-				System.out.println("6-Ìá½»ÈíÓ²¼şÆ½Ì¨ÈÏÖ¤ÉêÇë");
-				System.out.println("7-Ìá½»½Ì²ÄÈÏÖ¤ÉêÇë");
-				System.out.println("0-ÍË³öÉêÇë²Ù×÷");
+				System.out.println("1-æäº¤è®ºæ–‡è®¤è¯ç”³è¯·");
+				System.out.println("2-æäº¤å¥–åŠ±è®¤è¯ç”³è¯·");
+				System.out.println("3-æäº¤æ ‡å‡†è®¤è¯ç”³è¯·");
+				System.out.println("4-æäº¤æŠ¥å‘Šè®¤è¯ç”³è¯·");
+				System.out.println("5-æäº¤ä¸“åˆ©è®¤è¯ç”³è¯·");
+				System.out.println("6-æäº¤è½¯ç¡¬ä»¶å¹³å°è®¤è¯ç”³è¯·");
+				System.out.println("7-æäº¤æ•™æè®¤è¯ç”³è¯·");
+				System.out.println("0-é€€å‡ºç”³è¯·æ“ä½œ");
 				String choice="";
 				while(true) {
-					System.out.println("ÇëÊäÈëÉêÇëÑ¡Ïî£º");
+					System.out.println("è¯·è¾“å…¥ç”³è¯·é€‰é¡¹ï¼š");
 					if(scanner.hasNext()){
-					    choice = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+					    choice = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 					}
 					while(!choice.contentEquals("1")&&!choice.contentEquals("2")&&!choice.contentEquals("3")&&!choice.contentEquals("4")&&!choice.contentEquals("5")&&!choice.contentEquals("6")&&!choice.contentEquals("7")&&!choice.contentEquals("0")) {
-						System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+						System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 						choice = scanner.next();
 					}
 					if(choice.contentEquals("0")) {
 						break;
 					}
 					if(choice.contentEquals("1")) {
-						System.out.printf("ÇëÊäÈëÄúÏëÉêÇëµÄÂÛÎÄÈÏÖ¤¸öÊı£º");
+						System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³ç”³è¯·çš„è®ºæ–‡è®¤è¯ä¸ªæ•°ï¼š");
 						while (!scanner.hasNextInt()){
-						    System.out.println("ÇëÊäÈëÕûÊı£¡");
+						    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						int count=scanner.nextInt();
 						int j=0;
 						for(j=0;j<count;j++) {
 							Thesis t=new Thesis();
-							System.out.printf("ÂÛÎÄÃû³Æ£º");
+							System.out.printf("è®ºæ–‡åç§°ï¼š");
 							t.setName(scanner.nextLine());
-							System.out.printf("ÂÛÎÄ·¢±í¿¯ÎïÃû³Æ£º");
+							System.out.printf("è®ºæ–‡å‘è¡¨åˆŠç‰©åç§°ï¼š");
 							t.setPubname(scanner.nextLine());
-							System.out.printf("ÂÛÎÄ·¢±íÊ±¼ä£ºyyyy-MM-dd");
+							System.out.printf("è®ºæ–‡å‘è¡¨æ—¶é—´ï¼šyyyy-MM-dd");
 							String tmp=scanner.nextLine();
 							while(!isValidDate(tmp)) {
-								System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+								System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setPubtime(tmp);
-							System.out.printf("ÂÛÎÄ·¢±í×´Ì¬£º(Â¼ÓÃÎ´·¢±í/ÒÑ·¢±í)");
+							System.out.printf("è®ºæ–‡å‘è¡¨çŠ¶æ€ï¼š(å½•ç”¨æœªå‘è¡¨/å·²å‘è¡¨)");
 							tmp=scanner.nextLine();
-							while(!tmp.contentEquals("Â¼ÓÃÎ´·¢±í")&&!tmp.contentEquals("ÒÑ·¢±í")) {
-								System.out.println("ÇëÊäÈëÂ¼ÓÃÎ´·¢±í/ÒÑ·¢±í£¡");
+							while(!tmp.contentEquals("å½•ç”¨æœªå‘è¡¨")&&!tmp.contentEquals("å·²å‘è¡¨")) {
+								System.out.println("è¯·è¾“å…¥å½•ç”¨æœªå‘è¡¨/å·²å‘è¡¨ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setPubstate(tmp);
-							System.out.printf("ÂÛÎÄË÷ÒıÀàĞÍ£º");
+							System.out.printf("è®ºæ–‡ç´¢å¼•ç±»å‹ï¼š");
 							t.setIndextype(scanner.nextLine());
-							System.out.printf("ÂÛÎÄ¹éÊô¿âÇé¿ö£º(Ñ§Ôº¸ßÖÊÁ¿ÂÛÎÄ¿â/Ñ§ÔººËĞÄÂÛÎÄ¿â)");
+							System.out.printf("è®ºæ–‡å½’å±åº“æƒ…å†µï¼š(å­¦é™¢é«˜è´¨é‡è®ºæ–‡åº“/å­¦é™¢æ ¸å¿ƒè®ºæ–‡åº“)");
 							tmp=scanner.nextLine();
-							while(!tmp.contentEquals("Ñ§Ôº¸ßÖÊÁ¿ÂÛÎÄ¿â")&&!tmp.contentEquals("Ñ§ÔººËĞÄÂÛÎÄ¿â")) {
-								System.out.println("ÇëÊäÈëÑ§Ôº¸ßÖÊÁ¿ÂÛÎÄ¿â/Ñ§ÔººËĞÄÂÛÎÄ¿â£¡");
+							while(!tmp.contentEquals("å­¦é™¢é«˜è´¨é‡è®ºæ–‡åº“")&&!tmp.contentEquals("å­¦é™¢æ ¸å¿ƒè®ºæ–‡åº“")) {
+								System.out.println("è¯·è¾“å…¥å­¦é™¢é«˜è´¨é‡è®ºæ–‡åº“/å­¦é™¢æ ¸å¿ƒè®ºæ–‡åº“ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setBase(scanner.nextLine());
-							System.out.printf("ÂÛÎÄÉ¨Ãè»òPDFÎÄ¼ş£º");
+							System.out.printf("è®ºæ–‡æ‰«ææˆ–PDFæ–‡ä»¶ï¼š");
 							t.setMaterial(scanner.nextLine());
 							t.setSid(userid);
 							t.setState("0");
@@ -1001,44 +1001,44 @@ public class AchieveService {
 							}
 							t.setId(id);
 							DAOFactory .getInstance().getThesisDAO().addThesis(t);
-							System.out.println("ÒÑÌá½»ÉêÇë£¡");
+							System.out.println("å·²æäº¤ç”³è¯·ï¼");
 						}
 					}
 					if(choice.contentEquals("2")) {
-						System.out.printf("ÇëÊäÈëÄúÏëÉêÇëµÄ½±ÀøÈÏÖ¤¸öÊı£º");
+						System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³ç”³è¯·çš„å¥–åŠ±è®¤è¯ä¸ªæ•°ï¼š");
 						while (!scanner.hasNextInt()){
-						    System.out.println("ÇëÊäÈëÕûÊı£¡");
+						    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						int count=scanner.nextInt();
 						int j=0;
 						for(j=0;j<count;j++) {
 							Reward t=new Reward();
-							System.out.printf("½±ÀøÃû³Æ£º");
+							System.out.printf("å¥–åŠ±åç§°ï¼š");
 							t.setName(scanner.nextLine());
-							System.out.printf("½±ÀøµÈ¼¶£º(¹ú¼Ò¼¶/Ê¡²¿¼¶/ÊĞ¼¶/ÆäËû)");
+							System.out.printf("å¥–åŠ±ç­‰çº§ï¼š(å›½å®¶çº§/çœéƒ¨çº§/å¸‚çº§/å…¶ä»–)");
 							String tmp="";
-							while(!tmp.contentEquals("¹ú¼Ò¼¶")&&!tmp.contentEquals("Ê¡²¿¼¶")&&!tmp.contentEquals("ÊĞ¼¶")&&!tmp.contentEquals("ÆäËû")) {
-								System.out.println("ÇëÊäÈë(¹ú¼Ò¼¶/Ê¡²¿¼¶/ÊĞ¼¶/ÆäËû)£¡");
+							while(!tmp.contentEquals("å›½å®¶çº§")&&!tmp.contentEquals("çœéƒ¨çº§")&&!tmp.contentEquals("å¸‚çº§")&&!tmp.contentEquals("å…¶ä»–")) {
+								System.out.println("è¯·è¾“å…¥(å›½å®¶çº§/çœéƒ¨çº§/å¸‚çº§/å…¶ä»–)ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setRelevel(tmp);
-							System.out.printf("»ñ½±µÈ¼¶£º(ÌØµÈ½±/Ò»µÈ½±/¶şµÈ½±/ÈıµÈ½±)");
+							System.out.printf("è·å¥–ç­‰çº§ï¼š(ç‰¹ç­‰å¥–/ä¸€ç­‰å¥–/äºŒç­‰å¥–/ä¸‰ç­‰å¥–)");
 							tmp="";
-							while(!tmp.contentEquals("ÌØµÈ½±")&&!tmp.contentEquals("Ò»µÈ½±")&&!tmp.contentEquals("¶şµÈ½±")&&!tmp.contentEquals("ÈıµÈ½±")) {
-								System.out.println("ÇëÊäÈë(ÌØµÈ½±/Ò»µÈ½±/¶şµÈ½±/ÈıµÈ½±)£¡");
+							while(!tmp.contentEquals("ç‰¹ç­‰å¥–")&&!tmp.contentEquals("ä¸€ç­‰å¥–")&&!tmp.contentEquals("äºŒç­‰å¥–")&&!tmp.contentEquals("ä¸‰ç­‰å¥–")) {
+								System.out.println("è¯·è¾“å…¥(ç‰¹ç­‰å¥–/ä¸€ç­‰å¥–/äºŒç­‰å¥–/ä¸‰ç­‰å¥–)ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setGetlevel(tmp);
-							System.out.printf("ÅÅÃû£º)");
+							System.out.printf("æ’åï¼š)");
 							t.setGetlevel(scanner.nextLine());
-							System.out.printf("»ñ½±Ê±¼ä£ºyyyy-MM-dd");
+							System.out.printf("è·å¥–æ—¶é—´ï¼šyyyy-MM-dd");
 							tmp=scanner.nextLine();
 							while(!isValidDate(tmp)) {
-								System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+								System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setGettime(tmp);
-							System.out.printf("×ôÖ¤²ÄÁÏ");
+							System.out.printf("ä½è¯ææ–™");
 							t.setMaterial(scanner.nextLine());
 							t.setSid(userid);
 							t.setState("0");
@@ -1051,36 +1051,36 @@ public class AchieveService {
 							}
 							t.setId(id);
 							DAOFactory .getInstance().getRewardDAO().addReward(t);
-							System.out.println("ÒÑÌá½»ÉêÇë£¡");
+							System.out.println("å·²æäº¤ç”³è¯·ï¼");
 						}
 					}
 					if(choice.contentEquals("3")) {
-						System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
-						System.out.printf("ÇëÊäÈëÄúÏëÉêÇëµÄ±ê×¼ÈÏÖ¤¸öÊı£º");
+						System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
+						System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³ç”³è¯·çš„æ ‡å‡†è®¤è¯ä¸ªæ•°ï¼š");
 						while (!scanner.hasNextInt()){
-						    System.out.println("ÇëÊäÈëÕûÊı£¡");
+						    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						int count=scanner.nextInt();
 						int j=0;
 						for(j=0;j<count;j++) {
 							Standard t=new Standard();
-							System.out.printf("±ê×¼Ãû³Æ£º");
+							System.out.printf("æ ‡å‡†åç§°ï¼š");
 							t.setName(scanner.nextLine());
-							System.out.printf("±ê×¼µÈ¼¶£º(¹ú¼Ò±ê×¼/Ê¡²¿¼¶µØ·½±ê×¼/ĞĞÒµ±ê×¼/ÍÅ¶Ó±ê×¼)");
+							System.out.printf("æ ‡å‡†ç­‰çº§ï¼š(å›½å®¶æ ‡å‡†/çœéƒ¨çº§åœ°æ–¹æ ‡å‡†/è¡Œä¸šæ ‡å‡†/å›¢é˜Ÿæ ‡å‡†)");
 							String tmp="";
-							while(!tmp.contentEquals("¹ú¼Ò±ê×¼")&&!tmp.contentEquals("Ê¡²¿¼¶µØ·½±ê×¼")&&!tmp.contentEquals("ĞĞÒµ±ê×¼")&&!tmp.contentEquals("ÍÅ¶Ó±ê×¼")) {
-								System.out.println("ÇëÊäÈë(¹ú¼Ò±ê×¼/Ê¡²¿¼¶µØ·½±ê×¼/ĞĞÒµ±ê×¼/ÍÅ¶Ó±ê×¼)£¡");
+							while(!tmp.contentEquals("å›½å®¶æ ‡å‡†")&&!tmp.contentEquals("çœéƒ¨çº§åœ°æ–¹æ ‡å‡†")&&!tmp.contentEquals("è¡Œä¸šæ ‡å‡†")&&!tmp.contentEquals("å›¢é˜Ÿæ ‡å‡†")) {
+								System.out.println("è¯·è¾“å…¥(å›½å®¶æ ‡å‡†/çœéƒ¨çº§åœ°æ–¹æ ‡å‡†/è¡Œä¸šæ ‡å‡†/å›¢é˜Ÿæ ‡å‡†)ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setGetlevel(tmp);
-							System.out.printf("±ê×¼·¢²¼Ê±¼ä£ºyyyy-MM-dd");
+							System.out.printf("æ ‡å‡†å‘å¸ƒæ—¶é—´ï¼šyyyy-MM-dd");
 							tmp=scanner.nextLine();
 							while(!isValidDate(tmp)) {
-								System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+								System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setPubtime(tmp);
-							System.out.printf("×ôÖ¤²ÄÁÏ");
+							System.out.printf("ä½è¯ææ–™");
 							t.setMaterial(scanner.nextLine());
 							t.setSid(userid);
 							t.setState("0");
@@ -1093,42 +1093,42 @@ public class AchieveService {
 							}
 							t.setId(id);
 							DAOFactory .getInstance().getStandardDAO().addStandard(t);
-							System.out.println("ÒÑÌá½»ÉêÇë£¡");
+							System.out.println("å·²æäº¤ç”³è¯·ï¼");
 						}
 					}
 					if(choice.contentEquals("4")) {
-						System.out.printf("ÇëÊäÈëÄúÏëÉêÇëµÄ±¨¸æÈÏÖ¤¸öÊı£º");
+						System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³ç”³è¯·çš„æŠ¥å‘Šè®¤è¯ä¸ªæ•°ï¼š");
 						while (!scanner.hasNextInt()){
-							System.out.println("ÇëÊäÈëÕûÊı£¡");
+							System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						int count=scanner.nextInt();
 						int j=0;
 						for(j=0;j<count;j++) {
 							Report t=new Report();
-							System.out.printf("±¨¸æÃû³Æ£º");
+							System.out.printf("æŠ¥å‘Šåç§°ï¼š");
 							t.setName(scanner.nextLine());
-							System.out.printf("±¨¸æ·şÎñµ¥Î»£º");
+							System.out.printf("æŠ¥å‘ŠæœåŠ¡å•ä½ï¼š");
 							t.setAddress(scanner.nextLine());
-							System.out.printf("±¨¸æÊ±¼ä£ºyyyy-MM-dd");
+							System.out.printf("æŠ¥å‘Šæ—¶é—´ï¼šyyyy-MM-dd");
 							String tmp=scanner.nextLine();
 							while(!isValidDate(tmp)) {
-								System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+								System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setTime(tmp);
-							System.out.printf("±¨¸æÀàĞÍ£º(¹æ»®Àà/Éè¼ÆÀà/·şÎñÀà/ÆäËû)");
+							System.out.printf("æŠ¥å‘Šç±»å‹ï¼š(è§„åˆ’ç±»/è®¾è®¡ç±»/æœåŠ¡ç±»/å…¶ä»–)");
 							tmp=scanner.nextLine();
-							while(!tmp.contentEquals("¹æ»®Àà")&&!tmp.contentEquals("Éè¼ÆÀà")&&!tmp.contentEquals("·şÎñÀà")&&!tmp.contentEquals("ÆäËû")) {
-								System.out.println("ÇëÊäÈë ¹æ»®Àà/Éè¼ÆÀà/·şÎñÀà/ÆäËû");
+							while(!tmp.contentEquals("è§„åˆ’ç±»")&&!tmp.contentEquals("è®¾è®¡ç±»")&&!tmp.contentEquals("æœåŠ¡ç±»")&&!tmp.contentEquals("å…¶ä»–")) {
+								System.out.println("è¯·è¾“å…¥ è§„åˆ’ç±»/è®¾è®¡ç±»/æœåŠ¡ç±»/å…¶ä»–");
 								tmp=scanner.nextLine();
 							}
 							t.setType(tmp);
-							System.out.printf("¹±Ï×¶ÈÅÅÃû£¨ÕûÊı£©£º");
+							System.out.printf("è´¡çŒ®åº¦æ’åï¼ˆæ•´æ•°ï¼‰ï¼š");
 							t.setContribution(Integer.parseInt(scanner.nextLine()));
-							System.out.printf("×ôÖ¤²ÄÁÏ£º");
+							System.out.printf("ä½è¯ææ–™ï¼š");
 							t.setMaterial(scanner.nextLine());
 							t.setSid(userid);
-							t.setStatus("Î´ÉóºË");
+							t.setStatus("æœªå®¡æ ¸");
 							List<Report> ltl=DAOFactory.getInstance().getReportBase().findReport(userid, 4);
 							String id="";
 							if(ltl==null||ltl.size()==0) {
@@ -1138,74 +1138,74 @@ public class AchieveService {
 							}
 							t.setId(id);
 							DAOFactory.getInstance().getReportBase().addReport(t);
-							System.out.println("ÒÑÌá½»ÉêÇë£¡");
+							System.out.println("å·²æäº¤ç”³è¯·ï¼");
 						}
 					}
 					if(choice.contentEquals("5")) {
-						System.out.printf("ÇëÊäÈëÄúÏëÉêÇëµÄ×¨ÀûÈÏÖ¤¸öÊı£º");
-						while (!scanner.hasNextInt()){			//ÊäÈëÂ³°ôĞÔ
-							System.out.println("ÇëÊäÈëÕûÊı£¡");
+						System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³ç”³è¯·çš„ä¸“åˆ©è®¤è¯ä¸ªæ•°ï¼š");
+						while (!scanner.hasNextInt()){			//è¾“å…¥é²æ£’æ€§
+							System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						int count=scanner.nextInt();
 						int j=0;
 						for(j=0;j<count;j++) {
 							Patent t=new Patent();
-							System.out.printf("×¨ÀûÃû³Æ£º");			//ÊäÈë×¨ÀûÃû³Æ
+							System.out.printf("ä¸“åˆ©åç§°ï¼š");			//è¾“å…¥ä¸“åˆ©åç§°
 							t.setName(scanner.nextLine());
-							System.out.printf("×¨ÀûºÅ£º");			//ÊäÈë×¨ÀûºÅ
+							System.out.printf("ä¸“åˆ©å·ï¼š");			//è¾“å…¥ä¸“åˆ©å·
 							t.setId(scanner.nextLine());
-							System.out.printf("×¨Àû·¢²¼Ê±¼ä£ºyyyy-MM-dd");		//ÊäÈë×¨Àû·¢²¼Ê±¼ä
+							System.out.printf("ä¸“åˆ©å‘å¸ƒæ—¶é—´ï¼šyyyy-MM-dd");		//è¾“å…¥ä¸“åˆ©å‘å¸ƒæ—¶é—´
 							String tmp=scanner.nextLine();
 							while(!isValidDate(tmp)) {
-								System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+								System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setTime(tmp);
-							System.out.printf("×¨ÀûÀàĞÍ(·¢Ã÷×¨Àû/ÊµÓÃĞÂĞÍ×¨Àû)£º");		//ÏŞÖÆ×¨ÀûÀàĞÍ
+							System.out.printf("ä¸“åˆ©ç±»å‹(å‘æ˜ä¸“åˆ©/å®ç”¨æ–°å‹ä¸“åˆ©)ï¼š");		//é™åˆ¶ä¸“åˆ©ç±»å‹
 							tmp=scanner.nextLine();
-							while(!tmp.contentEquals("·¢Ã÷×¨Àû")&&!tmp.contentEquals("ÊµÓÃĞÂĞÍ×¨Àû")) {
-								System.out.println("ÇëÊäÈë ·¢Ã÷×¨Àû/ÊµÓÃĞÂĞÍ×¨Àû");
+							while(!tmp.contentEquals("å‘æ˜ä¸“åˆ©")&&!tmp.contentEquals("å®ç”¨æ–°å‹ä¸“åˆ©")) {
+								System.out.println("è¯·è¾“å…¥ å‘æ˜ä¸“åˆ©/å®ç”¨æ–°å‹ä¸“åˆ©");
 								tmp=scanner.nextLine();
 							}
 							t.setType(tmp);
-							System.out.printf("¹±Ï×¶ÈÅÅÃû£¨ÕûÊı£©£º");		//ÊäÈë¹±Ï×¶ÈÅÅÃû
+							System.out.printf("è´¡çŒ®åº¦æ’åï¼ˆæ•´æ•°ï¼‰ï¼š");		//è¾“å…¥è´¡çŒ®åº¦æ’å
 							t.setContribution(Integer.parseInt(scanner.nextLine()));
-							System.out.printf("×¨Àû×´Ì¬£º");		//ÊäÈë×¨Àû×´Ì¬
+							System.out.printf("ä¸“åˆ©çŠ¶æ€ï¼š");		//è¾“å…¥ä¸“åˆ©çŠ¶æ€
 							t.setStatus(scanner.nextLine());
-							System.out.printf("×ôÖ¤²ÄÁÏ£º");		//ÊäÈë×ôÖ¤²ÄÁÏ
+							System.out.printf("ä½è¯ææ–™ï¼š");		//è¾“å…¥ä½è¯ææ–™
 							t.setMaterial(scanner.nextLine());
 							t.setSid(userid);
-							t.setTstatus("Î´ÉóºË");				//ÉèÖÃÉóºË×´Ì¬ÎªÎ´Ìá½»
-							DAOFactory.getInstance().getPatentBase().addPatent(t);		//½«ÆäÌí¼Óµ½±íÖĞ
-							System.out.println("ÒÑÌá½»ÉêÇë£¡");
+							t.setTstatus("æœªå®¡æ ¸");				//è®¾ç½®å®¡æ ¸çŠ¶æ€ä¸ºæœªæäº¤
+							DAOFactory.getInstance().getPatentBase().addPatent(t);		//å°†å…¶æ·»åŠ åˆ°è¡¨ä¸­
+							System.out.println("å·²æäº¤ç”³è¯·ï¼");
 						}
 					}
 					if(choice.contentEquals("6")) {
-						System.out.printf("ÇëÊäÈëÄúÏëÉêÇëµÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤¸öÊı£º");
+						System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³ç”³è¯·çš„è½¯ç¡¬ä»¶å¹³å°è®¤è¯ä¸ªæ•°ï¼š");
 						while (!scanner.hasNextInt()){
-							System.out.println("ÇëÊäÈëÕûÊı£¡");
+							System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						int count=scanner.nextInt();
 						int j=0;
 						for(j=0;j<count;j++) {
 							Prove t=new Prove();
-							System.out.printf("Æ½Ì¨Ãû³Æ£º");
+							System.out.printf("å¹³å°åç§°ï¼š");
 							t.setName(scanner.nextLine());
-							System.out.printf("Æ½Ì¨·şÎñµ¥Î»£º");
+							System.out.printf("å¹³å°æœåŠ¡å•ä½ï¼š");
 							t.setAddress(scanner.nextLine());
-							System.out.printf("Æ½Ì¨ÉÏÏßÊ±¼ä£ºyyyy-MM-dd");
+							System.out.printf("å¹³å°ä¸Šçº¿æ—¶é—´ï¼šyyyy-MM-dd");
 							String tmp=scanner.nextLine();
 							while(!isValidDate(tmp)) {
-								System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+								System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setTime(tmp);
-							System.out.printf("¹±Ï×¶ÈÅÅÃû£¨ÕûÊı£©£º");
+							System.out.printf("è´¡çŒ®åº¦æ’åï¼ˆæ•´æ•°ï¼‰ï¼š");
 							t.setContribution(Integer.parseInt(scanner.nextLine()));
-							System.out.printf("×ôÖ¤²ÄÁÏ£º");
+							System.out.printf("ä½è¯ææ–™ï¼š");
 							t.setMaterial(scanner.nextLine());
 							t.setSid(userid);
-							t.setStatus("Î´ÉóºË");
+							t.setStatus("æœªå®¡æ ¸");
 							List<Prove> ltl=DAOFactory.getInstance().getProveBase().findProve(userid, 4);
 							String id="";
 							if(ltl==null||ltl.size()==0) {
@@ -1215,35 +1215,35 @@ public class AchieveService {
 							}
 							t.setId(id);
 							DAOFactory.getInstance().getProveBase().addProve(t);
-							System.out.println("ÒÑÌá½»ÉêÇë£¡");
+							System.out.println("å·²æäº¤ç”³è¯·ï¼");
 						}
 					}
 					if(choice.contentEquals("7")) {
-						System.out.printf("ÇëÊäÈëÄúÏëÉêÇëµÄ½Ì²ÄÈÏÖ¤¸öÊı£º");
+						System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³ç”³è¯·çš„æ•™æè®¤è¯ä¸ªæ•°ï¼š");
 						while (!scanner.hasNextInt()){
-							System.out.println("ÇëÊäÈëÕûÊı£¡");
+							System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						int count=scanner.nextInt();
 						int j=0;
 						for(j=0;j<count;j++) {
 							Textbook t=new Textbook();
-							System.out.printf("½Ì²ÄÃû³Æ£º");
+							System.out.printf("æ•™æåç§°ï¼š");
 							t.setName(scanner.nextLine());
-							System.out.printf("½Ì²Ä³ö°æÉç£º");
+							System.out.printf("æ•™æå‡ºç‰ˆç¤¾ï¼š");
 							t.setPress(scanner.nextLine());
-							System.out.printf("½Ì²Ä³ö°æÊ±¼ä£ºyyyy-MM-dd");
+							System.out.printf("æ•™æå‡ºç‰ˆæ—¶é—´ï¼šyyyy-MM-dd");
 							String tmp=scanner.nextLine();
 							while(!isValidDate(tmp)) {
-								System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+								System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 								tmp=scanner.nextLine();
 							}
 							t.setTime(tmp);
-							System.out.printf("¹±Ï×¶ÈÅÅÃû£¨ÕûÊı£©£º");
+							System.out.printf("è´¡çŒ®åº¦æ’åï¼ˆæ•´æ•°ï¼‰ï¼š");
 							t.setContribution(Integer.parseInt(scanner.nextLine()));
-							System.out.printf("×ôÖ¤²ÄÁÏ£º");
+							System.out.printf("ä½è¯ææ–™ï¼š");
 							t.setMaterial(scanner.nextLine());
 							t.setSid(userid);
-							t.setStatus("Î´ÉóºË");
+							t.setStatus("æœªå®¡æ ¸");
 							List<Textbook> ltl=DAOFactory.getInstance().getTextbookBase().findTextbook(userid, 4);
 							String id="";
 							if(ltl==null||ltl.size()==0) {
@@ -1253,58 +1253,58 @@ public class AchieveService {
 							}
 							t.setId(id);
 							DAOFactory.getInstance().getTextbookBase().addTextbook(t);
-							System.out.println("ÒÑÌá½»ÉêÇë£¡");
+							System.out.println("å·²æäº¤ç”³è¯·ï¼");
 						}
 					}
 				}
 			}
 			if(c.contentEquals("B")) {
-				System.out.println("ÂÛÎÄÈÏÖ¤½ø³Ì");
-				System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("è®ºæ–‡è®¤è¯è¿›ç¨‹");
+				System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 1);
 				int k=0;
 				while(k<lt.size()) {
 					System.out.println(lt.get(k));
 					k++;
 				}
-				System.out.println("½±ÀøÈÏÖ¤½ø³Ì");
-				System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å¥–åŠ±è®¤è¯è¿›ç¨‹");
+				System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Reward> lt2=DAOFactory .getInstance().getRewardDAO().findReward(userid, 1);
 				int k2=0;
 				while(k2<lt2.size()) {
 					System.out.println(lt2.get(k2));
 					k2++;
 				}
-				System.out.println("±ê×¼ÈÏÖ¤½ø³Ì");
-				System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("æ ‡å‡†è®¤è¯è¿›ç¨‹");
+				System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Standard> lt3=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 1);
 				int k3=0;
 				while(k3<lt3.size()) {
 					System.out.println(lt3.get(k3));
 					k3++;
 				}
-				System.out.println("±¨¸æÈÏÖ¤½ø³Ì");
+				System.out.println("æŠ¥å‘Šè®¤è¯è¿›ç¨‹");
 				List<Report> lt4=DAOFactory .getInstance().getReportBase().findReport(userid, 1);
 				int k4=0;
 				while(k4<lt4.size()) {
 					System.out.println(lt4.get(k4));
 					k4++;
 				}
-				System.out.println("ÖÕÉóÈÏÖ¤½ø³Ì");
+				System.out.println("ç»ˆå®¡è®¤è¯è¿›ç¨‹");
 				List<Patent> lt5=DAOFactory .getInstance().getPatentBase().findPatent(userid, 1);
 				int k5=0;
 				while(k5<lt5.size()) {
 					System.out.println(lt5.get(k5));
 					k5++;
 				}
-				System.out.println("ÈíÓ²¼şÆ½Ì¨ÈÏÖ¤½ø³Ì");
+				System.out.println("è½¯ç¡¬ä»¶å¹³å°è®¤è¯è¿›ç¨‹");
 				List<Prove> lt6=DAOFactory .getInstance().getProveBase().findProve(userid, 4);
 				int k6=0;
 				while(k6<lt6.size()) {
 					System.out.println(lt6.get(k6));
 					k6++;
 				}
-				System.out.println("½Ì²ÄÈÏÖ¤½ø³Ì");
+				System.out.println("æ•™æè®¤è¯è¿›ç¨‹");
 				List<Textbook> lt7=DAOFactory .getInstance().getTextbookBase().findTextbook(userid, 4);
 				int k7=0;
 				while(k7<lt7.size()) {
@@ -1313,102 +1313,102 @@ public class AchieveService {
 				}
 			}
 			if(c.contentEquals("C")) {
-				System.out.println("1-ĞŞ¸ÄÂÛÎÄÈÏÖ¤ÉêÇë");
-				System.out.println("2-ĞŞ¸Ä½±ÀøÈÏÖ¤ÉêÇë");
-				System.out.println("3-ĞŞ¸Ä±ê×¼ÈÏÖ¤ÉêÇë");
-				System.out.println("4-ĞŞ¸Ä±¨¸æÈÏÖ¤ÉêÇë");
-				System.out.println("5-ĞŞ¸Ä×¨ÀûÈÏÖ¤ÉêÇë");
-				System.out.println("6-ĞŞ¸ÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤ÉêÇë");
-				System.out.println("7-ĞŞ¸Ä½Ì²ÄÈÏÖ¤ÉêÇë");
-				System.out.println("0-ÍË³öÉêÇë²Ù×÷");
+				System.out.println("1-ä¿®æ”¹è®ºæ–‡è®¤è¯ç”³è¯·");
+				System.out.println("2-ä¿®æ”¹å¥–åŠ±è®¤è¯ç”³è¯·");
+				System.out.println("3-ä¿®æ”¹æ ‡å‡†è®¤è¯ç”³è¯·");
+				System.out.println("4-ä¿®æ”¹æŠ¥å‘Šè®¤è¯ç”³è¯·");
+				System.out.println("5-ä¿®æ”¹ä¸“åˆ©è®¤è¯ç”³è¯·");
+				System.out.println("6-ä¿®æ”¹è½¯ç¡¬ä»¶å¹³å°è®¤è¯ç”³è¯·");
+				System.out.println("7-ä¿®æ”¹æ•™æè®¤è¯ç”³è¯·");
+				System.out.println("0-é€€å‡ºç”³è¯·æ“ä½œ");
 				String choice="";
 				while(true) {
-					System.out.println("ÇëÊäÈëĞŞ¸ÄÑ¡Ïî£º");
+					System.out.println("è¯·è¾“å…¥ä¿®æ”¹é€‰é¡¹ï¼š");
 					if(scanner.hasNext()){
-					    choice = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+					    choice = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 					}
 					while(!choice.contentEquals("1")&&!choice.contentEquals("2")&&!choice.contentEquals("3")&&!choice.contentEquals("4")&&!choice.contentEquals("5")&&!choice.contentEquals("6")&&!choice.contentEquals("7")&&!choice.contentEquals("0")) {
-						System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+						System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 						choice = scanner.next();
 					}
 					if(choice.contentEquals("1")) {
 						List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 1);
 						int k=0;
-						System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+						System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 						while(k<lt.size()) {
 							if(lt.get(k).getState().contentEquals("3")||lt.get(k).getState().contentEquals("4")) {
 								Thesis t=lt.get(k);
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºĞŞ¸Ä-1£¬Ìø¹ı-0");
+								System.out.println("è¯·è¾“å…¥ï¼šä¿®æ”¹-1ï¼Œè·³è¿‡-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
 									int count=0;
-									System.out.println("ÇëÊäÈëĞŞ¸ÄÏîĞòºÅ£¨1-ÂÛÎÄÃû³Æ 2-ÂÛÎÄ·¢±í¿¯ÎïÃû³Æ 3-·¢±íÊ±¼ä 4-ÂÛÎÄ×´Ì¬ 5-Ë÷ÒıÀàĞÍ 6-ÂÛÎÄ¹éÊôÇé¿ö 7-ÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ 0-ÍË³ö¶Ôµ±Ç°ÏîµÄĞŞ¸Ä£©");
+									System.out.println("è¯·è¾“å…¥ä¿®æ”¹é¡¹åºå·ï¼ˆ1-è®ºæ–‡åç§° 2-è®ºæ–‡å‘è¡¨åˆŠç‰©åç§° 3-å‘è¡¨æ—¶é—´ 4-è®ºæ–‡çŠ¶æ€ 5-ç´¢å¼•ç±»å‹ 6-è®ºæ–‡å½’å±æƒ…å†µ 7-è®ºæ–‡æ‰«ææˆ–PDFææ–™ 0-é€€å‡ºå¯¹å½“å‰é¡¹çš„ä¿®æ”¹ï¼‰");
 									while(true) {
 										String inc="";
 										if(scanner.hasNext()){
-										    inc = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+										    inc = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 										}
 										while(!inc.contentEquals("1")&&!inc.contentEquals("2")&&!inc.contentEquals("3")&&!inc.contentEquals("4")&&!inc.contentEquals("5")&&!inc.contentEquals("6")&&!inc.contentEquals("7")&&!inc.contentEquals("0")) {
-											System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+											System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 											inc = scanner.next();
 										}
 										if(choice.contentEquals("0")) {
 											break;
 										}
 										if(choice.contentEquals("1")) {
-											System.out.printf("ÂÛÎÄÃû³Æ£º");
+											System.out.printf("è®ºæ–‡åç§°ï¼š");
 											t.setName(scanner.nextLine());
 											
 										}
 										if(choice.contentEquals("2")) {
-											System.out.printf("ÂÛÎÄ·¢±í¿¯ÎïÃû³Æ£º");
+											System.out.printf("è®ºæ–‡å‘è¡¨åˆŠç‰©åç§°ï¼š");
 											t.setPubname(scanner.nextLine());
 										}
 										if(choice.contentEquals("3")) {
-											System.out.printf("ÂÛÎÄ·¢±íÊ±¼ä£ºyyyy-MM-dd");
+											System.out.printf("è®ºæ–‡å‘è¡¨æ—¶é—´ï¼šyyyy-MM-dd");
 											String tmp=scanner.nextLine();
 											while(!isValidDate(tmp)) {
-												System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+												System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setPubtime(tmp);
 										}
 										if(choice.contentEquals("4")) {
-											System.out.printf("ÂÛÎÄ·¢±í×´Ì¬£º(Â¼ÓÃÎ´·¢±í/ÒÑ·¢±í)");
+											System.out.printf("è®ºæ–‡å‘è¡¨çŠ¶æ€ï¼š(å½•ç”¨æœªå‘è¡¨/å·²å‘è¡¨)");
 											String tmp=scanner.nextLine();
-											while(!tmp.contentEquals("Â¼ÓÃÎ´·¢±í")&&!tmp.contentEquals("ÒÑ·¢±í")) {
-												System.out.println("ÇëÊäÈëÂ¼ÓÃÎ´·¢±í/ÒÑ·¢±í£¡");
+											while(!tmp.contentEquals("å½•ç”¨æœªå‘è¡¨")&&!tmp.contentEquals("å·²å‘è¡¨")) {
+												System.out.println("è¯·è¾“å…¥å½•ç”¨æœªå‘è¡¨/å·²å‘è¡¨ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setPubstate(tmp);
 										}
 										if(choice.contentEquals("5")) {
-											System.out.printf("ÂÛÎÄË÷ÒıÀàĞÍ£º");
+											System.out.printf("è®ºæ–‡ç´¢å¼•ç±»å‹ï¼š");
 											t.setIndextype(scanner.nextLine());
 										}
 										if(choice.contentEquals("6")) {
-											System.out.printf("ÂÛÎÄ¹éÊô¿âÇé¿ö£º(Ñ§Ôº¸ßÖÊÁ¿ÂÛÎÄ¿â/Ñ§ÔººËĞÄÂÛÎÄ¿â)");
+											System.out.printf("è®ºæ–‡å½’å±åº“æƒ…å†µï¼š(å­¦é™¢é«˜è´¨é‡è®ºæ–‡åº“/å­¦é™¢æ ¸å¿ƒè®ºæ–‡åº“)");
 											String tmp=scanner.nextLine();
-											while(!tmp.contentEquals("Ñ§Ôº¸ßÖÊÁ¿ÂÛÎÄ¿â")&&!tmp.contentEquals("Ñ§ÔººËĞÄÂÛÎÄ¿â")) {
-												System.out.println("ÇëÊäÈëÑ§Ôº¸ßÖÊÁ¿ÂÛÎÄ¿â/Ñ§ÔººËĞÄÂÛÎÄ¿â£¡");
+											while(!tmp.contentEquals("å­¦é™¢é«˜è´¨é‡è®ºæ–‡åº“")&&!tmp.contentEquals("å­¦é™¢æ ¸å¿ƒè®ºæ–‡åº“")) {
+												System.out.println("è¯·è¾“å…¥å­¦é™¢é«˜è´¨é‡è®ºæ–‡åº“/å­¦é™¢æ ¸å¿ƒè®ºæ–‡åº“ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setBase(scanner.nextLine());
 										}
 										if(choice.contentEquals("7")) {
-											System.out.printf("ÂÛÎÄÉ¨Ãè»òPDFÎÄ¼ş£º");
+											System.out.printf("è®ºæ–‡æ‰«ææˆ–PDFæ–‡ä»¶ï¼š");
 											t.setMaterial(scanner.nextLine());
 										}										
 									}
 									t.setState("0");
 									DAOFactory .getInstance().getThesisDAO().updateThesis(t);
-									System.out.println("ĞŞ¸Ä³É¹¦£¡");
+									System.out.println("ä¿®æ”¹æˆåŠŸï¼");
 								}
 								k++;
 							}
@@ -1416,7 +1416,7 @@ public class AchieveService {
 					}
 					
 					if(choice.contentEquals("2")) {
-						System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+						System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 						List<Reward> lt=DAOFactory .getInstance().getRewardDAO().findReward(userid, 1);
 						int k=0;
 						while(k<lt.size()) {
@@ -1424,77 +1424,77 @@ public class AchieveService {
 								Reward t=lt.get(k);
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
 									int count=0;
-									System.out.println("ÇëÊäÈëĞŞ¸ÄÏîĞòºÅ£¨1-½±ÀøÃû³Æ 2½±ÀøµÈ¼¶ 3-»ñ½±µÈ¼¶ 4-ÅÅÃû 5-»ñ½±Ê±¼ä 6-×ôÖ¤²ÄÁÏ 0-ÍË³ö¶Ôµ±Ç°ÏîµÄĞŞ¸Ä£©");
+									System.out.println("è¯·è¾“å…¥ä¿®æ”¹é¡¹åºå·ï¼ˆ1-å¥–åŠ±åç§° 2å¥–åŠ±ç­‰çº§ 3-è·å¥–ç­‰çº§ 4-æ’å 5-è·å¥–æ—¶é—´ 6-ä½è¯ææ–™ 0-é€€å‡ºå¯¹å½“å‰é¡¹çš„ä¿®æ”¹ï¼‰");
 									while(true) {
 										String inc="";
 										if(scanner.hasNext()){
-										    inc = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+										    inc = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 										}
 										while(!inc.contentEquals("1")&&!inc.contentEquals("2")&&!inc.contentEquals("3")&&!inc.contentEquals("4")&&!inc.contentEquals("5")&&!inc.contentEquals("6")&&!inc.contentEquals("0")) {
-											System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+											System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 											inc = scanner.next();
 										}
 										if(choice.contentEquals("0")) {
 											break;
 										}
 										if(choice.contentEquals("1")) {
-											System.out.printf("½±ÀøÃû³Æ£º");
+											System.out.printf("å¥–åŠ±åç§°ï¼š");
 											t.setName(scanner.nextLine());
 										}
 										if(choice.contentEquals("2")) {
-											System.out.printf("½±ÀøµÈ¼¶£º(¹ú¼Ò¼¶/Ê¡²¿¼¶/ÊĞ¼¶/ÆäËû)");
+											System.out.printf("å¥–åŠ±ç­‰çº§ï¼š(å›½å®¶çº§/çœéƒ¨çº§/å¸‚çº§/å…¶ä»–)");
 											String tmp="";
-											while(!tmp.contentEquals("¹ú¼Ò¼¶")&&!tmp.contentEquals("Ê¡²¿¼¶")&&!tmp.contentEquals("ÊĞ¼¶")&&!tmp.contentEquals("ÆäËû")) {
-												System.out.println("ÇëÊäÈë(¹ú¼Ò¼¶/Ê¡²¿¼¶/ÊĞ¼¶/ÆäËû)£¡");
+											while(!tmp.contentEquals("å›½å®¶çº§")&&!tmp.contentEquals("çœéƒ¨çº§")&&!tmp.contentEquals("å¸‚çº§")&&!tmp.contentEquals("å…¶ä»–")) {
+												System.out.println("è¯·è¾“å…¥(å›½å®¶çº§/çœéƒ¨çº§/å¸‚çº§/å…¶ä»–)ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setRelevel(tmp);
 										}
 										if(choice.contentEquals("3")) {
-											System.out.printf("ÅÅÃû£º)");
+											System.out.printf("æ’åï¼š)");
 											t.setGetlevel(scanner.nextLine());
 										}
 										if(choice.contentEquals("4")) {
-											System.out.printf("»ñ½±µÈ¼¶£º(ÌØµÈ½±/Ò»µÈ½±/¶şµÈ½±/ÈıµÈ½±)");
+											System.out.printf("è·å¥–ç­‰çº§ï¼š(ç‰¹ç­‰å¥–/ä¸€ç­‰å¥–/äºŒç­‰å¥–/ä¸‰ç­‰å¥–)");
 											String tmp="";
-											while(!tmp.contentEquals("ÌØµÈ½±")&&!tmp.contentEquals("Ò»µÈ½±")&&!tmp.contentEquals("¶şµÈ½±")&&!tmp.contentEquals("ÈıµÈ½±")) {
-												System.out.println("ÇëÊäÈë(ÌØµÈ½±/Ò»µÈ½±/¶şµÈ½±/ÈıµÈ½±)£¡");
+											while(!tmp.contentEquals("ç‰¹ç­‰å¥–")&&!tmp.contentEquals("ä¸€ç­‰å¥–")&&!tmp.contentEquals("äºŒç­‰å¥–")&&!tmp.contentEquals("ä¸‰ç­‰å¥–")) {
+												System.out.println("è¯·è¾“å…¥(ç‰¹ç­‰å¥–/ä¸€ç­‰å¥–/äºŒç­‰å¥–/ä¸‰ç­‰å¥–)ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setGetlevel(tmp);
 										}
 										if(choice.contentEquals("5")) {
-											System.out.printf("»ñ½±Ê±¼ä£ºyyyy-MM-dd");
+											System.out.printf("è·å¥–æ—¶é—´ï¼šyyyy-MM-dd");
 											String tmp=scanner.nextLine();
 											while(!isValidDate(tmp)) {
-												System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+												System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setGettime(tmp);
 										}
 										if(choice.contentEquals("6")) {
-											System.out.printf("×ôÖ¤²ÄÁÏ");
+											System.out.printf("ä½è¯ææ–™");
 											t.setMaterial(scanner.nextLine());
 										}										
 									}
 									t.setState("0");
 									DAOFactory .getInstance().getRewardDAO().updateReward(t);
-									System.out.println("ĞŞ¸Ä³É¹¦£¡");
+									System.out.println("ä¿®æ”¹æˆåŠŸï¼");
 								}
 							}
 							k++;
 						}
 					}
 					if(choice.contentEquals("3")) {
-						System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+						System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 						List<Standard> lt=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 1);
 						int k=0;
 						while(k<lt.size()) {
@@ -1502,58 +1502,58 @@ public class AchieveService {
 								Standard t=lt.get(k);
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºÍ¬Òâ-1£¬¾Ü¾ø-0");
+								System.out.println("è¯·è¾“å…¥ï¼šåŒæ„-1ï¼Œæ‹’ç»-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
-									System.out.println("ÇëÊäÈëĞŞ¸ÄÏîĞòºÅ£¨1-±ê×¼Ãû³Æ 2±ê×¼¼¶±ğ 3-±ê×¼·¢²¼Ê±¼ä 4-×ôÖ¤²ÄÁÏ 0-ÍË³ö¶Ôµ±Ç°ÏîµÄĞŞ¸Ä£©");
+									System.out.println("è¯·è¾“å…¥ä¿®æ”¹é¡¹åºå·ï¼ˆ1-æ ‡å‡†åç§° 2æ ‡å‡†çº§åˆ« 3-æ ‡å‡†å‘å¸ƒæ—¶é—´ 4-ä½è¯ææ–™ 0-é€€å‡ºå¯¹å½“å‰é¡¹çš„ä¿®æ”¹ï¼‰");
 									while(true) {
 										String inc="";
 										if(scanner.hasNext()){
-										    inc = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+										    inc = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 										}
 										while(!inc.contentEquals("1")&&!inc.contentEquals("2")&&!inc.contentEquals("3")&&!inc.contentEquals("4")&&!inc.contentEquals("0")) {
-											System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+											System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 											inc = scanner.next();
 										}
 										if(choice.contentEquals("0")) {
 											break;
 										}
 										if(choice.contentEquals("1")) {
-											System.out.printf("±ê×¼Ãû³Æ£º");
+											System.out.printf("æ ‡å‡†åç§°ï¼š");
 											t.setName(scanner.nextLine());
 											
 											
 											
 										}
 										if(choice.contentEquals("2")) {
-											System.out.printf("±ê×¼µÈ¼¶£º(¹ú¼Ò±ê×¼/Ê¡²¿¼¶µØ·½±ê×¼/ĞĞÒµ±ê×¼/ÍÅ¶Ó±ê×¼)");
+											System.out.printf("æ ‡å‡†ç­‰çº§ï¼š(å›½å®¶æ ‡å‡†/çœéƒ¨çº§åœ°æ–¹æ ‡å‡†/è¡Œä¸šæ ‡å‡†/å›¢é˜Ÿæ ‡å‡†)");
 											String tmp="";
-											while(!tmp.contentEquals("¹ú¼Ò±ê×¼")&&!tmp.contentEquals("Ê¡²¿¼¶µØ·½±ê×¼")&&!tmp.contentEquals("ĞĞÒµ±ê×¼")&&!tmp.contentEquals("ÍÅ¶Ó±ê×¼")) {
-												System.out.println("ÇëÊäÈë(¹ú¼Ò±ê×¼/Ê¡²¿¼¶µØ·½±ê×¼/ĞĞÒµ±ê×¼/ÍÅ¶Ó±ê×¼)£¡");
+											while(!tmp.contentEquals("å›½å®¶æ ‡å‡†")&&!tmp.contentEquals("çœéƒ¨çº§åœ°æ–¹æ ‡å‡†")&&!tmp.contentEquals("è¡Œä¸šæ ‡å‡†")&&!tmp.contentEquals("å›¢é˜Ÿæ ‡å‡†")) {
+												System.out.println("è¯·è¾“å…¥(å›½å®¶æ ‡å‡†/çœéƒ¨çº§åœ°æ–¹æ ‡å‡†/è¡Œä¸šæ ‡å‡†/å›¢é˜Ÿæ ‡å‡†)ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setGetlevel(tmp);
 										}
 										if(choice.contentEquals("3")) {
-											System.out.printf("±ê×¼·¢²¼Ê±¼ä£ºyyyy-MM-dd");
+											System.out.printf("æ ‡å‡†å‘å¸ƒæ—¶é—´ï¼šyyyy-MM-dd");
 											String tmp=scanner.nextLine();
 											while(!isValidDate(tmp)) {
-												System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+												System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setPubtime(tmp);
 										}
 										if(choice.contentEquals("4")) {
-											System.out.printf("×ôÖ¤²ÄÁÏ");
+											System.out.printf("ä½è¯ææ–™");
 											t.setMaterial(scanner.nextLine());
 										}
 									t.setState("0");
 									DAOFactory .getInstance().getStandardDAO().updateStandard(t);
-									System.out.println("ĞŞ¸Ä³É¹¦£¡");
+									System.out.println("ä¿®æ”¹æˆåŠŸï¼");
 								}
 							}
 							k++;
@@ -1564,142 +1564,142 @@ public class AchieveService {
 						List<Report> lt=DAOFactory.getInstance().getReportBase().findReport(userid, 1);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("³õÉó½á¹û£º¾Ü¾ø")||lt.get(k).getStatus().contentEquals("ÖÕÉó½á¹û£º¾Ü¾ø")) {
+							if(lt.get(k).getStatus().contentEquals("åˆå®¡ç»“æœï¼šæ‹’ç»")||lt.get(k).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šæ‹’ç»")) {
 								Report t=lt.get(k);
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºĞŞ¸Ä-1£¬Ìø¹ı-0");
+								System.out.println("è¯·è¾“å…¥ï¼šä¿®æ”¹-1ï¼Œè·³è¿‡-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
 									int count=0;
-									System.out.println("ÇëÊäÈëĞŞ¸ÄÏîĞòºÅ£¨1-±¨¸æÃû³Æ 2-±¨¸æÀàĞÍ 3-±¨¸æÊ±¼ä 4-±¨¸æ·şÎñµ¥Î» 5-¹±Ï×¶ÈÅÅÃû 6-×ôÖ¤²ÄÁÏ 0-ÍË³ö¶Ôµ±Ç°ÏîµÄĞŞ¸Ä£©");
+									System.out.println("è¯·è¾“å…¥ä¿®æ”¹é¡¹åºå·ï¼ˆ1-æŠ¥å‘Šåç§° 2-æŠ¥å‘Šç±»å‹ 3-æŠ¥å‘Šæ—¶é—´ 4-æŠ¥å‘ŠæœåŠ¡å•ä½ 5-è´¡çŒ®åº¦æ’å 6-ä½è¯ææ–™ 0-é€€å‡ºå¯¹å½“å‰é¡¹çš„ä¿®æ”¹ï¼‰");
 									while(true) {
 										String inc="";
 										if(scanner.hasNext()){
-											inc = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+											inc = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 										}
 										while(!inc.contentEquals("1")&&!inc.contentEquals("2")&&!inc.contentEquals("3")&&!inc.contentEquals("4")&&!inc.contentEquals("5")&&!inc.contentEquals("6")&&!inc.contentEquals("0")) {
-											System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+											System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 											inc = scanner.next();
 										}
 										if(choice.contentEquals("0")) {
 											break;
 										}
 										if(choice.contentEquals("1")) {
-											System.out.printf("±¨¸æÃû³Æ£º");
+											System.out.printf("æŠ¥å‘Šåç§°ï¼š");
 											t.setName(scanner.nextLine());
 
 										}
 										if(choice.contentEquals("2")) {
-											System.out.printf("±¨¸æÀàĞÍ£º(¹æ»®Àà/Éè¼ÆÀà/·şÎñÀà/ÆäËû)");
+											System.out.printf("æŠ¥å‘Šç±»å‹ï¼š(è§„åˆ’ç±»/è®¾è®¡ç±»/æœåŠ¡ç±»/å…¶ä»–)");
 											String tmp=scanner.nextLine();
-											while(!tmp.contentEquals("¹æ»®Àà")&&!tmp.contentEquals("Éè¼ÆÀà")&&!tmp.contentEquals("·şÎñÀà")&&!tmp.contentEquals("ÆäËû")) {
-												System.out.println("ÇëÊäÈë ¹æ»®Àà/Éè¼ÆÀà/·şÎñÀà/ÆäËû£¡");
+											while(!tmp.contentEquals("è§„åˆ’ç±»")&&!tmp.contentEquals("è®¾è®¡ç±»")&&!tmp.contentEquals("æœåŠ¡ç±»")&&!tmp.contentEquals("å…¶ä»–")) {
+												System.out.println("è¯·è¾“å…¥ è§„åˆ’ç±»/è®¾è®¡ç±»/æœåŠ¡ç±»/å…¶ä»–ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setType(tmp);
 										}
 										if(choice.contentEquals("3")) {
-											System.out.printf("±¨¸æÊ±¼ä£ºyyyy-MM-dd");
+											System.out.printf("æŠ¥å‘Šæ—¶é—´ï¼šyyyy-MM-dd");
 											String tmp=scanner.nextLine();
 											while(!isValidDate(tmp)) {
-												System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+												System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setTime(tmp);
 										}
 										if(choice.contentEquals("4")) {
-											System.out.printf("±¨¸æ·şÎñµ¥Î»£º");
+											System.out.printf("æŠ¥å‘ŠæœåŠ¡å•ä½ï¼š");
 											t.setAddress(scanner.nextLine());
 										}
 										if(choice.contentEquals("5")) {
-											System.out.printf("¹±Ï×¶ÈÅÅÃû£¨ÕûÊı£©£º");
+											System.out.printf("è´¡çŒ®åº¦æ’åï¼ˆæ•´æ•°ï¼‰ï¼š");
 											t.setContribution(Integer.parseInt(scanner.nextLine()));
 										}
 										if(choice.contentEquals("6")) {
-											System.out.printf("×ôÖ¤²ÄÁÏ£º");
+											System.out.printf("ä½è¯ææ–™ï¼š");
 											t.setMaterial(scanner.nextLine());
 										}
 									}
-									t.setStatus("Î´ÉóºË");
+									t.setStatus("æœªå®¡æ ¸");
 									DAOFactory.getInstance().getReportBase().updateReport(t);
-									System.out.println("ĞŞ¸Ä³É¹¦£¡");
+									System.out.println("ä¿®æ”¹æˆåŠŸï¼");
 								}
 								k++;
 							}
 						}
 					}
 					if(choice.contentEquals("5")) {
-						List<Patent> lt=DAOFactory.getInstance().getPatentBase().findPatent(userid, 1);	//»ñÈ¡µ½Ñ§ÉúÃûÏÂµÄËùÓĞ×¨Àû
+						List<Patent> lt=DAOFactory.getInstance().getPatentBase().findPatent(userid, 1);	//è·å–åˆ°å­¦ç”Ÿåä¸‹çš„æ‰€æœ‰ä¸“åˆ©
 						int k=0;
-						while(k<lt.size()) {			//±éÀúÁĞ±í£¬
-							if(lt.get(k).getTstatus().contentEquals("³õÉó½á¹û£º¾Ü¾ø")||lt.get(k).getTstatus().contentEquals("ÖÕÉó½á¹û£º¾Ü¾ø")) {			//×´Ì¬Î»Îª±»´ò»Ø
+						while(k<lt.size()) {			//éå†åˆ—è¡¨ï¼Œ
+							if(lt.get(k).getTstatus().contentEquals("åˆå®¡ç»“æœï¼šæ‹’ç»")||lt.get(k).getTstatus().contentEquals("ç»ˆå®¡ç»“æœï¼šæ‹’ç»")) {			//çŠ¶æ€ä½ä¸ºè¢«æ‰“å›
 								Patent t=lt.get(k);
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºĞŞ¸Ä-1£¬Ìø¹ı-0");
+								System.out.println("è¯·è¾“å…¥ï¼šä¿®æ”¹-1ï¼Œè·³è¿‡-0");
 								inchoice = scanner.next();
-								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){		//ÊäÈëÂ³°ôĞÔ
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){		//è¾“å…¥é²æ£’æ€§
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
 									int count=0;
-									System.out.println("ÇëÊäÈëĞŞ¸ÄÏîĞòºÅ£¨1-×¨ÀûÃû³Æ 2-×¨ÀûÀàĞÍ 3-×¨Àû·¢²¼Ê±¼ä 4-×¨Àû×´Ì¬ 5-¹±Ï×¶ÈÅÅÃû 6-×ôÖ¤²ÄÁÏ 0-ÍË³ö¶Ôµ±Ç°ÏîµÄĞŞ¸Ä£©");  //Ñ¡ÔñĞŞ¸ÄµÄ×Ö¶Î
+									System.out.println("è¯·è¾“å…¥ä¿®æ”¹é¡¹åºå·ï¼ˆ1-ä¸“åˆ©åç§° 2-ä¸“åˆ©ç±»å‹ 3-ä¸“åˆ©å‘å¸ƒæ—¶é—´ 4-ä¸“åˆ©çŠ¶æ€ 5-è´¡çŒ®åº¦æ’å 6-ä½è¯ææ–™ 0-é€€å‡ºå¯¹å½“å‰é¡¹çš„ä¿®æ”¹ï¼‰");  //é€‰æ‹©ä¿®æ”¹çš„å­—æ®µ
 									while(true) {
 										String inc="";
 										if(scanner.hasNext()){
-											inc = scanner.next();				//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+											inc = scanner.next();				//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 										}
 										while(!inc.contentEquals("1")&&!inc.contentEquals("2")&&!inc.contentEquals("3")&&!inc.contentEquals("4")&&!inc.contentEquals("5")&&!inc.contentEquals("6")&&!inc.contentEquals("0")) {
-											System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+											System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 											inc = scanner.next();
 										}
 										if(choice.contentEquals("0")) {
 											break;
 										}
-										if(choice.contentEquals("1")) {				//¶Ô×¨ÀûÃû³Æ½øĞĞĞŞ¸Ä
-											System.out.printf("×¨ÀûÃû³Æ£º");
+										if(choice.contentEquals("1")) {				//å¯¹ä¸“åˆ©åç§°è¿›è¡Œä¿®æ”¹
+											System.out.printf("ä¸“åˆ©åç§°ï¼š");
 											t.setName(scanner.nextLine());
 										}
 										if(choice.contentEquals("2")) {
-											System.out.printf("×¨ÀûÀàĞÍ£º(·¢Ã÷×¨Àû/ÊµÓÃĞÂĞÍ×¨Àû)");		//¶Ô×¨ÀûÀàĞÍ½øĞĞĞŞ¸Ä
+											System.out.printf("ä¸“åˆ©ç±»å‹ï¼š(å‘æ˜ä¸“åˆ©/å®ç”¨æ–°å‹ä¸“åˆ©)");		//å¯¹ä¸“åˆ©ç±»å‹è¿›è¡Œä¿®æ”¹
 											String tmp=scanner.nextLine();
-											while(!tmp.contentEquals("·¢Ã÷×¨Àû")&&!tmp.contentEquals("ÊµÓÃĞÂĞÍ×¨Àû")) {	//¶Ô×¨ÀûÀàĞÍ½øĞĞ¿ØÖÆ
-												System.out.println("ÇëÊäÈë ·¢Ã÷×¨Àû/ÊµÓÃĞÂĞÍ×¨Àû");
+											while(!tmp.contentEquals("å‘æ˜ä¸“åˆ©")&&!tmp.contentEquals("å®ç”¨æ–°å‹ä¸“åˆ©")) {	//å¯¹ä¸“åˆ©ç±»å‹è¿›è¡Œæ§åˆ¶
+												System.out.println("è¯·è¾“å…¥ å‘æ˜ä¸“åˆ©/å®ç”¨æ–°å‹ä¸“åˆ©");
 												tmp=scanner.nextLine();
 											}
 											t.setType(tmp);
 										}
-										if(choice.contentEquals("3")) {				//¶Ô×¨ÀûÊ±¼ä½øĞĞĞŞ¸Ä
-											System.out.printf("×¨Àû·¢²¼Ê±¼ä£ºyyyy-MM-dd");
+										if(choice.contentEquals("3")) {				//å¯¹ä¸“åˆ©æ—¶é—´è¿›è¡Œä¿®æ”¹
+											System.out.printf("ä¸“åˆ©å‘å¸ƒæ—¶é—´ï¼šyyyy-MM-dd");
 											String tmp=scanner.nextLine();
-											while(!isValidDate(tmp)) {				//¶ÔÊäÈë¸ñÊ½½øĞĞÅĞ¶Ï
-												System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+											while(!isValidDate(tmp)) {				//å¯¹è¾“å…¥æ ¼å¼è¿›è¡Œåˆ¤æ–­
+												System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setTime(tmp);
 										}
-										if(choice.contentEquals("4")) {				//¶Ô×¨Àû×´Ì¬½øĞĞĞŞ¸Ä
-											System.out.printf("×¨Àû×´Ì¬£º");
+										if(choice.contentEquals("4")) {				//å¯¹ä¸“åˆ©çŠ¶æ€è¿›è¡Œä¿®æ”¹
+											System.out.printf("ä¸“åˆ©çŠ¶æ€ï¼š");
 											t.setStatus(scanner.nextLine());
 										}
-										if(choice.contentEquals("5")) {				//¶Ô¹±Ï×¶ÈÅÅÃû½øĞĞĞŞ¸Ä
-											System.out.printf("¹±Ï×¶ÈÅÅÃû£¨ÕûÊı£©£º");
+										if(choice.contentEquals("5")) {				//å¯¹è´¡çŒ®åº¦æ’åè¿›è¡Œä¿®æ”¹
+											System.out.printf("è´¡çŒ®åº¦æ’åï¼ˆæ•´æ•°ï¼‰ï¼š");
 											t.setContribution(Integer.parseInt(scanner.nextLine()));
 										}
-										if(choice.contentEquals("6")) {				//¶Ô×ôÖ¤²ÄÁÏ½øĞĞĞŞ¸Ä
-											System.out.printf("×ôÖ¤²ÄÁÏ£º");
+										if(choice.contentEquals("6")) {				//å¯¹ä½è¯ææ–™è¿›è¡Œä¿®æ”¹
+											System.out.printf("ä½è¯ææ–™ï¼š");
 											t.setMaterial(scanner.nextLine());
 										}
 									}
-									t.setStatus("Î´ÉóºË");									//½«ÉóºË×´Ì¬¸ÄÎªÎ´ÉóºË£¬´Ó³õÉó¿ªÊ¼
-									DAOFactory.getInstance().getPatentBase().updatePatent(t);	//µ÷ÓÃDAO²ã¸üĞÂ×´Ì¬
-									System.out.println("ĞŞ¸Ä³É¹¦£¡");
+									t.setStatus("æœªå®¡æ ¸");									//å°†å®¡æ ¸çŠ¶æ€æ”¹ä¸ºæœªå®¡æ ¸ï¼Œä»åˆå®¡å¼€å§‹
+									DAOFactory.getInstance().getPatentBase().updatePatent(t);	//è°ƒç”¨DAOå±‚æ›´æ–°çŠ¶æ€
+									System.out.println("ä¿®æ”¹æˆåŠŸï¼");
 								}
 								k++;
 							}
@@ -1709,60 +1709,60 @@ public class AchieveService {
 						List<Prove> lt=DAOFactory.getInstance().getProveBase().findProve(userid, 1);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("³õÉó½á¹û£º¾Ü¾ø")||lt.get(k).getStatus().contentEquals("ÖÕÉó½á¹û£º¾Ü¾ø")) {
+							if(lt.get(k).getStatus().contentEquals("åˆå®¡ç»“æœï¼šæ‹’ç»")||lt.get(k).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šæ‹’ç»")) {
 								Prove t=lt.get(k);
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºĞŞ¸Ä-1£¬Ìø¹ı-0");
+								System.out.println("è¯·è¾“å…¥ï¼šä¿®æ”¹-1ï¼Œè·³è¿‡-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
 									int count=0;
-									System.out.println("ÇëÊäÈëĞŞ¸ÄÏîĞòºÅ£¨1-ÈíÓ²¼şÆ½Ì¨Ãû³Æ 2-Æ½Ì¨·şÎñµ¥Î» 3-Æ½Ì¨ÉÏÏßÊ±¼ä 4-¹±Ï×¶ÈÅÅÃû 5-×ôÖ¤²ÄÁÏ 0-ÍË³ö¶Ôµ±Ç°ÏîµÄĞŞ¸Ä£©");
+									System.out.println("è¯·è¾“å…¥ä¿®æ”¹é¡¹åºå·ï¼ˆ1-è½¯ç¡¬ä»¶å¹³å°åç§° 2-å¹³å°æœåŠ¡å•ä½ 3-å¹³å°ä¸Šçº¿æ—¶é—´ 4-è´¡çŒ®åº¦æ’å 5-ä½è¯ææ–™ 0-é€€å‡ºå¯¹å½“å‰é¡¹çš„ä¿®æ”¹ï¼‰");
 									while(true) {
 										String inc="";
 										if(scanner.hasNext()){
-											inc = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+											inc = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 										}
 										while(!inc.contentEquals("1")&&!inc.contentEquals("2")&&!inc.contentEquals("3")&&!inc.contentEquals("4")&&!inc.contentEquals("5")&&!inc.contentEquals("0")) {
-											System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+											System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 											inc = scanner.next();
 										}
 										if(choice.contentEquals("0")) {
 											break;
 										}
 										if(choice.contentEquals("1")) {
-											System.out.printf("ÈíÓ²¼şÆ½Ì¨Ãû³Æ£º");
+											System.out.printf("è½¯ç¡¬ä»¶å¹³å°åç§°ï¼š");
 											t.setName(scanner.nextLine());
 										}
 										if(choice.contentEquals("2")) {
-											System.out.printf("Æ½Ì¨·şÎñµ¥Î»£º");
+											System.out.printf("å¹³å°æœåŠ¡å•ä½ï¼š");
 											t.setAddress(scanner.nextLine());
 										}
 										if(choice.contentEquals("3")) {
-											System.out.printf("Æ½Ì¨ÉÏÏßÊ±¼ä£ºyyyy-MM-dd");
+											System.out.printf("å¹³å°ä¸Šçº¿æ—¶é—´ï¼šyyyy-MM-dd");
 											String tmp=scanner.nextLine();
 											while(!isValidDate(tmp)) {
-												System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+												System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setTime(tmp);
 										}
 										if(choice.contentEquals("4")) {
-											System.out.printf("¹±Ï×¶ÈÅÅÃû£¨ÕûÊı£©£º");
+											System.out.printf("è´¡çŒ®åº¦æ’åï¼ˆæ•´æ•°ï¼‰ï¼š");
 											t.setContribution(Integer.parseInt(scanner.nextLine()));
 										}
 										if(choice.contentEquals("5")) {
-											System.out.printf("×ôÖ¤²ÄÁÏ£º");
+											System.out.printf("ä½è¯ææ–™ï¼š");
 											t.setMaterial(scanner.nextLine());
 										}
 									}
-									t.setStatus("Î´ÉóºË");
+									t.setStatus("æœªå®¡æ ¸");
 									DAOFactory.getInstance().getProveBase().updateProve(t);
-									System.out.println("ĞŞ¸Ä³É¹¦£¡");
+									System.out.println("ä¿®æ”¹æˆåŠŸï¼");
 								}
 								k++;
 							}
@@ -1772,60 +1772,60 @@ public class AchieveService {
 						List<Textbook> lt=DAOFactory.getInstance().getTextbookBase().findTextbook(userid, 1);
 						int k=0;
 						while(k<lt.size()) {
-							if(lt.get(k).getStatus().contentEquals("³õÉó½á¹û£º¾Ü¾ø")||lt.get(k).getStatus().contentEquals("ÖÕÉó½á¹û£º¾Ü¾ø")) {
+							if(lt.get(k).getStatus().contentEquals("åˆå®¡ç»“æœï¼šæ‹’ç»")||lt.get(k).getStatus().contentEquals("ç»ˆå®¡ç»“æœï¼šæ‹’ç»")) {
 								Textbook t=lt.get(k);
 								System.out.println(lt.get(k));
 								String inchoice="";
-								System.out.println("ÇëÊäÈë£ºĞŞ¸Ä-1£¬Ìø¹ı-0");
+								System.out.println("è¯·è¾“å…¥ï¼šä¿®æ”¹-1ï¼Œè·³è¿‡-0");
 								inchoice = scanner.next();
 								while(!inchoice.contentEquals("1")&&!inchoice.contentEquals("0")){
-									System.out.println("ÄúµÄÊäÈë´íÎó£¬ÇëÊäÈë1»ò0£º");
+									System.out.println("æ‚¨çš„è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥1æˆ–0ï¼š");
 									inchoice = scanner.next();
 								}
 								if(inchoice.contentEquals("1")) {
 									int count=0;
-									System.out.println("ÇëÊäÈëĞŞ¸ÄÏîĞòºÅ£¨1-½Ì²ÄÃû³Æ 2-½Ì²Ä³ö°æÉç 3-½Ì²Ä³ö°æÊ±¼ä 4-¹±Ï×¶ÈÅÅÃû 5-×ôÖ¤²ÄÁÏ 0-ÍË³ö¶Ôµ±Ç°ÏîµÄĞŞ¸Ä£©");
+									System.out.println("è¯·è¾“å…¥ä¿®æ”¹é¡¹åºå·ï¼ˆ1-æ•™æåç§° 2-æ•™æå‡ºç‰ˆç¤¾ 3-æ•™æå‡ºç‰ˆæ—¶é—´ 4-è´¡çŒ®åº¦æ’å 5-ä½è¯ææ–™ 0-é€€å‡ºå¯¹å½“å‰é¡¹çš„ä¿®æ”¹ï¼‰");
 									while(true) {
 										String inc="";
 										if(scanner.hasNext()){
-											inc = scanner.next();//³ÌĞò»áµÈ´ıÓÃ»§ÊäÈëÍê±Ï
+											inc = scanner.next();//ç¨‹åºä¼šç­‰å¾…ç”¨æˆ·è¾“å…¥å®Œæ¯•
 										}
 										while(!inc.contentEquals("1")&&!inc.contentEquals("2")&&!inc.contentEquals("3")&&!inc.contentEquals("4")&&!inc.contentEquals("5")&&!inc.contentEquals("0")) {
-											System.out.println("ÄúµÄÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£º");
+											System.out.println("æ‚¨çš„è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š");
 											inc = scanner.next();
 										}
 										if(choice.contentEquals("0")) {
 											break;
 										}
 										if(choice.contentEquals("1")) {
-											System.out.printf("½Ì²ÄÃû³Æ£º");
+											System.out.printf("æ•™æåç§°ï¼š");
 											t.setName(scanner.nextLine());
 										}
 										if(choice.contentEquals("2")) {
-											System.out.printf("½Ì²Ä³ö°æÉç£º");
+											System.out.printf("æ•™æå‡ºç‰ˆç¤¾ï¼š");
 											t.setPress(scanner.nextLine());
 										}
 										if(choice.contentEquals("3")) {
-											System.out.printf("½Ì²Ä³ö°æÊ±¼ä£ºyyyy-MM-dd");
+											System.out.printf("æ•™æå‡ºç‰ˆæ—¶é—´ï¼šyyyy-MM-dd");
 											String tmp=scanner.nextLine();
 											while(!isValidDate(tmp)) {
-												System.out.println("ÇëÒÔyyyy-MM-dd¸ñÊ½ÊäÈëÊ±¼ä£¡");
+												System.out.println("è¯·ä»¥yyyy-MM-ddæ ¼å¼è¾“å…¥æ—¶é—´ï¼");
 												tmp=scanner.nextLine();
 											}
 											t.setTime(tmp);
 										}
 										if(choice.contentEquals("4")) {
-											System.out.printf("¹±Ï×¶ÈÅÅÃû£¨ÕûÊı£©£º");
+											System.out.printf("è´¡çŒ®åº¦æ’åï¼ˆæ•´æ•°ï¼‰ï¼š");
 											t.setContribution(Integer.parseInt(scanner.nextLine()));
 										}
 										if(choice.contentEquals("5")) {
-											System.out.printf("×ôÖ¤²ÄÁÏ£º");
+											System.out.printf("ä½è¯ææ–™ï¼š");
 											t.setMaterial(scanner.nextLine());
 										}
 									}
-									t.setStatus("Î´ÉóºË");
+									t.setStatus("æœªå®¡æ ¸");
 									DAOFactory.getInstance().getTextbookBase().updateTextbook(t);
-									System.out.println("ĞŞ¸Ä³É¹¦£¡");
+									System.out.println("ä¿®æ”¹æˆåŠŸï¼");
 								}
 								k++;
 							}
@@ -1834,266 +1834,266 @@ public class AchieveService {
 				}
 			}
 			if(c.contentEquals("D")) {
-				System.out.println("ÒÑÌá½»ÉêÇëµÄÂÛÎÄÈÏÖ¤ÁĞ±í");
-				System.out.println("ÂÛÎÄÃû³Æ\tÂÛÎÄ·¢±í¿¯ÎïÃû³Æ\t·¢±íÊ±¼ä\tÂÛÎÄ×´Ì¬\tË÷ÒıÀàĞÍ\tÂÛÎÄ¹éÊô¿âÇé¿ö\tÂÛÎÄÉ¨Ãè»òPDF²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²æäº¤ç”³è¯·çš„è®ºæ–‡è®¤è¯åˆ—è¡¨");
+				System.out.println("è®ºæ–‡åç§°\tè®ºæ–‡å‘è¡¨åˆŠç‰©åç§°\tå‘è¡¨æ—¶é—´\tè®ºæ–‡çŠ¶æ€\tç´¢å¼•ç±»å‹\tè®ºæ–‡å½’å±åº“æƒ…å†µ\tè®ºæ–‡æ‰«ææˆ–PDFææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 1);
 				int k=0;
 				while(k<lt.size()) {
 					System.out.println(k+1+"\t"+lt.get(k));
 					k++;
 				}
-				System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄÂÛÎÄÈÏÖ¤¸öÊı£º");
+				System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„è®ºæ–‡è®¤è¯ä¸ªæ•°ï¼š");
 				while (!scanner.hasNextInt()){
-				    System.out.println("ÇëÊäÈëÕûÊı£¡");
+				    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 				}
 				int count=scanner.nextInt();
 				while(count>lt.size()||count<0) {
-					System.out.printf("ÇëÊäÈë0-"+lt.size()+"µÄÊı×Ö£¡");
+					System.out.printf("è¯·è¾“å…¥0-"+lt.size()+"çš„æ•°å­—ï¼");
 					while (!scanner.hasNextInt()){
-					    System.out.println("ÇëÊäÈëÕûÊı£¡");
+					    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					count=scanner.nextInt();
 				}
 				int j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄÂÛÎÄĞòºÅ£º");
+					System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„è®ºæ–‡åºå·ï¼š");
 					while (!scanner.hasNextInt()){
-					    System.out.println("ÇëÊäÈëÕûÊı£¡");
+					    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					int index=scanner.nextInt();
 					while(index>lt.size()||index<1) {
-						System.out.printf("ÇëÊäÈë1-"+lt.size()+"µÄÊı×Ö£¡");
+						System.out.printf("è¯·è¾“å…¥1-"+lt.size()+"çš„æ•°å­—ï¼");
 						while (!scanner.hasNextInt()){
-						    System.out.println("ÇëÊäÈëÕûÊı£¡");
+						    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						index=scanner.nextInt();
 					}
 					DAOFactory .getInstance().getThesisDAO().deleteThesis(lt.get(index-1));
-					System.out.println("³·»Ø³É¹¦£¡");
+					System.out.println("æ’¤å›æˆåŠŸï¼");
 				}
 				
-				System.out.println("ÒÑÌá½»ÉêÇëµÄ½±ÀøÈÏÖ¤ÁĞ±í");
-				System.out.println("½±ÀøÃû³Æ\t½±ÀøµÈ¼¶\t»ñ½±µÈ¼¶\tÅÅÃû\t»ñ½±Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²æäº¤ç”³è¯·çš„å¥–åŠ±è®¤è¯åˆ—è¡¨");
+				System.out.println("å¥–åŠ±åç§°\tå¥–åŠ±ç­‰çº§\tè·å¥–ç­‰çº§\tæ’å\tè·å¥–æ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Reward> lt2=DAOFactory .getInstance().getRewardDAO().findReward(userid, 1);
 				int k2=0;
 				while(k2<lt2.size()) {
 					System.out.println(k2+1+"\t"+lt2.get(k2));
 					k2++;
 				}
-				System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ½±ÀøÈÏÖ¤¸öÊı£º");
+				System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„å¥–åŠ±è®¤è¯ä¸ªæ•°ï¼š");
 				while (!scanner.hasNextInt()){
-				    System.out.println("ÇëÊäÈëÕûÊı£¡");
+				    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 				}
 				count=scanner.nextInt();
 				while(count>lt2.size()||count<0) {
-					System.out.printf("ÇëÊäÈë0-"+lt2.size()+"µÄÊı×Ö£¡");
+					System.out.printf("è¯·è¾“å…¥0-"+lt2.size()+"çš„æ•°å­—ï¼");
 					while (!scanner.hasNextInt()){
-					    System.out.println("ÇëÊäÈëÕûÊı£¡");
+					    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					count=scanner.nextInt();
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ½±ÀøĞòºÅ£º");
+					System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„å¥–åŠ±åºå·ï¼š");
 					while (!scanner.hasNextInt()){
-					    System.out.println("ÇëÊäÈëÕûÊı£¡");
+					    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					int index=scanner.nextInt();
 					while(index>lt2.size()||index<1) {
-						System.out.printf("ÇëÊäÈë1-"+lt2.size()+"µÄÊı×Ö£¡");
+						System.out.printf("è¯·è¾“å…¥1-"+lt2.size()+"çš„æ•°å­—ï¼");
 						while (!scanner.hasNextInt()){
-						    System.out.println("ÇëÊäÈëÕûÊı£¡");
+						    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						index=scanner.nextInt();
 					}
 					DAOFactory .getInstance().getRewardDAO().deleteReward(lt2.get(index-1));
-					System.out.println("³·»Ø³É¹¦£¡");
+					System.out.println("æ’¤å›æˆåŠŸï¼");
 				}
 				
-				System.out.println("ÒÑÌá½»ÉêÇëµÄ±ê×¼ÈÏÖ¤ÁĞ±í");
-				System.out.println("±ê×¼Ãû³Æ\t±ê×¼¼¶±ğ\t±ê×¼·¢²¼Ê±¼ä\t×ôÖ¤²ÄÁÏ\tËùÊôÈËÑ§ºÅ\tÉóºË×´Ì¬");
+				System.out.println("å·²æäº¤ç”³è¯·çš„æ ‡å‡†è®¤è¯åˆ—è¡¨");
+				System.out.println("æ ‡å‡†åç§°\tæ ‡å‡†çº§åˆ«\tæ ‡å‡†å‘å¸ƒæ—¶é—´\tä½è¯ææ–™\tæ‰€å±äººå­¦å·\tå®¡æ ¸çŠ¶æ€");
 				List<Standard> lt3=DAOFactory .getInstance().getStandardDAO().findStandard(userid, 1);
 				int k3=0;
 				while(k3<lt3.size()) {
 					System.out.println(k3+1+"\t"+lt3.get(k3));
 					k3++;
 				}
-				System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ±ê×¼ÈÏÖ¤¸öÊı£º");
+				System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„æ ‡å‡†è®¤è¯ä¸ªæ•°ï¼š");
 				while (!scanner.hasNextInt()){
-				    System.out.println("ÇëÊäÈëÕûÊı£¡");
+				    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 				}
 				count=scanner.nextInt();
 				while(count>lt3.size()||count<0) {
-					System.out.printf("ÇëÊäÈë0-"+lt3.size()+"µÄÊı×Ö£¡");
+					System.out.printf("è¯·è¾“å…¥0-"+lt3.size()+"çš„æ•°å­—ï¼");
 					while (!scanner.hasNextInt()){
-					    System.out.println("ÇëÊäÈëÕûÊı£¡");
+					    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					count=scanner.nextInt();
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ±ê×¼ĞòºÅ£º");
+					System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„æ ‡å‡†åºå·ï¼š");
 					while (!scanner.hasNextInt()){
-					    System.out.println("ÇëÊäÈëÕûÊı£¡");
+					    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					int index=scanner.nextInt();
 					while(index>lt.size()||index<1) {
-						System.out.printf("ÇëÊäÈë1-"+lt3.size()+"µÄÊı×Ö£¡");
+						System.out.printf("è¯·è¾“å…¥1-"+lt3.size()+"çš„æ•°å­—ï¼");
 						while (!scanner.hasNextInt()){
-						    System.out.println("ÇëÊäÈëÕûÊı£¡");
+						    System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						index=scanner.nextInt();
 					}
 					DAOFactory .getInstance().getStandardDAO().deleteStandard(lt3.get(index-1));
-					System.out.println("³·»Ø³É¹¦£¡");
+					System.out.println("æ’¤å›æˆåŠŸï¼");
 				}
 
-				System.out.println("ÒÑÌá½»ÉêÇëµÄ±¨¸æÈÏÖ¤ÁĞ±í");
+				System.out.println("å·²æäº¤ç”³è¯·çš„æŠ¥å‘Šè®¤è¯åˆ—è¡¨");
 				List<Report> lt4=DAOFactory .getInstance().getReportBase().findReport(userid, 1);
 				int k4=0;
 				while(k4<lt4.size()) {
 					System.out.println(k4+1+"\t"+lt4.get(k4));
 					k4++;
 				}
-				System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ±¨¸æÈÏÖ¤¸öÊı£º");
+				System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„æŠ¥å‘Šè®¤è¯ä¸ªæ•°ï¼š");
 				while (!scanner.hasNextInt()){
-					System.out.println("ÇëÊäÈëÕûÊı£¡");
+					System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 				}
 				count=scanner.nextInt();
 				while(count>lt4.size()||count<0) {
-					System.out.printf("ÇëÊäÈë0-"+lt4.size()+"µÄÊı×Ö£¡");
+					System.out.printf("è¯·è¾“å…¥0-"+lt4.size()+"çš„æ•°å­—ï¼");
 					while (!scanner.hasNextInt()){
-						System.out.println("ÇëÊäÈëÕûÊı£¡");
+						System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					count=scanner.nextInt();
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ±¨¸æĞòºÅ£º");
+					System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„æŠ¥å‘Šåºå·ï¼š");
 					while (!scanner.hasNextInt()){
-						System.out.println("ÇëÊäÈëÕûÊı£¡");
+						System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					int index=scanner.nextInt();
 					while(index>lt4.size()||index<1) {
-						System.out.printf("ÇëÊäÈë1-"+lt4.size()+"µÄÊı×Ö£¡");
+						System.out.printf("è¯·è¾“å…¥1-"+lt4.size()+"çš„æ•°å­—ï¼");
 						while (!scanner.hasNextInt()){
-							System.out.println("ÇëÊäÈëÕûÊı£¡");
+							System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						index=scanner.nextInt();
 					}
 					DAOFactory.getInstance().getReportBase().deleteReport(lt4.get(index-1));
-					System.out.println("³·»Ø³É¹¦£¡");
+					System.out.println("æ’¤å›æˆåŠŸï¼");
 				}
-				System.out.println("ÒÑÌá½»ÉêÇëµÄ×¨ÀûÈÏÖ¤ÁĞ±í");
-				List<Patent> lt5=DAOFactory.getInstance().getPatentBase().findPatent(userid, 1);	//»ñÈ¡¸ÃÑĞ¾¿ÉúÃûÏÂµÄ×¨ÀûÁĞ±í
+				System.out.println("å·²æäº¤ç”³è¯·çš„ä¸“åˆ©è®¤è¯åˆ—è¡¨");
+				List<Patent> lt5=DAOFactory.getInstance().getPatentBase().findPatent(userid, 1);	//è·å–è¯¥ç ”ç©¶ç”Ÿåä¸‹çš„ä¸“åˆ©åˆ—è¡¨
 				int k5=0;
 				while(k5<lt5.size()) {
-					System.out.println(k5+1+"\t"+lt5.get(k5));		//Êä³ö×¨ÀûÁĞ±í
+					System.out.println(k5+1+"\t"+lt5.get(k5));		//è¾“å‡ºä¸“åˆ©åˆ—è¡¨
 					k5++;
 				}
-				System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ×¨ÀûÈÏÖ¤¸öÊı£º");
-				while (!scanner.hasNextInt()){					//¶ÔÊäÈë½øĞĞ¿ØÖÆ
-					System.out.println("ÇëÊäÈëÕûÊı£¡");
+				System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„ä¸“åˆ©è®¤è¯ä¸ªæ•°ï¼š");
+				while (!scanner.hasNextInt()){					//å¯¹è¾“å…¥è¿›è¡Œæ§åˆ¶
+					System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 				}
 				count=scanner.nextInt();
 				while(count>lt5.size()||count<0) {
-					System.out.printf("ÇëÊäÈë0-"+lt5.size()+"µÄÊı×Ö£¡");	 //¶ÔÊäÈë½øĞĞ¿ØÖÆ
+					System.out.printf("è¯·è¾“å…¥0-"+lt5.size()+"çš„æ•°å­—ï¼");	 //å¯¹è¾“å…¥è¿›è¡Œæ§åˆ¶
 					while (!scanner.hasNextInt()){
-						System.out.println("ÇëÊäÈëÕûÊı£¡");
+						System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					count=scanner.nextInt();
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ×¨ÀûĞòºÅ£º");			//¶ÔÊäÈë½øĞĞ¿ØÖÆ
+					System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„ä¸“åˆ©åºå·ï¼š");			//å¯¹è¾“å…¥è¿›è¡Œæ§åˆ¶
 					while (!scanner.hasNextInt()){
-						System.out.println("ÇëÊäÈëÕûÊı£¡");
+						System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					int index=scanner.nextInt();
 					while(index>lt5.size()||index<1) {
-						System.out.printf("ÇëÊäÈë1-"+lt5.size()+"µÄÊı×Ö£¡");	//¶ÔÊäÈë½øĞĞ¿ØÖÆ
+						System.out.printf("è¯·è¾“å…¥1-"+lt5.size()+"çš„æ•°å­—ï¼");	//å¯¹è¾“å…¥è¿›è¡Œæ§åˆ¶
 						while (!scanner.hasNextInt()){
-							System.out.println("ÇëÊäÈëÕûÊı£¡");
+							System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						index=scanner.nextInt();
 					}
-					DAOFactory.getInstance().getPatentBase().deletePatent(lt5.get(index-1));	//µ÷ÓÃDAO²ã³·»ØÉêÇë
-					System.out.println("³·»Ø³É¹¦£¡");
+					DAOFactory.getInstance().getPatentBase().deletePatent(lt5.get(index-1));	//è°ƒç”¨DAOå±‚æ’¤å›ç”³è¯·
+					System.out.println("æ’¤å›æˆåŠŸï¼");
 				}
 
-				System.out.println("ÒÑÌá½»ÉêÇëµÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤ÁĞ±í");
+				System.out.println("å·²æäº¤ç”³è¯·çš„è½¯ç¡¬ä»¶å¹³å°è®¤è¯åˆ—è¡¨");
 				List<Prove> lt6=DAOFactory.getInstance().getProveBase().findProve(userid, 1);
 				int k6=0;
 				while(k6<lt6.size()) {
 					System.out.println(k6+1+"\t"+lt6.get(k6));
 					k6++;
 				}
-				System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤¸öÊı£º");
+				System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„è½¯ç¡¬ä»¶å¹³å°è®¤è¯ä¸ªæ•°ï¼š");
 				while (!scanner.hasNextInt()){
-					System.out.println("ÇëÊäÈëÕûÊı£¡");
+					System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 				}
 				count=scanner.nextInt();
 				while(count>lt6.size()||count<0) {
-					System.out.printf("ÇëÊäÈë0-"+lt6.size()+"µÄÊı×Ö£¡");
+					System.out.printf("è¯·è¾“å…¥0-"+lt6.size()+"çš„æ•°å­—ï¼");
 					while (!scanner.hasNextInt()){
-						System.out.println("ÇëÊäÈëÕûÊı£¡");
+						System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					count=scanner.nextInt();
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄÈíÓ²¼şÆ½Ì¨ÈÏÖ¤ĞòºÅ£º");
+					System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„è½¯ç¡¬ä»¶å¹³å°è®¤è¯åºå·ï¼š");
 					while (!scanner.hasNextInt()){
-						System.out.println("ÇëÊäÈëÕûÊı£¡");
+						System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					int index=scanner.nextInt();
 					while(index>lt6.size()||index<1) {
-						System.out.printf("ÇëÊäÈë1-"+lt6.size()+"µÄÊı×Ö£¡");
+						System.out.printf("è¯·è¾“å…¥1-"+lt6.size()+"çš„æ•°å­—ï¼");
 						while (!scanner.hasNextInt()){
-							System.out.println("ÇëÊäÈëÕûÊı£¡");
+							System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						index=scanner.nextInt();
 					}
 					DAOFactory.getInstance().getProveBase().deleteProve(lt6.get(index-1));
-					System.out.println("³·»Ø³É¹¦£¡");
+					System.out.println("æ’¤å›æˆåŠŸï¼");
 				}
 
 
-				System.out.println("ÒÑÌá½»ÉêÇëµÄ½Ì²ÄÈÏÖ¤ÁĞ±í");
+				System.out.println("å·²æäº¤ç”³è¯·çš„æ•™æè®¤è¯åˆ—è¡¨");
 				List<Textbook> lt7=DAOFactory.getInstance().getTextbookBase().findTextbook(userid, 1);
 				int k7=0;
 				while(k7<lt7.size()) {
 					System.out.println(k7+1+"\t"+lt7.get(k7));
 					k7++;
 				}
-				System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ½Ì²ÄÈÏÖ¤¸öÊı£º");
+				System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„æ•™æè®¤è¯ä¸ªæ•°ï¼š");
 				while (!scanner.hasNextInt()){
-					System.out.println("ÇëÊäÈëÕûÊı£¡");
+					System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 				}
 				count=scanner.nextInt();
 				while(count>lt7.size()||count<0) {
-					System.out.printf("ÇëÊäÈë0-"+lt7.size()+"µÄÊı×Ö£¡");
+					System.out.printf("è¯·è¾“å…¥0-"+lt7.size()+"çš„æ•°å­—ï¼");
 					while (!scanner.hasNextInt()){
-						System.out.println("ÇëÊäÈëÕûÊı£¡");
+						System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					count=scanner.nextInt();
 				}
 				j=0;
 				for(j=0;j<count;j++) {
-					System.out.printf("ÇëÊäÈëÄúÏë³·»ØµÄ½Ì²ÄĞòºÅ£º");
+					System.out.printf("è¯·è¾“å…¥æ‚¨æƒ³æ’¤å›çš„æ•™æåºå·ï¼š");
 					while (!scanner.hasNextInt()){
-						System.out.println("ÇëÊäÈëÕûÊı£¡");
+						System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 					}
 					int index=scanner.nextInt();
 					while(index>lt7.size()||index<1) {
-						System.out.printf("ÇëÊäÈë1-"+lt7.size()+"µÄÊı×Ö£¡");
+						System.out.printf("è¯·è¾“å…¥1-"+lt7.size()+"çš„æ•°å­—ï¼");
 						while (!scanner.hasNextInt()){
-							System.out.println("ÇëÊäÈëÕûÊı£¡");
+							System.out.println("è¯·è¾“å…¥æ•´æ•°ï¼");
 						}
 						index=scanner.nextInt();
 					}
 					DAOFactory.getInstance().getTextbookBase().deleteTextbook(lt7.get(index-1));
-					System.out.println("³·»Ø³É¹¦£¡");
+					System.out.println("æ’¤å›æˆåŠŸï¼");
 				}
 			}
 		}
@@ -2101,23 +2101,23 @@ public class AchieveService {
 	public static void achieveMenu(String userid,int role) {
 		switch(role) {
 		case 1:
-			//ÑĞ¾¿Éú¹ÜÀíÔ±Í¨¹ı»ò¾Ü¾øÈÏ¶¨³É¹û
+			//ç ”ç©¶ç”Ÿç®¡ç†å‘˜é€šè¿‡æˆ–æ‹’ç»è®¤å®šæˆæœ
 			adminMenu(userid);
 			break;
 		case 2:
-			//Ñ§¿Æ¸ºÔğÈË
+			//å­¦ç§‘è´Ÿè´£äºº
 			leaderMenu(userid);
 			break;
 		case 3:
-			//ÊÚ¿Î½ÌÊ¦
-			System.out.println("ÊÚ¿Î½ÌÊ¦ÎŞÈ¨ÏŞ²Ù×÷³É¹ûÈÏ¶¨¹¤×÷£¡");
+			//æˆè¯¾æ•™å¸ˆ
+			System.out.println("æˆè¯¾æ•™å¸ˆæ— æƒé™æ“ä½œæˆæœè®¤å®šå·¥ä½œï¼");
 			break;
 		case 4:
-			//µ¼Ê¦
+			//å¯¼å¸ˆ
 			mentorMenu(userid);
 			break;
 		case 5:
-			//ÑĞ¾¿Éú
+			//ç ”ç©¶ç”Ÿ
 			studentMenu(userid);
 			break;
 		}
