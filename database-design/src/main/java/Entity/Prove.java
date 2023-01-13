@@ -77,7 +77,7 @@ public class Prove {
     @Override
     public String toString() {
         return "证明{" +
-                ", 名称='" + name + '\'' +
+                "名称='" + name + '\'' +
                 ", 平台服务单位='" + address + '\'' +
                 ", 平台上线时间='" + time + '\'' +
                 ", 佐证材料='" + material + '\'' +

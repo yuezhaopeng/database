@@ -1337,6 +1337,9 @@ public class AchieveService {
 						System.out.println("您的输入不正确，请重新输入：");
 						choice = scanner.nextLine();
 					}
+					if(choice.contentEquals("0")){
+						break;
+					}
 					if(choice.contentEquals("1")) {
 						List<Thesis> lt=DAOFactory .getInstance().getThesisDAO().findThesis(userid, 1);
 						int k=0;
