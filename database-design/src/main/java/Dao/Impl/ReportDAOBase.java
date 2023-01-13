@@ -14,7 +14,7 @@ public class ReportDAOBase extends DaoBase implements ReportDAO {
 
     @Override
     public void addReport(Report report) {
-        String sql = "INSERT INTO report VALUES(?,?,?,?,?,?,?,?,?,?) ";
+        String sql = "INSERT INTO report VALUES(?,?,?,?,?,?,?,?,?) ";
         Connection connection = getConnection();
         PreparedStatement preparedStatement = null;
         try {
@@ -85,11 +85,11 @@ public class ReportDAOBase extends DaoBase implements ReportDAO {
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;
-                case 2: STUDENT_INSERT_SQL = "select report.* from report,student where sid=Sno and Mno=?";
+                case 3: STUDENT_INSERT_SQL = "select report.* from report,student where sid=Sno and Mno=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;
-                case 3: STUDENT_INSERT_SQL = "select report.* from report,student,mentor where sid=Sno and student.Mno=mentor.Mno and Lno=?";
+                case 2: STUDENT_INSERT_SQL = "select report.* from report,student,mentor where sid=Sno and student.Mno=mentor.Mno and Lno=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;

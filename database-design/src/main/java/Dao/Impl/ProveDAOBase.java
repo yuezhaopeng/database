@@ -78,18 +78,16 @@ public class ProveDAOBase extends DaoBase implements ProveDAO {
         try {
             Connection connection = getConnection();
             PreparedStatement preparedStatement = null;
-            preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
-            preparedStatement.setString(1,id);
             switch (i){
                 case 1: STUDENT_INSERT_SQL = "select * from prove where sid=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;
-                case 2: STUDENT_INSERT_SQL = "select prove.* from prove,student where sid=Sno and Mno=?";
+                case 3: STUDENT_INSERT_SQL = "select prove.* from prove,student where sid=Sno and Mno=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;
-                case 3: STUDENT_INSERT_SQL = "select prove.* from prove,student,mentor where sid=Sno and student.Mno=mentor.Mno and Lno=?";
+                case 2: STUDENT_INSERT_SQL = "select prove.* from prove,student,mentor where sid=Sno and student.Mno=mentor.Mno and Lno=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;

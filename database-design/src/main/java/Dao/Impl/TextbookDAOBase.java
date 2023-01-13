@@ -78,15 +78,15 @@ public class TextbookDAOBase extends DaoBase implements TextbookDAO {
             Connection connection = getConnection();
             PreparedStatement preparedStatement = null;
             switch (i){
-                case 1: STUDENT_INSERT_SQL = "select * from textbook where tno=?";
+                case 1: STUDENT_INSERT_SQL = "select * from textbook where sid=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;
-                case 2: STUDENT_INSERT_SQL = "select textbook.* from textbook,student where sid=Sno and Mno=?";
+                case 3: STUDENT_INSERT_SQL = "select textbook.* from textbook,student where sid=Sno and Mno=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;
-                case 3: STUDENT_INSERT_SQL = "select textbook.* from textbook,student,mentor where sid=Sno and student.Mno=mentor.Mno and Lno=?";
+                case 2: STUDENT_INSERT_SQL = "select textbook.* from textbook,student,mentor where sid=Sno and student.Mno=mentor.Mno and Lno=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;

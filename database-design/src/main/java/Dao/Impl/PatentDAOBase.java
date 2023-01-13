@@ -84,11 +84,11 @@ public class PatentDAOBase extends DaoBase implements PatentDAO {
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;
-                case 2: STUDENT_INSERT_SQL = "select patent.* from patent,student where sid=Sno and Mno=?";
+                case 3: STUDENT_INSERT_SQL = "select patent.* from patent,student where sid=Sno and Mno=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;
-                case 3: STUDENT_INSERT_SQL = "select patent.* from patent,student,mentor where sid=Sno and student.Mno=mentor.Mno and Lno=?";
+                case 2: STUDENT_INSERT_SQL = "select patent.* from patent,student,mentor where sid=Sno and student.Mno=mentor.Mno and Lno=?";
                         preparedStatement = connection.prepareStatement(STUDENT_INSERT_SQL);
                         preparedStatement.setString(1,id);
                         break;
